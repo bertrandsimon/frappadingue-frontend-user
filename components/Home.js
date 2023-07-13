@@ -2,6 +2,9 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
 
 // IMAGE IMPORT
 import Image from 'next/image';
@@ -23,6 +26,11 @@ function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <h2>TEST DE COMMIT</h2>
+        <Stack spacing={2} direction="row">
+          <Button variant="text">Text</Button>
+          <Button variant="contained">Contained</Button>
+          <Button variant="outlined">Outlined</Button>
+        </Stack>
       </main>
     </div>
   );
