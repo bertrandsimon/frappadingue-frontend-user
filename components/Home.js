@@ -16,6 +16,16 @@ import { faBookmark, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons
 
 import { hideArticle } from '../reducers/hiddenArticles';
 
+import Header from './common/Header';
+import Menu from './common/Menu';
+import UserZone from './common/UserZone';
+import SliderHome from './common/SliderHome';
+import CardsArea from './common/CardsArea';
+import EventCard from './common/EventCard';
+
+import Editorial from './homepage/Editorial';
+
+
 import styles from '../styles/Home.module.css';
 
 function Home() {
@@ -26,11 +36,14 @@ function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <h2>TEST DE COMMIT</h2>
-        <Stack spacing={2} direction="row">
-          <Button variant="text">Text</Button>
-          <Button variant="contained">Contained</Button>
-          <Button variant="outlined">Outlined</Button>
-        </Stack>
+       
+      <Header></Header>
+      <Menu></Menu>
+      <UserZone></UserZone>
+      <SliderHome></SliderHome>
+      <CardsArea></CardsArea>
+      <EventCard></EventCard>
+      <Editorial></Editorial>
       </main>
     </div>
   );
