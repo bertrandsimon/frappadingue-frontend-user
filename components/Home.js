@@ -36,7 +36,6 @@ function Home() {
        
         <SliderHome></SliderHome>
         <CardsArea></CardsArea>
-        <EventCard></EventCard>
         <Editorial></Editorial>
         <Arguments></Arguments>
       </div>

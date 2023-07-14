@@ -10,3 +10,45 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.up {text-transform: uppercase;}
+
+.yellow {color:#FFE000;}
+.grey {color:#818181}
+.whiteBtn {color: white !important; border-color: #ffffff !important;}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0; 
+  font-style: normal;
+  font-weight: 400; 
+}
+
+h1 {
+ font-size: 28px;
+}
+h2 {
+  font-size: 26px;
+ }
+
+ h3 {
+  font-size: 24px;
+ }
+
+ h4 {
+  font-size: 22px;
+ }
+
+ h5 {
+  font-size: 20px;
+ }
+
+ h6 {
+  font-size: 28px;
+ }
+ .hero1 {
+  font-size: 28px;
+ }
+
+ .hero2 {
+  font-size: 28px;
+ }
