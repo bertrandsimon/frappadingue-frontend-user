@@ -7,13 +7,22 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
+import IconButton from '@mui/material/IconButton';
+
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import PersonIcon from '@mui/icons-material/Person';
 
 
 
 function UserZone() {
   return (
-    <div>
-      <h1 className={styles.title}>UserZone</h1>
+    <div className={styles.container}>
+      <IconButton style={{ color: 'white' }} aria-label="Panier" >
+        <AddShoppingCartIcon />
+      </IconButton>
+      <IconButton style={{ color: 'white' }} aria-label="Connexion">
+        <PersonIcon />
+      </IconButton>
     </div>
   );
 }
