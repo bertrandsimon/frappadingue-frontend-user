@@ -1,6 +1,9 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 
+import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import { useState } from 'react';
+
 import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
@@ -22,17 +25,28 @@ const store = configureStore({
  
  const persistor = persistStore(store);
 
+ const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#FFFF00', // Yellow color code
+    },
+  },
+});
+
 function App({ Component, pageProps }) {
   return (
     <>
-      <Provider store={store}>
-      <PersistGate persistor={persistor}>
-      <Head>
-        <title>Next.js App</title>
-      </Head>
-      <Component {...pageProps} />
-      </PersistGate>
-      </Provider>
+      <ThemeProvider theme={darkTheme}>
+        <Provider store={store}>
+          <PersistGate persistor={persistor}>
+            <Head>
+              <title>Next.js App</title>
+            </Head>
+            <Component {...pageProps} />
+            </PersistGate>
+        </Provider>
+      </ThemeProvider>
     </>
   );
 }
