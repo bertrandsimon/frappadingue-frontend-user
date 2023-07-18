@@ -1,31 +1,63 @@
 import styles from '../../styles/SignUp.module.css';
 
+import { useState } from 'react';
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
+
 function SignUp() {
+
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
+
+  const isFormValid = name && surname && email && password;
+
+  const handleSubmit = () => {
+    console.log(name, surname, email, password);
+  };
+  
+  //console.log(name, surname, email, password);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Inscription</h1>
       <TextField
           required
           id="outlined-required"
-          label="Required"
-          defaultValue="Hello World"
+          label="Nom"
+          defaultValue=""
+          onChange={(e) => setName(e.target.value)} value={name}
+        />
+
+      <TextField
+          required
+          id="outlined-required"
+          label="Prénom"
+          defaultValue=""
+          onChange={(e) => setSurname(e.target.value)} value={surname}
+        />
+
+      <TextField
+          required
+          id="outlined-required"
+          label="Email@email.com"
+          defaultValue=""
+          onChange={(e) => setEmail(e.target.value)} value={email}
         />
 
       <TextField
           id="outlined-password-input"
-          label="Password"
+          label="Mot de passe"
           type="password"
-          autoComplete="current-password"
+          autoComplete=""
+          onChange={(e) => setPassword(e.target.value)} value={password}
         />
 
-<Button variant="contained" disabled>
-  Disabled
-</Button>
-<Button variant="contained" href="#contained-buttons">
-  Link
+
+<Button variant="contained" href="#contained-buttons" onClick={ () => handleSubmit() } disabled={!isFormValid}>
+  CREATION COMPTE
 </Button>
 
     </div>
