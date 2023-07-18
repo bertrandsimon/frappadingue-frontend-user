@@ -22,6 +22,7 @@ import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
 import EventCard from './common/EventCard';
 import SignUp from './common/SignUp';
+import SignIn from './common/SignIn';
 
 import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
@@ -34,6 +35,7 @@ function Home() {
       
       <div className={styles.container}>
         <SignUp></SignUp>
+        <SignIn></SignIn>
         <Header></Header>
        
         <SliderHome></SliderHome>
