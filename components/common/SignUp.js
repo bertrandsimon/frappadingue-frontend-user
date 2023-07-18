@@ -16,7 +16,21 @@ function SignUp() {
   const isFormValid = name && surname && email && password;
 
   const handleSubmit = () => {
-    console.log(name, surname, email, password);
+    fetch('http://localhost:3000/users/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, surname, email, password }),
+    }).then(response => response.json())
+      .then(data => {
+        console.log(data)
+      //dispatch( loggedStatus ()) 
+      //dispatch( loggedName (data.name))
+      //dispatch( loggedSurname (data.surname))
+      //dispatch( loggedToken (data.token)) ;
+      //setShowRegisterForm(true)
+      });
+  
+    //console.log(name, surname, email, password);
   };
   
   //console.log(name, surname, email, password);
