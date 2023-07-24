@@ -21,8 +21,7 @@ import UserZone from './common/UserZone';
 import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
 import EventCard from './common/EventCard';
-import SignUp from './common/SignUp';
-import SignIn from './common/SignIn';
+
 
 import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
@@ -34,10 +33,11 @@ function Home() {
     <div className={styles.main}>
       
       <div className={styles.container}>
-        <SignUp></SignUp>
-        <SignIn></SignIn>
+
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
         <Header></Header>
-       
         <SliderHome></SliderHome>
         <CardsArea></CardsArea>
         <Editorial></Editorial>
