@@ -17,6 +17,7 @@ import { faBookmark, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons
 import { hideArticle } from '../reducers/hiddenArticles';
 
 import Header from './common/Header';
+import Nav from './common/Nav';
 import UserZone from './common/UserZone';
 import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
@@ -35,6 +36,7 @@ function Home() {
     <div className={styles.main}>
       
       <div className={styles.container}>
+        <Nav></Nav>
         <Header></Header>
         <Volunteer></Volunteer>
         <SliderHome></SliderHome>
