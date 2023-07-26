@@ -21,11 +21,12 @@ import UserZone from './common/UserZone';
 import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
 import EventCard from './common/EventCard';
-import Faq from './common/Faq';
+import Faq from './Faq';
 import Footer from './common/Footer';
 
 import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
+import Volunteer from './Volunteer';
 
 import styles from '../styles/Home.module.css';
 
@@ -34,12 +35,8 @@ function Home() {
     <div className={styles.main}>
       
       <div className={styles.container}>
-
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
         <Header></Header>
-        {/* <Faq></Faq> */}
+        <Volunteer></Volunteer>
         <SliderHome></SliderHome>
         <CardsArea></CardsArea>
         <Editorial></Editorial>
