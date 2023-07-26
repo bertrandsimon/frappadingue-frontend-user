@@ -21,7 +21,7 @@ import UserZone from './common/UserZone';
 import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
 import EventCard from './common/EventCard';
-
+import Faq from './common/Faq';
 
 import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
@@ -38,6 +38,7 @@ function Home() {
       Hello world!
     </h1>
         <Header></Header>
+        <Faq></Faq>
         <SliderHome></SliderHome>
         <CardsArea></CardsArea>
         <Editorial></Editorial>
