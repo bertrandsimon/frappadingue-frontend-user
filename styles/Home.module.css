@@ -1,4 +1,4 @@
-.main {
+/* .main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,9 +6,9 @@
   min-height: 100vh;
   padding: 0px;
 
-}
+} */
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,5 +17,5 @@
   max-width: 1366px;
   width: 100%;
   padding: 0px;
-  /* background-color: rgb(22, 22, 22); */
-}
+
+} */

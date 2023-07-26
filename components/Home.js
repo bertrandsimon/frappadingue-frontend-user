@@ -22,6 +22,7 @@ import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
 import EventCard from './common/EventCard';
 import Faq from './common/Faq';
+import Footer from './common/Footer';
 
 import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
@@ -38,11 +39,12 @@ function Home() {
       Hello world!
     </h1>
         <Header></Header>
-        <Faq></Faq>
+        {/* <Faq></Faq> */}
         <SliderHome></SliderHome>
         <CardsArea></CardsArea>
         <Editorial></Editorial>
         <Arguments></Arguments>
+        <Footer></Footer>
       </div>
         
        
