@@ -1,17 +1,12 @@
 // import styles from '../../styles/Menu.module.css';
+import { useState } from 'react';
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-  { name: 'Présentation', href: '#', current: true },
-  { name: 'Courses', href: '#', current: true },
-  { name: 'Médias', href: '#', current: false },
-  { name: 'FAQ', href: '#', current: false },
-  { name: 'Bénévoles', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-]
+
+
 
 // IMAGE IMPORT
 import Image from 'next/image';
@@ -20,7 +15,25 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+
 function Nav() {
+
+  const [currentNavItem, setCurrentNavItem] = useState(null);
+
+  const navigation = [
+    { name: 'Présentation', href: '#', current: currentNavItem === 'Présentation' },
+    { name: 'Courses', href: '#', current: currentNavItem === 'Courses' },
+    { name: 'Médias', href: '#', current: currentNavItem === 'Médias' },
+    { name: 'FAQ', href: '#', current: currentNavItem === 'FAQ' },
+    { name: 'Bénévoles', href: '#', current: currentNavItem === 'Bénévoles' },
+    { name: 'Contact', href: '#', current: currentNavItem === 'Contact' },
+  ];
+  
+  const handleClick = (itemName) => {
+    setCurrentNavItem(itemName);
+  };
+
   return (
     <Disclosure as="nav" className="bg-black sticky top-0 z-50 p-6 sm:mt-10">
       {({ open }) => (
@@ -30,7 +43,7 @@ function Nav() {
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-yellow-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
+                  <span className="sr-only">Ouvrir</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
@@ -40,17 +53,15 @@ function Nav() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <img
-                    className="h-12 w-auto"
-                    src="/images/frappadingue-logo.png"
-                    alt="Your Company"
-                  /> */}
                   <Image src="/images/frappadingue-logo.png" width={216} height={77}/>
                 </div>
                 <div className="hidden sm:ml-6 sm:block sm:pt-4 sm:pl-10">
+                 {/* desktop menu */}
                   <div className="flex space-x-4 uppercase">
                     {navigation.map((item) => (
                       <a
+                        onClick={() => handleClick(item.name)}
+                       
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -135,6 +146,7 @@ function Nav() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
+              {/* mobile menu */}
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

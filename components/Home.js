@@ -36,7 +36,7 @@ function Home() {
     <div className="">
         <Nav></Nav>
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <Volunteer></Volunteer>
+         
           <SliderHome></SliderHome>
           <CardsArea></CardsArea>
           <Editorial></Editorial>
