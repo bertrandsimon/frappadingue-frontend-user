@@ -4,6 +4,7 @@ import { ChevronUpIcon } from '@heroicons/react/20/solid'
 function Faq() {
   return (
     <div className="w-full px-4 pt-16">
+   
     <div className="mx-auto w-full max-w-md rounded-2xl bg-black p-2">
 
       <Disclosure>

@@ -33,23 +33,25 @@ import styles from '../styles/Home.module.css';
 
 function Home() {
   return (
-    <div className={styles.main}>
-      
-      <div className={styles.container}>
+    <div className="">
         <Nav></Nav>
-        <Header></Header>
-        <Volunteer></Volunteer>
-        <SliderHome></SliderHome>
-        <CardsArea></CardsArea>
-        <Editorial></Editorial>
-        <Arguments></Arguments>
-        <Footer></Footer>
-      </div>
-        
+        <main className="container mx-auto sm:px-6 lg:px-8">
+          <Volunteer></Volunteer>
+          <SliderHome></SliderHome>
+          <CardsArea></CardsArea>
+          <Editorial></Editorial>
+          <Arguments></Arguments>
+        </main>
        
-      
-      
+        <Footer></Footer>
     </div>
+    // <div className={styles.main}>
+      
+    //   <div className={styles.container}>
+     
+    //   </div>
+      
+    // </div>
   );
 }
 

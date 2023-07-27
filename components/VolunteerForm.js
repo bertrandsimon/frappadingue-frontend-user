@@ -1,6 +1,20 @@
+import { useState, useEffect } from 'react';
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 function VolunteerForm() {
+
+  const [events,SetEvents] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/events/allEvents')
+    .then(res => res.json())
+    .then( data => { SetEvents(data.all) } )
+  }, []);
+
+
+  useEffect(() => {
+   console.log('events:', events);
+  }, [events]);
 
   return (
     <form>
@@ -9,7 +23,8 @@ function VolunteerForm() {
 
       <div className="border-b border-white/10 pb-12 mt-12">
         <h2 className="text-base font-semibold leading-7 text-white">Formulaire de demande</h2>
-        <p className="mt-1 text-sm leading-6 text-gray-400"> A remplir pour devnir bénévole</p>
+       
+        <p className="mt-1 text-sm leading-6 text-gray-400"> A remplir pour devenir bénévole</p>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div className="sm:col-span-3">
@@ -63,15 +78,14 @@ function VolunteerForm() {
               Choix de la course
             </label>
             <div className="mt-2">
+            
               <select
                 id="country"
                 name="country"
                 autoComplete="country-name"
                 className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 [&_*]:text-black"
               >
-                <option>Course 1</option>
-                <option>Course 2</option>
-                <option>Course 3</option>
+               {events.map( (event) => (<option key={event.name} name={event.name}>{event.name}</option>))}
               </select>
             </div>
           </div>

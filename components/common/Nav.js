@@ -2,7 +2,7 @@
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Courses', href: '#', current: true },
@@ -11,7 +11,6 @@ const navigation = [
   { name: 'Bénévoles', href: '#', current: false },
   { name: 'Contact', href: '#', current: false },
 ]
-
 
 // IMAGE IMPORT
 import Image from 'next/image';
@@ -22,7 +21,7 @@ function classNames(...classes) {
 
 function Nav() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 sticky top-0 z-50 p-5">
+    <Disclosure as="nav" className="bg-black sticky top-0 z-50 p-6 sm:mt-10">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -40,21 +39,22 @@ function Nav() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  {/* <img
+                    className="h-12 w-auto"
+                    src="/images/frappadingue-logo.png"
                     alt="Your Company"
-                  />
+                  /> */}
+                  <Image src="/images/frappadingue-logo.png" width={216} height={77}/>
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:ml-6 sm:block sm:pt-4 sm:pl-10">
+                  <div className="flex space-x-4 uppercase">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current ? 'bg-yellow-400 text-black' : 'text-gray-300 hover:bg-yellow-400 hover:text-black',
+                          'rounded-md px-3 py-2 text-lg font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -67,10 +67,10 @@ function Nav() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full  p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
@@ -101,7 +101,7 @@ function Nav() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Your Profile
+                            Votre compte
                           </a>
                         )}
                       </Menu.Item>
@@ -111,7 +111,7 @@ function Nav() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Settings
+                            Infos
                           </a>
                         )}
                       </Menu.Item>
@@ -121,7 +121,7 @@ function Nav() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Sign out
+                            Deconnection
                           </a>
                         )}
                       </Menu.Item>
