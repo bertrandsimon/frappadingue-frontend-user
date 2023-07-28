@@ -1,37 +1,28 @@
 import styles from '../../styles/Arguments.module.css';
 
-// IMAGE IMPORT
-import Image from 'next/image';
-
-// FONT AWESOME IMPORT EXAMPLE
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 import ArgumentCard from './ArgumentCard';
 
 
 function Arguments() {
+
+  const argumentsContent = [
+    {title1: 'test', title2: 'test', content: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'},
+    {title1: 'test2', title2: 'test', content: 'lfsdconsectetur adipisicfslit. Quisquam, voluptatum.'},
+    {title1: 'test2', title2: 'test', content: 'lfsdconsectetur adipisicfslit. Quisquam, voluptatum.'},
+    {title1: 'test2', title2: 'test', content: 'lfsdconsectetur adipisicfslit. Quisquam, voluptatum.'},
+    {title1: 'test2', title2: 'test', content: 'lfsdconsectetur adipisicfslit. Quisquam, voluptatum.'},
+  ];
+
+  const argumentsZone = argumentsContent.map((item) => (<ArgumentCard title1={item.title1} title2={item.title2} content={item.content}/>))
+
   return (
     <div className={styles.container}>
-      <ArgumentCard/>
-      <ArgumentCard/>
-      <ArgumentCard/>
-      <ArgumentCard/>
-      <ArgumentCard/>
-      <ArgumentCard/>
-   
-      
+
+      {argumentsZone}
      
     </div>
-  //   <div className={styles.container}>
-  //     <div>lorem dqshkd hqsk dhqskjqhs jkdhjkqhd sqkjhdsqjkhds jkqhds kjh</div>
-  //     <div>lorem dqshkd hqsk dhqskjqhs jkdhjkqhd sqkjhdsqjkhds jkqhds kjh</div>
-  //     <div>lorem dqshkd hqsk dhqskjqhs jkdhjkqhd sqkjhdsqjkhds jkqhds kjh</div>
-  //     <div>lorem dqshkd hqsk dhqskjqhs jkdhjkqhd sqkjhdsqjkhds jkqhds kjh</div>
 
-     
-    
-  //  </div>
    
   );
 }
