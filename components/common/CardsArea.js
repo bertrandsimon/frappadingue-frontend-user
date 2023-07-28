@@ -10,24 +10,24 @@ function CardsArea() {
   return (
     
 
-    <div class="flex flex-wrap flex-row justify-center">
+    <div className="flex flex-wrap flex-row justify-center sm:-mt-16 pr-8 pl-8">
 
-    <div class="w-full sm:basis-1/4 text-center mx-auto flex flex-column items-center justify-center" height={346}>
+    <div className="w-full sm:basis-1/4 text-center mx-auto flex flex-column items-center justify-center pb-6" height={346}>
       <div className={styles.coursesTxt}>
-        <h1 class="pb-6">Les prochaines<br /><span className='yellow'>courses</span></h1>
+        <h1 className="pb-6">Les prochaines<br /><span className='yellow'>courses</span></h1>
         <Button variant="outlined" className='whiteBtn'>toutes les courses</Button>
       </div>
     </div>
   
-    <div class="w-full sm:basis-1/4 mx-auto flex items-center justify-center">
+    <div className="w-full sm:basis-1/4 mx-auto flex items-center justify-center">
       <Image src="/images/event2.png" width={270} height={346} />
     </div>
   
-    <div class="w-full sm:basis-1/4 mx-auto flex items-center justify-center">
+    <div className="w-full sm:basis-1/4 mx-auto flex items-center justify-center">
       <Image src="/images/event2.png" width={270} height={346} />
     </div>
   
-    <div class="w-full sm:basis-1/4 mx-auto flex items-center justify-center">
+    <div className="w-full sm:basis-1/4 mx-auto flex items-center justify-center">
       <Image src="/images/event2.png" width={270} height={346} />
     </div>
   

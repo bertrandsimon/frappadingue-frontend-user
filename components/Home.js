@@ -45,13 +45,7 @@ function Home() {
        
         <Footer></Footer>
     </div>
-    // <div className={styles.main}>
-      
-    //   <div className={styles.container}>
-     
-    //   </div>
-      
-    // </div>
+
   );
 }
 
