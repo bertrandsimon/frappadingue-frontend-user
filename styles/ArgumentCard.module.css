@@ -12,7 +12,9 @@
     background-size: cover;
 }
 
-
+.content {
+    white-space: pre-line; /* or pre-wrap */
+  }
 /* .container{
     background: url('/images/banner.jpg');
     border-radius: 10px 10px 0px 0px;

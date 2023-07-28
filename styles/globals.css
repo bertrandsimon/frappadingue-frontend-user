@@ -20,6 +20,8 @@ body {
 .yellow {color:#FFE000;}
 .grey {color:#818181}
 .whiteBtn {color: white !important; border-color: #ffffff !important;}
+.whiteBtn:hover {color: black !important; border-color: #FFE000 !important; background-color: #FFE000 !important;}
+
 
 h1,h2,h3,h4,h5,h6 {
   margin: 0; 

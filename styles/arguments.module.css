@@ -5,9 +5,11 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-   
     flex-wrap: wrap;
-    
+    background: url('/images/argumentArea-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 .container2 {

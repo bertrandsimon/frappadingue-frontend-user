@@ -10,7 +10,10 @@ function Editorial() {
       <div className='w-full sm:basis-2/3'>
         <h1 className='up'><span className='yellow'>la frappadingue</span> c'est quoi ?</h1>
         <br />
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nostrum libero tenetur adipisci harum corporis aspernatur in itaque expedita atque inventore at tempore placeat modi repellat, vel, provident officiis voluptate.</span>
+        <span>La FRAPPADINGUE c’est une course à obstacles hors du commun :un parcours parsemé d’embûches, de passages d’échelles, de ponts de singe, de filets à grimper, de tunnels à franchir, de boue et bien plus encore…
+        <br /><br />
+        Sur un parcours de 5 à 12km, une quarantaine d’obstacles viendra mettre à rude épreuve sportifs aguerris et sportifs d’un jour.
+        Chaque muscle sera mis à contribution, avec pour seul objectif, pouvoir dire : « J’y étais et j’ai terminé ! »</span>
       </div>
     </div>
   );

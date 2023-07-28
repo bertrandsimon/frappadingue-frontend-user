@@ -8,7 +8,7 @@ function ArgumentCard(props) {
   return (
     <div className={styles.container}>
       <h5 className='up'><span className='yellow'>{props.title1}</span> {props.title2}</h5> 
-      <span>{props.content}</span>
+      <span className={styles.content}>{props.content}</span>
     </div>
   );
 }
