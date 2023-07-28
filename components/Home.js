@@ -10,6 +10,8 @@ import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
 import Pricing from './common/Pricing';
 import Stats from './common/Stats';
+import Pattern from './common/Pattern';
+import Banner from './common/Banner';
 
 import styles from '../styles/Home.module.css';
 
@@ -18,7 +20,8 @@ function Home() {
     <div className="">
         <Nav></Nav>
         <main className="container mx-auto sm:px-6 lg:px-8">
-
+          <Pattern></Pattern>
+          <Banner></Banner>
           <SliderHome></SliderHome>
           <CardsArea></CardsArea>
           <Stats></Stats>
