@@ -9,6 +9,7 @@ import Footer from './common/Footer';
 import Editorial from './homepage/Editorial';
 import Arguments from './common/Arguments';
 import Pricing from './common/Pricing';
+import Stats from './common/Stats';
 
 import styles from '../styles/Home.module.css';
 
@@ -20,6 +21,7 @@ function Home() {
 
           <SliderHome></SliderHome>
           <CardsArea></CardsArea>
+          <Stats></Stats>
           <Pricing></Pricing>
           <Editorial></Editorial>
           <Arguments></Arguments>
