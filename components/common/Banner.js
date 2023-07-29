@@ -1,5 +1,7 @@
 import styles from '../../styles/Banner.module.css';
 
+import MiniSlider from './MiniSlider';
+
 // IMAGE IMPORT
 import Image from 'next/image';
 
@@ -7,11 +9,14 @@ import Image from 'next/image';
 
 
 function Banner() {
+  
+  
+
   return (
    
     <div className={styles.container}>
       <div className='grid grid-cols-3 gap-4 w-full h-full'>
-        <div className='col-span-1 flex justify-center items-center'>TEST</div>
+        <div className='col-span-1 flex justify-end items-center h-full'><MiniSlider/></div>
         <div className='col-span-2 flex justify-center items-center flex-col drop-shadow-md'>
           <div className={styles.bannerTitle1}>la frappadingue</div>
           <div className={styles.bannerTitle2}>accessible à tous sans exception</div>
