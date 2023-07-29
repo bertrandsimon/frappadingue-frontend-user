@@ -22,7 +22,7 @@ function MiniSlider() {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-  
+
   const handleNext = () => {
     setCurrentImgIndex((prevIndex) => (prevIndex + 1) % images.length);
 
@@ -39,9 +39,9 @@ function MiniSlider() {
 
   return (
     <div className={styles.container}>
-      <div onClick={handlePrev}><ChevronLeftIcon className="w-6 h-6 text-black" /></div>
+      <div onClick={handlePrev} className='cursor-pointer flex items-center pt-40 h-full'><ChevronLeftIcon className="w-6 h-6 text-black hover:text-white" /></div>
       <Image src={currentImage.src} width={488} height={404} />
-      <div onClick={handleNext}><ChevronRightIcon className="w-6 h-6 text-black" /></div>
+      <div onClick={handleNext} className='cursor-pointer flex items-center pt-40 h-full'><ChevronRightIcon className="w-6 h-6 text-black hover:text-white" /></div>
     </div>
   );
 }
