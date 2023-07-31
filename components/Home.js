@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { hideArticle } from '../reducers/hiddenArticles';
 
-import CartSummary from './shop/CartSummary';
+import OrderSummary from './shop/OrderSummary';
 import Nav from './common/Nav';
 import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
@@ -23,7 +23,7 @@ function Home() {
     <div className="">
         <Nav></Nav>
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <CartSummary></CartSummary>
+          <OrderSummary></OrderSummary>
           <Pattern></Pattern>
           <Banner></Banner>
           <SliderHome></SliderHome>
