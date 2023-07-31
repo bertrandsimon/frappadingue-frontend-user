@@ -1,14 +1,13 @@
 
-import Nav from '../common/Nav';
-import SliderHome from '../common/SliderHome';
-import CardsArea from '../common/CardsArea';
-import Footer from '../common/Footer';
-import Editorial from '../homepage/Editorial';
-import Arguments from '../common/Arguments';
-import Pricing from '../common/Pricing';
-import Stats from '../common/Stats';
-import Pattern from '../common/Pattern';
-import Banner from '../common/Banner';
+import Nav from "../common/Nav";
+import Footer from "../common/Footer";
+import Pattern from "../common/Pattern";
+import Banner from "../common/Banner";
+import CardsArea from "../common/CardsArea";
+import Stats from "../common/Stats";
+import Pricing from "../common/Pricing";
+import Editorial from "../homepage/Editorial";
+import Arguments from "../common/Arguments";
 
 
 function CoursesComponentPage() {

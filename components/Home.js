@@ -24,11 +24,7 @@ function Home() {
     <div className="">
         <Nav></Nav>
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <Photos></Photos>
-          <OrderSummary></OrderSummary>
-          <Pattern></Pattern>
           <Banner></Banner>
-          <SliderHome></SliderHome>
           <CardsArea></CardsArea>
           <Stats></Stats>
           <Pricing></Pricing>

@@ -18,7 +18,7 @@ function Nav() {
     { name: 'Courses', href: '/CoursesPage', current: currentNavItem === 'Courses' },
     { name: 'Médias', href: '/MediasPage', current: currentNavItem === 'Médias' },
     { name: 'FAQ', href: '/FaqPage', current: currentNavItem === 'FAQ' },
-    { name: 'Bénévoles', href: '/BenevolePage', current: currentNavItem === 'Bénévoles' },
+    { name: 'Bénévoles', href: '/BenevolesPage', current: currentNavItem === 'Bénévoles' },
     { name: 'Contact', href: '/ContactPage', current: currentNavItem === 'Contact' },
   ];
 
