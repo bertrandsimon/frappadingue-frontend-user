@@ -1,7 +1,9 @@
+import styles from '../styles/Home.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { hideArticle } from '../reducers/hiddenArticles';
 
+import CartSummary from './shop/CartSummary';
 import Nav from './common/Nav';
 import SliderHome from './common/SliderHome';
 import CardsArea from './common/CardsArea';
@@ -13,13 +15,15 @@ import Stats from './common/Stats';
 import Pattern from './common/Pattern';
 import Banner from './common/Banner';
 
-import styles from '../styles/Home.module.css';
+
+
 
 function Home() {
   return (
     <div className="">
         <Nav></Nav>
         <main className="container mx-auto sm:px-6 lg:px-8">
+          <CartSummary></CartSummary>
           <Pattern></Pattern>
           <Banner></Banner>
           <SliderHome></SliderHome>
@@ -28,6 +32,7 @@ function Home() {
           <Pricing></Pricing>
           <Editorial></Editorial>
           <Arguments></Arguments>
+          
         </main>
        
         <Footer></Footer>

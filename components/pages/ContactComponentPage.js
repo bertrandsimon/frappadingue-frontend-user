@@ -11,13 +11,13 @@ import Pattern from '../common/Pattern';
 import Banner from '../common/Banner';
 
 
-function Courses() {
+function ContactComponentPage() {
   return (
     <div>
         <Nav></Nav>
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>COURSES</h1>
+          <h1>Contact</h1>
           <Pattern></Pattern>
           <Banner></Banner>
           <SliderHome></SliderHome>
@@ -34,4 +34,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+export default ContactComponentPage;

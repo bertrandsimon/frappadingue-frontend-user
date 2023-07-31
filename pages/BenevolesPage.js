@@ -1,7 +1,7 @@
-import Benevoles from "../components/pages/Benevoles";
+import BenevolesComponentPage from "../components/pages/BenevolesComponentPage";
 
 function BenevolesPage() {
-  return <Benevoles />;
+  return <BenevolesComponentPage />;
 }
 
 export default BenevolesPage;

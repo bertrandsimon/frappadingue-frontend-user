@@ -1,7 +1,7 @@
-import Faq from "../components/pages/Faq";
+import FaqComponentPage from "../components/pages/FaqComponentPage";
 
 function FaqPage() {
-  return <Faq />;
+  return <FaqComponentPage />;
 }
 
 export default FaqPage;

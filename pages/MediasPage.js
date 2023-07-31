@@ -1,7 +1,7 @@
-import Medias from "../components/pages/Medias";
+import MediasComponentPage from "../components/pages/MediasComponentPage";
 
 function MediasPage() {
-  return <Medias />;
+  return <MediasComponentPage />;
 }
 
 export default MediasPage;

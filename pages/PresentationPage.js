@@ -1,7 +1,7 @@
-import Presentation from '../components/pages/Presentation';
+import PresentationComponentPage from "../components/pages/PresentationComponentPage";
 
 function PresentationPage() {
-  return <Presentation />;
+  return <PresentationComponentPage />;
 }
 
 export default PresentationPage;

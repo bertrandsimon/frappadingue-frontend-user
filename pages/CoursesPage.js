@@ -1,7 +1,7 @@
-import Courses from "../components/pages/Courses";
+import CoursesComponentPage from "../components/pages/CoursesComponentPage";
 
 function CoursesPage() {
-  return <Courses />;
+  return <CoursesComponentPage />;
 }
 
 export default CoursesPage;

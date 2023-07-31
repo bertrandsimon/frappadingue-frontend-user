@@ -11,7 +11,7 @@ import Pattern from '../common/Pattern';
 import Banner from '../common/Banner';
 
 
-function Benevoles() {
+function BenevolesComponentPage() {
   return (
     <div>
         <Nav></Nav>
@@ -34,4 +34,4 @@ function Benevoles() {
   );
 }
 
-export default Benevoles;
+export default BenevolesComponentPage;

@@ -11,7 +11,7 @@ import Pattern from '../common/Pattern';
 import Banner from '../common/Banner';
 
 
-function Medias() {
+function MediasComponentPage() {
   return (
     <div>
         <Nav></Nav>
@@ -34,4 +34,4 @@ function Medias() {
   );
 }
 
-export default Medias;
+export default MediasComponentPage;

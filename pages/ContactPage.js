@@ -1,7 +1,7 @@
-import Contact from "../components/pages/Contact";
+import ContactComponentPage from "../components/pages/ContactComponentPage";
 
 function ContactPage() {
-  return <Contact />;
+  return <ContactComponentPage />;
 }
 
 export default ContactPage;
