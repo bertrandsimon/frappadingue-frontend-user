@@ -10,7 +10,7 @@ function CardsArea() {
   return (
     
 
-    <div className="flex flex-wrap flex-row justify-center sm:-mt-16 pr-8 pl-8">
+    <div className="flex flex-wrap flex-row justify-center mt-20 sm:-mt-16 pr-8 pl-8">
 
     <div className="w-full sm:basis-1/4 text-center mx-auto flex flex-column items-center justify-center pb-6" height={346}>
       <div className={styles.coursesTxt}>

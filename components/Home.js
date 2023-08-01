@@ -22,8 +22,9 @@ import Banner from './common/Banner';
 function Home() {
   return (
     <div className="">
-        <Nav></Nav>
+        
         <main className="container mx-auto sm:px-6 lg:px-8">
+          <Nav></Nav>
           <Banner></Banner>
           <CardsArea></CardsArea>
           <Stats></Stats>

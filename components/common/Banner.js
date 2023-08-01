@@ -15,12 +15,18 @@ function Banner() {
   return (
    
     <div className={styles.container}>
-      <div className='grid grid-cols-3 gap-4 w-full h-full'>
-        <div className='col-span-1 flex justify-end items-center h-full'><MiniSlider/></div>
-        <div className='col-span-2 flex justify-center items-center flex-col drop-shadow-md'>
-          <div className={styles.bannerTitle1}>la frappadingue</div>
-          <div className={styles.bannerTitle2}>accessible à tous sans exception</div>
-          </div>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 pr-1 h-96 sm:h-80 sm:m-1 mb-20 pt-20 sm:pt-0'>
+        <div className='sm:col-span-1 flex justify-end items-center h-64 sm:h-full'><MiniSlider/></div>
+        {/* desktop */}
+        <div className='hidden sm:visible sm:col-span-2 sm:flex justify-center text-center items-center flex-col mb-20 sm:mb-0'>
+          <div className='drop-shadow-md text-4xl uppercase font-extrabold'>la frappadingue (desk)</div>
+          <div className='drop-shadow-md text-2xl uppercase font-medium'>accessible à tous sans exception</div>
+        </div>
+        {/* mobile */}
+        <div className='sm:hidden 2 flex justify-center text-center items-center flex-col mb-20 '>
+          <div className='drop-shadow-md text-4xl uppercase font-extrabold'>la frappadingue (mob)</div>
+          <div className='drop-shadow-md text-2xl uppercase font-medium'>accessible à tous sans exception</div>
+        </div>
       </div>
     </div>
       
