@@ -1,0 +1,18 @@
+.container{
+    max-width: 1335px;
+
+}
+
+.yellowBlock {
+    border-radius: 6px;
+    background: #FFE000;;
+    width: 270px;
+    height: 80px;
+    color:black !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}

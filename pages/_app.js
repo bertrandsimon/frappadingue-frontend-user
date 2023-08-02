@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';

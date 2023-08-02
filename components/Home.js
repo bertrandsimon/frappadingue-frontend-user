@@ -15,7 +15,7 @@ import Pricing from './common/Pricing';
 import Stats from './common/Stats';
 import Pattern from './common/Pattern';
 import Banner from './common/Banner';
-
+import SingleEvent from './event/SingleEvent';
 
 
 
@@ -25,7 +25,9 @@ function Home() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
+          <SingleEvent></SingleEvent>
           <Banner></Banner>
+          
           <CardsArea></CardsArea>
           <Stats></Stats>
           <Pricing></Pricing>

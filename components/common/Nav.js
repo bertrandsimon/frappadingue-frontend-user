@@ -50,7 +50,7 @@ function Nav() {
                           item.current
                             ? 'bg-yellow-400 text-black'
                             : 'text-gray-300 hover:bg-yellow-400 hover:text-black',
-                          'rounded-md px-3 py-2 text-lg font-medium'
+                          'rounded-md px-3 py-2 text-lg font-extralight'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
