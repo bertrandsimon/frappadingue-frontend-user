@@ -144,14 +144,34 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
   return (
    
     <div>
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>INFOS</span> GENERALES</h2>
 
-    <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>INFOS</span> GENERALES</h2>
-    
-    {infoGeneralesCard}
+      <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
 
-    <h2 className='pl-8 pt-10 text-2xl'><span className='yellow'>INFOS</span> PRATIQUES</h2>
+        <div className='col-span-1 flex justify-center items-center'>
+        <Image src="/images/events/info1.png" width={400} height={326}/>
+        </div>
 
-    {infoPratiquesCard}
+        <div className='col-span-2'> 
+          {infoGeneralesCard}
+        </div>
+
+      </div>
+
+      <h2 className='pl-8 pt-10 text-2xl'><span className='yellow'>INFOS</span> PRATIQUES</h2>
+
+      <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+
+        <div className='col-span-1 flex justify-center items-center'>
+        <Image src="/images/events/info2.png" width={400} height={326}/>
+        </div>
+
+        <div className='col-span-2'> 
+          {infoPratiquesCard}
+        </div>
+
+      </div>
+
 
     </div>
       
