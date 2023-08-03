@@ -34,14 +34,21 @@ function TitleSingleEvent() {
           <span>Edition 2023</span>
         </div>
 
-        <div className='flex flex-row pl-10 pt-10 justify-between items-center max-w-2xl'>
+        <div className='flex flex-col sm:flex-row pl-10 pt-10 justify-between items-center max-w-3xl'>
 
           <Button variant="outlined" className='whiteBtn'>Inscription</Button>
+
           <div className={styles.yellowBlock}>
             <div className='font-poppins font-bold'>Format S : 5 à 6 kms</div>
             <div className='pt-2 text-xs'>15 obstacles | à partir de 16 ans</div>  
           </div>
-          <div>Format L : 10 à 12 kms</div>
+
+          <div className={styles.yellowBlock}>
+            <div className='font-poppins font-bold'>Format L : 10 à 12 kms</div>
+            <div className='pt-2 text-xs'>40 obstacles | à partir de 16 ans</div>  
+          </div>
+
+         
 
         </div>
       </div>

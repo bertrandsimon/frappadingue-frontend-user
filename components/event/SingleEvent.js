@@ -2,7 +2,8 @@ import styles from '../../styles/SingleEVent.module.css';
 
 import BannerSingleEvent from './BannerSingleEvent';
 import TitleSingleEvent from './TitleSingleEvent';
-
+import Pricing from '../common/Pricing';
+import InfoArea from './InfoAreaEvent';
 
 // IMAGE IMPORT
 import Image from 'next/image';
@@ -12,7 +13,10 @@ function SingleEvent() {
     <div>
       <BannerSingleEvent></BannerSingleEvent>
       <TitleSingleEvent></TitleSingleEvent>
-      <h1>SINGLE EVENT</h1>
+      <InfoArea></InfoArea>
+      <Pricing></Pricing>
+      
+
     </div>
   );
 }
