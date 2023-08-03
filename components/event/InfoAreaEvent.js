@@ -11,7 +11,7 @@ function InfoArea() {
   
   const infos = [
     {title:'Ce que comprend ton inscription', 
-    description: 'lorem fdshkfdskh kdsjfhjkf ',
+    tag: 'generales',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Une course de dingue avec une ambiance de folie',
@@ -26,7 +26,7 @@ function InfoArea() {
     ],
     },
     {title:'Ton équipe', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'generales',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Choisis ton nom d’équipe et renseigne le lors de ton inscription dans la case « nom d’équipe ». Un nom d’équipe identique vous permet d’être automatiquement réunis dans une même vague de départ (peu importe votre date d’inscription et la distance choisie).',
@@ -35,7 +35,7 @@ function InfoArea() {
     ],
     },
     {title:'Entreprise / Team Building', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'generales',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       `Tu souhaites rassembler tes collègues autour d’un événement sportif inédit? 
@@ -48,7 +48,7 @@ function InfoArea() {
     ],
     },
     {title:'Documents importants', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'generales',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Certificat médical',
@@ -56,7 +56,7 @@ function InfoArea() {
     ],
     },
     {title:'Assurance Annulation', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'generales',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       `Une assurance annulation vous est proposée au tarif de 10 euros (à souscrire au moment de l’inscription uniquement).
@@ -65,7 +65,7 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     ],
     },
     {title:'Assurance changement de nom', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'generales',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       `Une option changement de nom est disponible au tarif de 10€ (virement).
@@ -80,7 +80,7 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     ],
     },
     {title:'Retrait des dossards', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'pratiques',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Une pièce d’identité valide',
@@ -90,7 +90,7 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     ],
     },  
     {title:'Horaires', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'pratiques',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       '8H00 : Ouverture du retrait des dossards et des consignes',
@@ -100,7 +100,7 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     ],
     },
     {title:'Départ / Arrivée', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'pratiques',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Soit au niveau du sas de départ 30min avant le départ de ta vague. De la musique et un animateur t’attendront pour te divertir et te mettre dans l’ambiance Frappadingue !',
@@ -108,7 +108,7 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     ],
     },
     {title:'Vagues de départ', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'pratiques',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Les vagues sont constituées d’environ 150 personnes avec des départs tous les 15min',
@@ -118,14 +118,14 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     ],
     },
     {title:'Consignes', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'pratiques',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Tu pourras déposer tes clés de voiture et tes affaires dans notre espace consigne pour les récupérer après la course.',
     ],
     },
     {title:'Douches', 
-    description: 'lfdsgfdgf gsjfhjkf ',
+    tag: 'pratiques',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
       'Des douches FROIDES 🙂 (dans un gymnase) seront à ta disposition pour te laver après la course, donc n’oublie pas de ramener des affaires de rechange et du gel douche !',
@@ -133,13 +133,25 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
     },
   ]
 
-  const infoCard = infos.map((info) => (<InfoCard title={info.title} description={info.description} img={info.img} bulletPoints={info.bulletPoints}></InfoCard>))
+  const infosGenerales = infos.filter(info => info.tag === 'generales')
+  const infosPratiques = infos.filter(info => info.tag === 'pratiques')
+  
+
+  const infoGeneralesCard = infosGenerales.map((info) => (<InfoCard title={info.title} img={info.img} bulletPoints={info.bulletPoints}></InfoCard>))
+
+  const infoPratiquesCard = infosPratiques.map((info) => (<InfoCard title={info.title} img={info.img} bulletPoints={info.bulletPoints}></InfoCard>))
 
   return (
    
     <div>
+
+    <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>INFOS</span> GENERALES</h2>
     
-    {infoCard}
+    {infoGeneralesCard}
+
+    <h2 className='pl-8 pt-10 text-2xl'><span className='yellow'>INFOS</span> PRATIQUES</h2>
+
+    {infoPratiquesCard}
 
     </div>
       
