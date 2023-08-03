@@ -40,106 +40,144 @@ function Faq() {
     {title:'Comment inscrire une entreprise',  
     tag: 'inscription',
     bulletPoints: [
-      'Samedi (J-1) : 15h – 19h',
-      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
+      `Si paiement par CB
+
+      Dans l’onglet inscription
+      
+      Choisis la ville, le kilométrage et le nombre de places
+      Remplis le formulaire, renseigne correctement le nom d’équipe et utilise le paiement sécurisé.
+      Commence l’entrainement !`,
+      `Si paiement par chèque
+
+      Demande de devis à contact@frappadingue.fr
+      Infos à nous communiquer : adresse de facturation, mode de règlement, nombre d’inscrits, ville sélectionnées, choix du kilométrage, tee-shirt ou non
+      Validation du devis en retour d’email + envoie de la facture
+      Règlement : chèque ou virement (ordre > association La Salicorne)
+       
+      
+      Dès réception du paiement, nous t’enverrons des éléments pour que les membres de ton équipe puissent finaliser leurs inscriptions en ligne via des codes spécifiques ou nous te demanderons le fichier des inscrits;
+      Commence l’entrainement !`,
+      'Si tu as des questions > 06 28 93 10 50',
     ],
     },
     {title:`Le nom d'équipe`, 
     tag: 'inscription',
     bulletPoints: [
-      'Samedi (J-1) : 15h – 19h',
-      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
+      'Le nom d’équipe permet de vous réunir dans une même vague de départ.',
+      'Vous pouvez le modifier par email avec vos nom/prénom/nom d’équipe et préciser l’événement concerné.',
     ],
     },
     {title:'Que comprend mon inscription ?',  
     tag: 'inscription',
     bulletPoints: [
-      'Samedi (J-1) : 15h – 19h',
-      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
+      'Ta participation à la Frappadingue',
+      '1 ou 2 ravitaillements avec des surprise selon le kilométrage sélectionné',
+      'La bière à l’arrivée',
+      'La médaille Finisher',
+      'La logistique nécessaire à l’organisation',
     ],
     },
     {title:`Ai-je besoin d'un certificat médical ?`, 
     tag: 'certificat',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Oui',
     ],
     },
     {title:'Pourquoi le certificat médical est nécessaire ?', 
     tag: 'certificat',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'La Frappadingue est un événement sportif et nous devons nous assurer que ta condition physique te permette l’effort requis. L’épreuve comporte notamment des passages d’obstacles de plus de 2m, du cardio, de l’eau 🙂 alors il est nécessaire d’être en forme !',
     ],
     },
     {title:'Quel certificat médical ou quelle license ?', 
     tag: 'certificat',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      `Certificat médical de non-contre indication à la pratique de la course à pied en compétition de moins d’un an.
+
+      Certificat médical type >>  MODÈLE DE CERTIFICAT MÉDICAL
+      
+      Une licence sportive pourra être acceptée. (nous fournir une photocopie).`,
     ],
     },
     {title:'Quand est le retrait des dossards ?', 
     tag: 'retrait',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Samedi (J-1) : 15h – 19h',
+      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
     ],
     },
     {title:'Documents nécessaires ?', 
     tag: 'retrait',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Un certificat médical (type ou course à pied)',
+      'La copie d’une licence sportive en cours de validité',
+      'Une pièce d’identité',
+      'Une attestation si tu es mineur !',
     ],
     },
     {title:'Un retrait groupé ?', 
     tag: 'retrait',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Apporte la copie de la pièce d’identité et le certif de chacun 🙂',
     ],
     },
     {title:'Annulation avec assurance', 
     tag: 'annulation',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      `Le remboursement est possible: sans justificatif à 100% jusqu’au samedi minuit qui précède l’événement (J-8)
+
+      Le remboursement entre la date indiquée ci-dessus et le  jeudi minuit (J-3) sera fait à 50%, après cette date plus aucun remboursement ne sera pris en compte
+      
+      Toute demande de remboursement ne sera acceptée que si elle est faite par mail à contact@frappadingue.fr
+      
+      Pour les conditions de l’assurance annulation, tu peux consulter: LE RÈGLEMENT`,
+   
     ],
     },
     {title:'Annulation sans assurance', 
     tag: 'annulation',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      `Tu n’as pas opté pour l’assurance ANNULATION au moment de ton inscription.
+
+      L’inscription n’est pas remboursable, tu peux demander par email un changement de nom pour un montant de 5€`,
+
     ],
     },
     {title:'Changement de nom', 
     tag: 'annulation',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      `Sur place
+      - Accord cédant
+      - Nom-prénom du repreneur
+      - Certificat médical du repreneur
+      
+      > Montant : 5€`,
     ],
     },
     {title:'Lieu / heure de départ', 
     tag: 'jour',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      `Retrouve les infos pratiques sur la page de l’événement, bouton tout en haut >> INFOS PRATIQUES <<
+
+      > Lieu précis à retrouver sur la page de l’événement
+      
+      > Horaires : vagues – entrée dans le sas 30 min avant l’heure de votre vague – échauffement 15 min avant l’heure de votre vague`,
     ],
     },
     {title:'Equipement', 
     tag: 'jour',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Les gants, type mitaine vélo, sont toujours appréciables et vous les apprécierez dans les rampings ou les grimper de corde.',
+      'Eviter les déguisements susceptibles de se charger d’eau, surtout si le parcours comporte une traversée d’eau.',
+      'Privilégiez un legging pour limiter les égratignures',
     ],
     },
     {title:'Vestiaire / Consigne', 
     tag: 'jour',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Pas de vestiaires',
+      'Consigne gratuite à disposition sur le village Frappadingue',
+      'Possibilité de laisser un sac fermé ou vos clés de voiture',
     ],
     },
     {title:'Douches', 
@@ -152,36 +190,34 @@ function Faq() {
     {title:'Toilettes', 
     tag: 'jour',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Oui, avec un système de rampes de douches…',
+      'Cependant, on ne garantit pas qu’il y aura de l’eau chaude pour tout le monde!!!',
     ],
     },
     {title:'Durée épreuve', 
     tag: 'jour',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'En moyenne 2h30/3h00',
     ],
     },
     {title:'Parkings', 
     tag: 'jour',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Les parkings (gratuits) seront référencés sur les infos pratiques – sur chaque page événement',
     ],
     },
     {title:'Des courbatures ?', 
     tag: 'apres',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      'Evidemment !',
     ],
     },
     {title:'Photos / Vidéos', 
     tag: 'apres',
     bulletPoints: [
-      'Une course de dingue avec une ambiance de folie',
-      'Challenge S : Une quinzaine d’obstacles',
+      `Sur la page de l’événement via un lien en haut de page
+
+      Sur la page facebook dans la semaine suivant la manifestation`,
     ],
     },
   ]
