@@ -8,7 +8,7 @@ import Stats from "../common/Stats";
 import Pricing from "../common/Pricing";
 import Editorial from "../homepage/Editorial";
 import Arguments from "../common/Arguments";
-
+import Faq from "../Faq";
 
 function FaqComponentPage() {
   return (

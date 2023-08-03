@@ -1,7 +1,192 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
 
+
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 function Faq() {
+
+  const faqInfos = [
+    {title:`Comment s'inscrire ?`, 
+    tag: 'inscription',
+    bulletPoints: [
+      'Clique sur Courses',
+      'Sélectionne la ville de ton choix',
+      'Sélectionne ta distance 5/6km ou 10/12km',
+      'Remplis le formulaire',
+      'Procède au paiement',
+      'De notre côté tout est ok, à toi de commencer ton entrainement !',
+    ],
+    },
+    {title:'Et en équipe ?',  
+    tag: 'inscription',
+    bulletPoints: [
+      'Clique sur Courses',
+      'Sélectionne la ville de ton choix',
+      'Sélectionne ta distance 5/6km ou 10/12km',
+      'Remplis le formulaire',
+      'Renseigne un nom d’équipe identique à tes amis afin que vous soyez tous automatiquement réunis',
+      'Vous ne choisissez pas votre vague de départ, les vagues sont constituées dans les dernières semaines avant l’événement. En effet, cela nous permet une grande souplesse dans le regroupement des équipes',
+      'Tu te sens fort et désires faire un chrono et donc partir en vague 1, indique en nom d’équipe ELITE ou ajoute le nom à ton nom d’équipe (par ex: « les fantassins vague 1 » ou les « fantassins vague élite »)',
+      'Tu as une heure de préférence pour partir, indique en nom d’équipe VAGUE xx ou ajoute le nom à ton nom d’équipe (par ex: « les fantassins vague 10h »)',
+      'De notre côté tout est ok, à toi de commencer ton entrainement !',
+      'Sache qu’à tout moment, ton (ou tes ) potes pourront intégrer ton équipe (simplement en renseignant le même nom d’équipe que toi) et vous partirez ainsi ensemble.',
+    ],
+    },
+    {title:'Comment inscrire une entreprise',  
+    tag: 'inscription',
+    bulletPoints: [
+      'Samedi (J-1) : 15h – 19h',
+      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
+    ],
+    },
+    {title:`Le nom d'équipe`, 
+    tag: 'inscription',
+    bulletPoints: [
+      'Samedi (J-1) : 15h – 19h',
+      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
+    ],
+    },
+    {title:'Que comprend mon inscription ?',  
+    tag: 'inscription',
+    bulletPoints: [
+      'Samedi (J-1) : 15h – 19h',
+      'Dimanche (jour J) : à partir de 8h, jusqu’à 12h (prévoir 1h/1h30 avant l’heure de votre vague)',
+    ],
+    },
+    {title:`Ai-je besoin d'un certificat médical ?`, 
+    tag: 'certificat',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Pourquoi le certificat médical est nécessaire ?', 
+    tag: 'certificat',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Quel certificat médical ou quelle license ?', 
+    tag: 'certificat',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Quand est le retrait des dossards ?', 
+    tag: 'retrait',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Documents nécessaires ?', 
+    tag: 'retrait',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Un retrait groupé ?', 
+    tag: 'retrait',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Annulation avec assurance', 
+    tag: 'annulation',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Annulation sans assurance', 
+    tag: 'annulation',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Changement de nom', 
+    tag: 'annulation',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Lieu / heure de départ', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Equipement', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Vestiaire / Consigne', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Douches', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Toilettes', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Durée épreuve', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Parkings', 
+    tag: 'jour',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Des courbatures ?', 
+    tag: 'apres',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+    {title:'Photos / Vidéos', 
+    tag: 'apres',
+    bulletPoints: [
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+    ],
+    },
+  ]
+
+
   return (
     <div className="w-full px-4 pt-16">
    
