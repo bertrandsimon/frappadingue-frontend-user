@@ -10,76 +10,125 @@ import Button from '@mui/material/Button';
 function InfoArea() {
   
   const infos = [
-    {title:'Informations générales', 
+    {title:'Ce que comprend ton inscription', 
     description: 'lorem fdshkfdskh kdsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      'Une course de dingue avec une ambiance de folie',
+      'Challenge S : Une quinzaine d’obstacles',
+      'Challenge L : Une quarantaine d’obstacles',
+      'Un site exceptionnel choisi avec soin',
+      'Une médaille Frappadingue à l’arrivée',
+      'Un tee-shirt collector si tu en as fais le choix',
+      'Deux ravitaillements (Challenge L), un au milieu et un à la fin de la course',
+      'Une bonne bière fraîche !',
+      'Un village d’arrivée (ravitaillement, musique, transat…) pour te détendre après la course',
     ],
     },
-    {title:'Informations pratiques', 
+    {title:'Ton équipe', 
     description: 'lfdsgfdgf gsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      'Choisis ton nom d’équipe et renseigne le lors de ton inscription dans la case « nom d’équipe ». Un nom d’équipe identique vous permet d’être automatiquement réunis dans une même vague de départ (peu importe votre date d’inscription et la distance choisie).',
+      'Une équipe peut-être composée de 2 à 100 personnes',
+      'Le nom d’équipe sert à vous réunir dans une même vague de départ, même en vous inscrivant en tarif individuel, vous pouvez être intégré à une équipe.',
     ],
     },
+    {title:'Entreprise / Team Building', 
+    description: 'lfdsgfdgf gsjfhjkf ',
+    img: '/images/events/event-thumb1.jpg',
+    bulletPoints: [
+      `Tu souhaites rassembler tes collègues autour d’un événement sportif inédit? 
+      Cet événement permet de développer des notions importantes au sein de l’équipe, comme la cohésion, l’entraide, la confiance et la prise de risques. La Frappadingue est adaptée aux capacités physiques de tous les participants. Au travers de cette activité originale et stimulante, les participants font le plein d’énergie pour revenir dans leur quotidien professionnel avec plus de motivation !
+      
+      Comment faire ?
+      
+      Merci de nous joindre à contact@frappadingue.fr`,
+     
+    ],
+    },
+    {title:'Documents importants', 
+    description: 'lfdsgfdgf gsjfhjkf ',
+    img: '/images/events/event-thumb1.jpg',
+    bulletPoints: [
+      'Certificat médical',
+      'Autorisation parentale',
+    ],
+    },
+    {title:'Assurance Annulation', 
+    description: 'lfdsgfdgf gsjfhjkf ',
+    img: '/images/events/event-thumb1.jpg',
+    bulletPoints: [
+      `Une assurance annulation vous est proposée au tarif de 10 euros (à souscrire au moment de l’inscription uniquement).
+
+Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAMEDI minuit (J-8) sans aucun justificatif puis 50% jusqu’au JEUDI MINUIT (J-4) précédant l’événement.`
+    ],
+    },
+    {title:'Assurance changement de nom', 
+    description: 'lfdsgfdgf gsjfhjkf ',
+    img: '/images/events/event-thumb1.jpg',
+    bulletPoints: [
+      `Une option changement de nom est disponible au tarif de 10€ (virement).
+
+      Elle vous donne la possibilité de changer le nom de votre place jusqu’au moment du retrait des dossards.
+      
+      Procédure par mail :
+      
+      Nom, prénom + course d’inscription et accord du cédant.
+      
+      Informations générales du repren`
+    ],
+    },
+    {title:'Retrait des dossards', 
+    description: 'lfdsgfdgf gsjfhjkf ',
+    img: '/images/events/event-thumb1.jpg',
+    bulletPoints: [
+      'Une pièce d’identité valide',
+      'Ton certificat médical au format papier indiquant ton aptitude à la course à pied en compétition, de moins de 1 an OU une photocopie de ta licence sportive',
+      'A défaut > une décharge de responsabilité ICI à remplir et apporter sur place',
+      'Si tu es mineur(e), ton autorisation parentale',
+    ],
+    },  
     {title:'Horaires', 
     description: 'lfdsgfdgf gsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      '8H00 : Ouverture du retrait des dossards et des consignes',
+      '9H00 : Briefing',
+      '9H30 : Départ de la première vague',
+      'Ensuite, départs toutes les 10 minutes jusqu’à 13h',
     ],
     },
     {title:'Départ / Arrivée', 
     description: 'lfdsgfdgf gsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      'Soit au niveau du sas de départ 30min avant le départ de ta vague. De la musique et un animateur t’attendront pour te divertir et te mettre dans l’ambiance Frappadingue !',
+      'Pour l’arrivée, le village Frappadingue t’accueillera avec un espace détente, ravitaillement et un « PhotoWall » pour immortaliser ton expérience avec tes amis!',
     ],
     },
     {title:'Vagues de départ', 
     description: 'lfdsgfdgf gsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      'Les vagues sont constituées d’environ 150 personnes avec des départs tous les 15min',
+      'Inscription en équipe ou individuelle, choisis bien ton nom d’équipe, c’est grâce à lui que tu seras intégrer dans la même vague de départ que tes amis.',
+      'Inscris dans une équipe(même nom d’équipe lors de l’inscription), ne t’inquiètes pas, tout le monde partira dans la même vague !',
+      'Pour les élites, merci d’indiquer « vague Elite en nom d’équipe »',
     ],
     },
     {title:'Consignes', 
     description: 'lfdsgfdgf gsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      'Tu pourras déposer tes clés de voiture et tes affaires dans notre espace consigne pour les récupérer après la course.',
     ],
     },
     {title:'Douches', 
     description: 'lfdsgfdgf gsjfhjkf ',
     img: '/images/events/event-thumb1.jpg',
     bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
-    ],
-    },  
-    {title:'La Frappajeune', 
-    description: 'lfdsgfdgf gsjfhjkf ',
-    img: '/images/events/event-thumb1.jpg',
-    bulletPoints: [
-      'text 1',
-      'text 2',
-      'text 3',
+      'Des douches FROIDES 🙂 (dans un gymnase) seront à ta disposition pour te laver après la course, donc n’oublie pas de ramener des affaires de rechange et du gel douche !',
     ],
     },
   ]
@@ -89,8 +138,6 @@ function InfoArea() {
   return (
    
     <div>
-
-    <h1>INFOS AREA</h1>
     
     {infoCard}
 
