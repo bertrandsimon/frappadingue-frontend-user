@@ -19,7 +19,7 @@ function CoursesComponentPage() {
           <h1>COURSES</h1>
           <Pattern></Pattern>
           <Banner></Banner>
-          <SliderHome></SliderHome>
+          {/* <SliderHome></SliderHome> */}
           <CardsArea></CardsArea>
           <Stats></Stats>
           <Pricing></Pricing>
