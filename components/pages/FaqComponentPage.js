@@ -16,7 +16,6 @@ function FaqComponentPage() {
         <Nav></Nav>
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>Faq</h1>
           <Faq/>
         </main>
        

@@ -14,6 +14,27 @@ import InfoCard from './event/InfoCard';
 function Faq() {
 
   const faqInfos = [
+    {title:`La Frappadingue c'est quoi ?`, 
+    tag: 'general',
+    bulletPoints: [
+      `la Frappadingue c’est une course à obstacles, un événement fun et sportif aux allures de carnaval. Une manifestation atypique, populaire et spectaculaire pour les petits comme les grands.
+      Un événement accessible à tous pour découvrir le territoire de manière ludique.`,
+      'La première course à obstacles de France depuis 2010',
+      'Rassembler 20 000 sportifs et non sportifs chaque année',
+      'Une course sans chrono',
+      '40% de femmes',
+      'Une course qui vous fera découvrir les atouts du territoire à travers un parcours atypique',
+      'En marchant, en courant mais surtout en rigolant',
+    ],
+    },
+    {title:`Pour qui ?`, 
+    tag: 'general',
+    bulletPoints: [
+      'Hommes et femmes de plus de 16 ans',
+      'La Frappadingue est accessible à tous, tous les obstacles sont contournables, et vous pouvez tout faire en marchant !',
+      'Pour les mineurs (7/-12ans) une frappajeune est organisée la veille de chaque Frappadingue. Rdv sur la page de l’événement !',
+    ],
+    },
     {title:`Comment s'inscrire ?`, 
     tag: 'inscription',
     bulletPoints: [
@@ -225,6 +246,7 @@ function Faq() {
     },
   ]
 
+  const faqGeneral = faqInfos.filter(faqInfo => faqInfo.tag === 'general')
   const faqInscription = faqInfos.filter(faqInfo => faqInfo.tag === 'inscription')
   const faqCertificat = faqInfos.filter(faqInfo => faqInfo.tag === 'certificat')
   const faqRetrait = faqInfos.filter(faqInfo => faqInfo.tag === 'retrait')
@@ -234,26 +256,84 @@ function Faq() {
  
   
 
+  const faqGeneralCard = faqGeneral.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
   const faqInscriptionCard = faqInscription.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
-
+  const faqCertificatCard = faqCertificat.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
+  const faqRetraitCard = faqRetrait.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
+  const faqAnnulationCard = faqAnnulation.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
+  const faqJourCard = faqJour.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
+  const faqApresCard = faqApres.map((faq) => (<InfoCard title={faq.title} bulletPoints={faq.bulletPoints}></InfoCard>))
 
   return (
-    <div>
-    <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>INFOS</span> INSCRIPTION</h2>
+    <div className='pb-20'>
+    
+    {/* GENERAL */}
+    
 
     <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
 
       <div className='col-span-1 flex justify-center items-center'>
-      <Image src="/images/events/info1.png" width={400} height={326}/>
+      <Image src="/images/events/info6.png" width={400} height={326}/>
       </div>
 
       <div className='col-span-2'> 
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>INFOS </span>GENERALES</h2>
+        {faqGeneralCard }
+      </div>
+
+    </div>
+
+    {/* INSCRIPTION */}
+  
+    
+    
+    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+
+      <div className='col-span-1 flex justify-center items-center'>
+      <Image src="/images/events/info5.png" width={400} height={326}/>
+      </div>
+
+      <div className='col-span-2'>
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>INFOS SUR </span>L'INSCRIPTION</h2> 
         {faqInscriptionCard}
       </div>
 
     </div>
 
-    {/* <h2 className='pl-8 pt-10 text-2xl'><span className='yellow'>INFOS</span> PRATIQUES</h2>
+     {/* CERTIFICAT */}
+     
+
+    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+
+      <div className='col-span-1 flex justify-center items-center'>
+      <Image src="/images/events/info4.png" width={400} height={326}/>
+      </div>
+
+      <div className='col-span-2'> 
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>CERTIFICAT </span>MEDICAL</h2>
+        {faqCertificatCard}
+      </div>
+
+    </div>
+
+     {/* RETRAIT */}
+     
+
+    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+
+      <div className='col-span-1 flex justify-center items-center'>
+      <Image src="/images/events/info3.png" width={400} height={326}/>
+      </div>
+
+      <div className='col-span-2'> 
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>RETRAIT </span>DES DOSSARDS</h2>
+        {faqRetraitCard}
+      </div>
+
+    </div>
+
+    {/* ANNULATION */}
+    
 
     <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
 
@@ -262,10 +342,46 @@ function Faq() {
       </div>
 
       <div className='col-span-2'> 
-        {infoPratiquesCard}
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>ANNULATION </span>ET REMBOURSEMENT</h2>
+        {faqAnnulationCard}
       </div>
 
-    </div> */}
+    </div>
+
+    {/* JOUR J */}
+    
+
+    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+
+      <div className='col-span-1 flex justify-center items-center'>
+      <Image src="/images/events/info1.png" width={400} height={326}/>
+      </div>
+
+      <div className='col-span-2'> 
+      <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>LE JOUR </span>DE LA COURSE</h2>
+        {faqJourCard}
+      </div>
+
+    </div>
+
+     {/* JOUR D APRES */}
+     
+
+      <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+
+        <div className='col-span-1 flex justify-center items-center'>
+        <Image src="/images/events/info6.png" width={400} height={326}/>
+        </div>
+
+        <div className='col-span-2'> 
+        <h2 className='pl-8 pt-20 text-2xl'><span className='yellow'>ET LE </span>LENDEMAIN ?</h2>
+          {faqApresCard}
+        </div>
+
+      </div>
+
+ 
+ 
 
 
   </div>
