@@ -1,15 +1,8 @@
 
 import Nav from '../common/Nav';
-import SliderHome from '../common/SliderHome';
-import CardsArea from '../common/CardsArea';
 import Footer from '../common/Footer';
-import Editorial from '../homepage/Editorial';
-import Arguments from '../common/Arguments';
-import Pricing from '../common/Pricing';
-import Stats from '../common/Stats';
-import Pattern from '../common/Pattern';
 import Banner from '../common/Banner';
-
+import Photos from '../medias/Photos';
 
 function MediasComponentPage() {
   return (
@@ -20,7 +13,7 @@ function MediasComponentPage() {
           
           <Nav></Nav>
           <Banner title="médias" subtitle="photos et vidéos" sliderOn={false}></Banner>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <Photos></Photos>
         </main>
        
         <Footer></Footer>
