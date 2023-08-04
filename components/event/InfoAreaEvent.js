@@ -2,7 +2,6 @@ import styles from '../../styles/InfoArea.module.css';
 
 import InfoCard from './InfoCard';
 
-// IMAGE IMPORT
 import Image from 'next/image';
 
 import Button from '@mui/material/Button';

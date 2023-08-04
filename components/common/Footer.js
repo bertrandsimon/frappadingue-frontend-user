@@ -1,4 +1,4 @@
-// import styles from '../../styles/Footer.module.css';
+import styles from '../../styles/Footer.module.css';
 
 // IMAGE IMPORT
 import Image from 'next/image';
@@ -66,16 +66,16 @@ const navigation = {
 
 function Footer() {
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className={styles.greyBg}>
     <h2 id="footer-heading" className="sr-only">
       Footer
     </h2>
-    <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-16 lg:px- lg:pt-16">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-8">
         <Image src="/images/frappadingue-logo.png" width={216} height={77}/>
           <p className="text-sm leading-6 text-gray-300">
-            Course à obstacles
+            La course à obstacles la plus déjantée de France !
           </p>
           <div className="flex space-x-6">
             {navigation.social.map((item) => (
@@ -89,11 +89,11 @@ function Footer() {
         <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 className="text-sm font-semibold leading-6 text-white">courses</h3>
+              <h3 className="text-sm font-semibold leading-6 text-white">COURSES</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.courses.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-yellow-400">
                       {item.name}
                     </a>
                   </li>
@@ -101,11 +101,11 @@ function Footer() {
               </ul>
             </div>
             <div className="mt-10 md:mt-0">
-              <h3 className="text-sm font-semibold leading-6 text-white">Medias</h3>
+              <h3 className="text-sm font-semibold leading-6 text-white">MEDIAS</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.medias.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-yellow-400">
                       {item.name}
                     </a>
                   </li>
@@ -115,11 +115,11 @@ function Footer() {
           </div>
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 className="text-sm font-semibold leading-6 text-white">Informations</h3>
+              <h3 className="text-sm font-semibold leading-6 text-white">INFORMATIONS</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.informations.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-yellow-400">
                       {item.name}
                     </a>
                   </li>
