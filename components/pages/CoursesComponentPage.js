@@ -13,18 +13,12 @@ import Arguments from "../common/Arguments";
 function CoursesComponentPage() {
   return (
     <div>
-        <Nav></Nav>
+        
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>COURSES</h1>
-          <Pattern></Pattern>
-          <Banner></Banner>
-          {/* <SliderHome></SliderHome> */}
-          <CardsArea></CardsArea>
-          <Stats></Stats>
-          <Pricing></Pricing>
-          <Editorial></Editorial>
-          <Arguments></Arguments>
+          <Nav></Nav>
+          <Banner title="les prochaines courses" subtitle="une expérience inoubliable !" sliderOn={false}></Banner>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </main>
        
         <Footer></Footer>

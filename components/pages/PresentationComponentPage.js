@@ -12,17 +12,13 @@ import Arguments from "../common/Arguments";
 function PresentationComponentPage() {
   return (
     <div>
-        <Nav></Nav>
+        
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>PRESENTATION</h1>
-          <Pattern></Pattern>
-          <Banner></Banner>
-          <CardsArea></CardsArea>
+        <Nav></Nav>
+          <Banner title="la frappadingue c'est" subtitle="la référence de la course à obstacles" sliderOn={false}></Banner>
           <Stats></Stats>
           <Pricing></Pricing>
-          <Editorial></Editorial>
-          <Arguments></Arguments>
         </main>
        
         <Footer></Footer>

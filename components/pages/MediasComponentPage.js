@@ -14,18 +14,13 @@ import Banner from '../common/Banner';
 function MediasComponentPage() {
   return (
     <div>
-        <Nav></Nav>
+        
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>Medias</h1>
-          <Pattern></Pattern>
-          <Banner></Banner>
-          <SliderHome></SliderHome>
-          <CardsArea></CardsArea>
-          <Stats></Stats>
-          <Pricing></Pricing>
-          <Editorial></Editorial>
-          <Arguments></Arguments>
+          
+          <Nav></Nav>
+          <Banner title="médias" subtitle="photos et vidéos" sliderOn={false}></Banner>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </main>
        
         <Footer></Footer>

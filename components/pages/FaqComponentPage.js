@@ -13,10 +13,12 @@ import Faq from "../Faq";
 function FaqComponentPage() {
   return (
     <div>
-        <Nav></Nav>
+        
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <Faq/>
+          <Nav></Nav>
+          <Banner title="F.A.Q" subtitle="questions / réponses" sliderOn={false}></Banner>
+          <div className="-mt-20"><Faq/></div>
         </main>
        
         <Footer></Footer>

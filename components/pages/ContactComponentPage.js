@@ -13,18 +13,14 @@ import Arguments from "../common/Arguments";
 function ContactComponentPage() {
   return (
     <div>
-        <Nav></Nav>
+        
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>Contact</h1>
-          <Pattern></Pattern>
-          <Banner></Banner>
-          <SliderHome></SliderHome>
-          <CardsArea></CardsArea>
-          <Stats></Stats>
-          <Pricing></Pricing>
-          <Editorial></Editorial>
-          <Arguments></Arguments>
+         
+          <Nav></Nav>
+          <Banner title="contact" subtitle="à votre écoute" sliderOn={false}></Banner>
+         
+        
         </main>
        
         <Footer></Footer>

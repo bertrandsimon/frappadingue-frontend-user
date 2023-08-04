@@ -24,8 +24,8 @@ function Banner(props) {
         </div>
         {/* mobile */}
         <div className='sm:hidden 2 flex justify-end text-center items-center flex-col mb-20 h-40'>
-          <div className='drop-shadow-md text-4xl uppercase font-extrabold'>la frappadingue</div>
-          <div className='drop-shadow-md text-2xl uppercase font-medium'>accessible à tous sans exception</div>
+          <div className='drop-shadow-md text-4xl uppercase font-extrabold'>{props.title}</div>
+          <div className='drop-shadow-md text-2xl uppercase font-medium'>{props.subtitle}</div>
         </div>
       </div>
     </div>

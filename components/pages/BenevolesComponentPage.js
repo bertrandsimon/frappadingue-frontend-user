@@ -13,10 +13,11 @@ import Volunteer from "../Volunteer";
 function BenevolesComponentPage() {
   return (
     <div>
-        <Nav></Nav>
+        
         
         <main className="container mx-auto sm:px-6 lg:px-8">
-          <h1>Benevoles</h1>
+          <Nav></Nav>
+          <Banner title="bénévoles" subtitle="Intègre la team Frappadingue" sliderOn={false}></Banner>
           <Volunteer></Volunteer>
         </main>
        
