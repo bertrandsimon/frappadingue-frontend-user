@@ -29,7 +29,7 @@ function CartSummary() {
 
   return (
     <div className="bg-black">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-0 sm:py-24 lg:px-0">
         <h1 className="text-3xl font-bold tracking-tight text-white">Votre panier</h1>
 
         <form className="mt-12 ">
@@ -52,7 +52,7 @@ function CartSummary() {
                       <div className="flex justify-between sm:grid sm:grid-cols-2">
                         <div className="pr-6">
                           <h3 className="text-sm">
-                            <a href={product.href} className="font-medium text-yellow-400 hover:text-gray-800">
+                            <a href={product.href} className="font-medium text-yellow-300 hover:text-yellow-400">
                               {product.name}
                             </a>
                           </h3>
@@ -99,7 +99,7 @@ function CartSummary() {
           </div>
 
           {/* Order summary */}
-          <div className="mt-10 sm:ml-32 sm:pl-6">
+          <div className="mt-10 sm:ml-0 sm:pl-0">
             <div className="rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:p-8">
               <h2 className="sr-only">Order summary</h2>
 
@@ -132,8 +132,8 @@ function CartSummary() {
 
             <div className="mt-6 text-center text-sm text-gray-500">
               <p>
-                or
-                <a href="#" className="font-medium text-yellow-400 hover:text-yellow-500">
+                ou 
+                <a href="#" className="font-medium text-yellow-300 hover:text-yellow-500">
                   Continuer les achats
                   <span aria-hidden="true"> &rarr;</span>
                 </a>
