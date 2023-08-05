@@ -21,16 +21,13 @@ import InfoArea from './event/InfoAreaEvent';
 
 function Home() {
   return (
-    <div className="">
+    <div>
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
-          <SingleEvent></SingleEvent>
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
           <CardsArea></CardsArea>
-          <Stats></Stats>
-          <Pricing></Pricing>
           <Editorial></Editorial>
           <Arguments></Arguments>
           

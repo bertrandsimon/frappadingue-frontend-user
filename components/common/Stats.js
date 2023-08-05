@@ -16,16 +16,16 @@ function Stats() {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
       <div className="mx-auto max-w-2xl lg:max-w-none">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight yellow sm:text-4xl">Quelques chiffres</h2>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
+          <h2 className="text-3xl font-normal tracking-tight yellow sm:text-4xl">Quelques chiffres</h2>
+          <p className="mt-4 text-md leading-8 text-gray-300 font-light">
           Motivation, Fun attitude, Persévérance, Endurance, Solidarité et aussi
           </p>
         </div>
         <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-6">
           {stats.map((stat) => (
             <div key={stat.id} className="flex flex-col bg-white/10 p-8 items-center justify-center">
-              <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
+              <dt className="text-sm font-normal leading-6 text-gray-300">{stat.name}</dt>
+              <dd className="order-first text-3xl font-semibold tracking-tight text-white pb-2">{stat.value}</dd>
             </div>
           ))}
         </dl>

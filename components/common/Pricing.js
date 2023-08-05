@@ -52,18 +52,18 @@ function Pricing() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className=" font-semibold leading-7 text-yellow-400 uppercase">Nos tarifs</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <p className="mt-2 text-4xl font-normal tracking-tight text-white">
             2 formats de courses adaptés à tous
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-md leading-8 text-gray-300">
           1 course, 2 challenges : 1 départ commun
         </p>
         <div className="mt-16 flex justify-center">
           <RadioGroup
             value={frequency}
             onChange={setFrequency}
-            className="grid grid-cols-4 gap-x-1 rounded-full bg-yellow-400 p-1 text-center text-xs font-semibold leading-5 text-black"
+            className="text-center grid grid-cols-4 gap-x-1 rounded-full bg-yellow-400 p-2 text-xs font-normal leading-5 text-black"
           >
             <RadioGroup.Label className="sr-only">Paiement</RadioGroup.Label>
             {frequencies.map((option) => (
@@ -112,7 +112,7 @@ function Pricing() {
                   tier.mostPopular
                     ? 'bg-yellow-400 text-black shadow-sm hover:bg-yellow-300 focus-visible:outline-indigo-500'
                     : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
-                  'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 uppercase'
+                  'mt-6 block rounded-md py-2 px-3 text-center text-sm font-normal leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 uppercase'
                 )}
               >
                 Inscription

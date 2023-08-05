@@ -34,8 +34,9 @@ function Nav() {
             <div className="relative flex items-center justify-between">
               <div className="flex flex-1 items-center justify-start">
                 {/* Logo */}
-                <div className="flex-shrink-0 items-center">
-                  <Image src="/images/frappadingue-logo.png" width={216} height={77} />
+
+                <div className="flex-shrink-0 items-center cursor-pointer">
+                  <Link href="/" ><Image src="/images/frappadingue-logo.png" width={216} height={77} /></Link>
                 </div>
 
                 {/* Desktop menu */}

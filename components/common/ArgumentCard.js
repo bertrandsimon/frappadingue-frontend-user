@@ -7,7 +7,7 @@ function ArgumentCard(props) {
   console.log(props)
   return (
     <div className={styles.container}>
-      <h5 className='up'><span className='yellow'>{props.title1}</span> {props.title2}</h5> 
+      <p className='up'><span className='yellow'>{props.title1}</span> {props.title2}</p> 
       <span className={styles.content}>{props.content}</span>
     </div>
   );

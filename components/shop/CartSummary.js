@@ -30,7 +30,7 @@ function CartSummary() {
   return (
     <div className="bg-black">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-0 sm:py-24 lg:px-0">
-        <h1 className="text-3xl font-bold tracking-tight text-white">Votre panier</h1>
+        <h1 className="text-3xl font-light tracking-tight text-white ">Votre panier</h1>
 
         <form className="mt-12 ">
           <div>
@@ -130,10 +130,10 @@ function CartSummary() {
               </button>
             </div>
 
-            <div className="mt-6 text-center text-sm text-gray-500">
+            <div className="mt-6 text-center text-sm text-white">
               <p>
                 ou 
-                <a href="#" className="font-medium text-yellow-300 hover:text-yellow-500">
+                <a href="#" className="font-medium text-yellow-300 hover:text-yellow-500 pl-2">
                   Continuer les achats
                   <span aria-hidden="true"> &rarr;</span>
                 </a>
