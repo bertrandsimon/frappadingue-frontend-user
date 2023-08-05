@@ -5,20 +5,20 @@ import Image from 'next/image';
 
 const navigation = {
   courses: [
-    { name: 'Prochaines courses', href: '#' },
-    { name: 'Insolite', href: '#' },
-    { name: 'CGVs', href: '#' },
+    { name: 'Présentation', href: '/PresentationPage' },
+    { name: 'Prochaines courses', href: '/CoursesPage' },
+    { name: 'FAQ', href: '/FaqPage' },
   ],
   medias: [
     { name: 'Obstacles', href: '#' },
-    { name: 'Photos', href: '#' },
+    { name: 'Photos', href: '/MediasPage' },
     { name: 'Vidéos', href: '#' },
     
   ],
   informations: [
-    { name: 'Bénévoles', href: '#' },
+    { name: 'Bénévoles', href: '/BenevolesPage' },
     { name: 'Conception du site', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Contact', href: '/ContactPage' },
   ],
   social: [
     {
