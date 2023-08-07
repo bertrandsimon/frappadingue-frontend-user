@@ -1,4 +1,4 @@
-import styles from '../../styles/Arguments.module.css';
+// import styles from '../../styles/Arguments.module.css';
 
 
 import ArgumentCard from './ArgumentCard';
@@ -19,7 +19,7 @@ function Arguments() {
   const argumentsZone = argumentsContent.map((item) => (<ArgumentCard title1={item.title1} title2={item.title2} content={item.content}/>))
 
   return (
-    <div className={styles.container}>
+    <div>
 
       {argumentsZone}
      
