@@ -1,4 +1,4 @@
-import styles from '../../styles/SingleEVent.module.css';
+
 
 import BannerSingleEvent from './BannerSingleEvent';
 import TitleSingleEvent from './TitleSingleEvent';
