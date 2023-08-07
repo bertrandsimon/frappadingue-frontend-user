@@ -5,7 +5,7 @@ function ContactForm() {
   const [events,SetEvents] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/events/allEvents')
+    fetch('https://frappadingue-backend.vercel.app/events/allEvents')
     .then(res => res.json())
     .then( data => { SetEvents(data.all) } )
   }, []);
