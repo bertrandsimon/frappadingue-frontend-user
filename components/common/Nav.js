@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Fragment } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,8 +12,14 @@ import { Bars3Icon, XMarkIcon, ShoppingCartIcon, UserIcon } from '@heroicons/rea
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
-
+import SignUp from './SignUp';
+import SignIn from './SignIn';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -30,7 +36,24 @@ function Nav() {
     dispatch( loggedStatus ())
   }
 
-  console.log('user.userConnected in reducer :', user.userConnected)
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const userConnected = useSelector((state) => state.user.userConnected);
+  useEffect(() => {
+    // If user is connected, close the dialog
+    if (userConnected) {
+      setOpen(false);
+    }
+  }, [userConnected]);
+  
   const [currentNavItem, setCurrentNavItem] = useState(null);
 
   const navigation = [
@@ -47,6 +70,7 @@ function Nav() {
   };
 
   return (
+    <div>
     <Disclosure as="nav" className="bg-black sticky top-0 z-50 pb-10 sm:mt-10">
       {({ open }) => (
         <>
@@ -92,7 +116,7 @@ function Nav() {
                 </button>
 
                 {/* Profile dropdown */}
-                {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6" aria-hidden="true" />}
+                {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6" aria-hidden="true" onClick={handleClickOpen}/>}
                
               </div>
 
@@ -128,6 +152,18 @@ function Nav() {
         </>
       )}
     </Disclosure>
+
+    <Dialog open={open} onClose={handleClose} >
+      
+      <DialogContent>
+
+        <SignIn></SignIn>
+    
+      </DialogContent>
+
+    </Dialog>
+
+    </div>
   );
 }
 
