@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { hideArticle } from '../reducers/hiddenArticles';
 
+import SignIn from './common/SignIn';
 import Photos from './medias/Photos';
 import OrderSummary from './shop/OrderSummary';
 import Nav from './common/Nav';
@@ -17,7 +18,7 @@ import Pattern from './common/Pattern';
 import Banner from './common/Banner';
 import SingleEvent from './event/SingleEvent';
 import InfoArea from './event/InfoAreaEvent';
-
+import SignUp from './common/SignUp';
 
 function Home() {
   return (
@@ -25,6 +26,8 @@ function Home() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
+          <SignIn></SignIn>
+          <SignUp></SignUp>
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
           <CardsArea></CardsArea>

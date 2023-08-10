@@ -1,16 +1,34 @@
 import { useState } from 'react';
 import { Fragment } from 'react';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { loggedName, loggedToken, loggedStatus } from '../../reducers/user';
+
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
+
+
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 function Nav() {
+
+  const user = useSelector((state) => state.user);
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    console.log('clicked')
+    dispatch( loggedStatus ())
+  }
+
+  console.log('user.userConnected in reducer :', user.userConnected)
   const [currentNavItem, setCurrentNavItem] = useState(null);
 
   const navigation = [
@@ -115,12 +133,12 @@ function Nav() {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          <div
+                            onClick={handleLogout}
+                            className={classNames(active ? 'bg-gray-100 cursor-pointer' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                           >
-                            Sign out
-                          </a>
+                            Déconnexion
+                          </div>
                         )}
                       </Menu.Item>
                     </Menu.Items>

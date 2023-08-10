@@ -2,12 +2,17 @@ import styles from '../../styles/SignIn.module.css';
 
 import { useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+// REDUCERS
+import { loggedName, loggedToken, loggedStatus } from '../../reducers/user';
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 
 function SignIn() {
 
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
 
@@ -21,8 +26,8 @@ function SignIn() {
     }).then(response => response.json())
       .then(data => {
         console.log(data)
-        console.log('connecté OK')
-      //dispatch( loggedStatus ()) 
+        //console.log('connecté OK')
+        dispatch( loggedStatus ())
       //dispatch( loggedName (data.name))
       //dispatch( loggedSurname (data.surname))
       //dispatch( loggedToken (data.token)) ;
