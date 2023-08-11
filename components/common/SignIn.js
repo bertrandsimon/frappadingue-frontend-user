@@ -8,13 +8,14 @@ import { loggedName, loggedToken, loggedStatus } from '../../reducers/user';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
+import Alert from '@mui/material/Alert';
 
 function SignIn() {
 
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
+  const [errorMsg, setErrorMsg] = useState(false)
 
   const isFormValid = email && password;
 
@@ -26,7 +27,16 @@ function SignIn() {
     }).then(response => response.json())
       .then(data => {
         console.log(data)
-        dispatch( loggedStatus ())
+        if (data.result === false) {
+          console.log('pas d user')
+          setErrorMsg(true)
+          
+        }
+        else { 
+          setErrorMsg(false)
+          dispatch( loggedStatus ())
+         }
+        
       //dispatch( loggedName (data.name))
       //dispatch( loggedSurname (data.surname))
       //dispatch( loggedToken (data.token)) ;
@@ -40,8 +50,10 @@ function SignIn() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Connexion</h1>
-     
 
+      { errorMsg &&  <Alert severity="warning">Email / mot de passe non valides</Alert>}
+     
+     
       <TextField
           required
           id="outlined-required"
