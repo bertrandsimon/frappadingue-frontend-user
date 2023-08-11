@@ -12,7 +12,7 @@ function ContactComponentPage() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
          
-          <Nav></Nav>
+        <Nav currentNavItem="Contact"></Nav>
           <Banner title="contact" subtitle="à votre écoute" sliderOn={false}></Banner>
           <Contact></Contact>
         

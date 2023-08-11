@@ -26,7 +26,6 @@ function SignIn() {
     }).then(response => response.json())
       .then(data => {
         console.log(data)
-        //console.log('connecté OK')
         dispatch( loggedStatus ())
       //dispatch( loggedName (data.name))
       //dispatch( loggedSurname (data.surname))

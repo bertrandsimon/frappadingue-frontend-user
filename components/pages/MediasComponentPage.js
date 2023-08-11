@@ -11,7 +11,7 @@ function MediasComponentPage() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           
-          <Nav></Nav>
+          <Nav currentNavItem="Médias"></Nav>
           <Banner title="médias" subtitle="photos et vidéos" sliderOn={false}></Banner>
           <Photos></Photos>
         </main>

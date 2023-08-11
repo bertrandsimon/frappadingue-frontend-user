@@ -25,7 +25,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-function Nav() {
+function Nav(props) {
 
   const user = useSelector((state) => state.user);
 
@@ -54,23 +54,31 @@ function Nav() {
     }
   }, [userConnected]);
   
-  const [currentNavItem, setCurrentNavItem] = useState(null);
+  
 
   const navigation = [
-    { name: 'Présentation', href: '/PresentationPage', current: currentNavItem === 'Présentation' },
-    { name: 'Courses', href: '/CoursesPage', current: currentNavItem === 'Courses' },
-    { name: 'Médias', href: '/MediasPage', current: currentNavItem === 'Médias' },
-    { name: 'FAQ', href: '/FaqPage', current: currentNavItem === 'FAQ' },
-    { name: 'Bénévoles', href: '/BenevolesPage', current: currentNavItem === 'Bénévoles' },
-    { name: 'Contact', href: '/ContactPage', current: currentNavItem === 'Contact' },
+    { name: 'Présentation', href: '/PresentationPage', current: false },
+    { name: 'Courses', href: '/CoursesPage', current: false },
+    { name: 'Médias', href: '/MediasPage', current: false },
+    { name: 'FAQ', href: '/FaqPage', current: false },
+    { name: 'Bénévoles', href: '/BenevolesPage', current: false },
+    { name: 'Contact', href: '/ContactPage', current: false },
   ];
 
-  const handleClick = (itemName) => {
-    setCurrentNavItem(itemName);
-  };
+  const updatedNavigation = navigation.map((item) => {
+    if (item.name === props.currentNavItem) {
+      return { ...item, current: true }; // Create a new object with 'current' property set to true
+    } else {
+      return item; // Return the original item as it is
+    }
+  });
+
+  // const handleClick = (itemName) => {
+  //   setCurrentNavItem(itemName);
+  // };
 
   return (
-    <div>
+    <>
     <Disclosure as="nav" className="bg-black sticky top-0 z-50 pb-10 sm:mt-10">
       {({ open }) => (
         <>
@@ -86,9 +94,9 @@ function Nav() {
                 {/* Desktop menu */}
                 <div className="hidden sm:ml-6 sm:block sm:pt-4 sm:pl-10">
                   <div className="flex space-x-4 uppercase">
-                    {navigation.map((item) => (
+                    {updatedNavigation.map((item) => (
                       <a
-                        onClick={() => handleClick(item.name)}
+                        // onClick={() => handleClick(item.name)}
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -109,14 +117,14 @@ function Nav() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:bg-yellow-400"
+                  className="rounded-full p-1 text-white hover:text-white focus:outline-none "
                 >
                   <span className="sr-only">Panier</span>
-                  <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                  <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
-                {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6" aria-hidden="true" onClick={handleClickOpen}/>}
+                {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6 cursor-pointer hover:text-yellow-300" aria-hidden="true" onClick={handleClickOpen}/>}
                
               </div>
 
@@ -133,7 +141,7 @@ function Nav() {
           {/* Mobile menu */}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {updatedNavigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
@@ -163,7 +171,7 @@ function Nav() {
 
     </Dialog>
 
-    </div>
+    </>
   );
 }
 
