@@ -48,6 +48,7 @@ function SignIn() {
           label="Email@email.com"
           defaultValue=""
           onChange={(e) => setEmail(e.target.value)} value={email}
+          size="small"
         />
 
       <TextField
@@ -56,6 +57,7 @@ function SignIn() {
           type="password"
           autoComplete=""
           onChange={(e) => setPassword(e.target.value)} value={password}
+          size="small"
         />
 
 

@@ -38,6 +38,7 @@ function SignUp() {
     <div className={styles.container}>
       <h1 className={styles.title}>Inscription</h1>
       <TextField
+          size="small"
           required
           id="outlined-required"
           label="Nom"
@@ -46,6 +47,7 @@ function SignUp() {
         />
 
       <TextField
+          size="small"
           required
           id="outlined-required"
           label="Prénom"
@@ -54,6 +56,7 @@ function SignUp() {
         />
 
       <TextField
+          size="small"
           required
           id="outlined-required"
           label="Email@email.com"
@@ -62,6 +65,7 @@ function SignUp() {
         />
 
       <TextField
+          size="small"
           id="outlined-password-input"
           label="Mot de passe"
           type="password"
