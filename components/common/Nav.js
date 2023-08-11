@@ -1,5 +1,7 @@
+
 import { useState, useEffect } from 'react';
 import { Fragment } from 'react';
+
 
 import { useDispatch, useSelector } from 'react-redux';
 import { loggedName, loggedToken, loggedStatus } from '../../reducers/user';
@@ -12,11 +14,14 @@ import { Bars3Icon, XMarkIcon, ShoppingCartIcon, UserIcon } from '@heroicons/rea
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
 
 import SignUp from './SignUp';
 import SignIn from './SignIn';
@@ -26,6 +31,8 @@ function classNames(...classes) {
 }
 
 function Nav(props) {
+
+
 
   const user = useSelector((state) => state.user);
 
@@ -46,6 +53,19 @@ function Nav(props) {
     setOpen(false);
   };
 
+  const [displaySignIn, setDisplaySignIn] = useState(false);
+  const [displaySignUp, setDisplaySignUp] = useState(false);
+
+  const handleClickDisplaySignIn = () => { 
+    setDisplaySignIn(true)
+    setDisplaySignUp(false)
+  }
+
+  const handleClickDisplaySignUp = () => {
+    setDisplaySignUp(true)
+    setDisplaySignIn(false)
+  }
+
   const userConnected = useSelector((state) => state.user.userConnected);
   useEffect(() => {
     // If user is connected, close the dialog
@@ -54,6 +74,9 @@ function Nav(props) {
     }
   }, [userConnected]);
   
+  useEffect(() => {
+  
+  }, [open]);
   
 
   const navigation = [
@@ -161,13 +184,22 @@ function Nav(props) {
       )}
     </Disclosure>
 
-    <Dialog open={open} onClose={handleClose} >
-      
-      <DialogContent>
-
-        <SignIn></SignIn>
+    <Dialog open={open} onClose={handleClose} maxWidth="md">
+  
+     
     
-      </DialogContent>
+      <DialogContent className='mb-10'>
+        <div className='flex flex-row justify-center items-center pt-10 pb-10' style={{ overflowY: 'none' }}>
+          <span className='px-2 cursor-pointer hover:text-yellow-300' onClick={handleClickDisplaySignIn}>J'ai deja un compte</span>
+          <span className='px-2'> | </span>
+          <span className='px-2 cursor-pointer hover:text-yellow-300' onClick={handleClickDisplaySignUp}>Je crée un compte</span>
+        </div>
+        
+        { displaySignIn && <SignIn/>}
+        { displaySignUp && <SignUp/>}
+        {/* <SignIn></SignIn> */}
+    
+      </DialogContent> 
 
     </Dialog>
 
