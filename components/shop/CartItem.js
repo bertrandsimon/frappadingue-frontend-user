@@ -16,7 +16,8 @@ export default function CartItem({ item }) {
       {/* <div className="ml-auto">{price}</div> */}
       <div className="ml-auto">{price * quantity}</div>
       <button onClick={ () => removeItemFromCart() } className="hover:bg-emerald-50 transition-colors rounded-full duration-500 p-1">
-        <Image alt="delete icon" src="./trash.svg" width={20} height={20} />
+        X
+        {/* <Image alt="delete icon" src="./trash.svg" width={20} height={20} /> */}
       </button>
     </div>
   );

@@ -1,0 +1,51 @@
+export const products = [
+  {
+    id: "price_1Nez26KRe8hWIoUkv32gERoK",
+    name: "Assurance",
+    price: 10,
+    emoji: "🍉",
+    currency: "EUR",
+  },
+  {
+    id: "price_1Nez2gKRe8hWIoUkMcmoVxLP",
+    name: "T-shirt S",
+    price: 6,
+    emoji: "🍎",
+    currency: "EUR",
+  },
+  {
+    id: "price_1Nez3OKRe8hWIoUksZRuPtgF",
+    name: "T-shirt M",
+    price: 6,
+    emoji: "🍍",
+    currency: "EUR",
+  },
+  {
+    id: "price_1Nez3oKRe8hWIoUkZz7ZuLuv",
+    name: "T-shirt L",
+    price: 40,
+    emoji: "🍌",
+    currency: "EUR",
+  },
+  {
+    id: "price_1Nez4KKRe8hWIoUkuXsQGSbm",
+    name: "T-shirt XL",
+    price: 6,
+    emoji: "🍌",
+    currency: "EUR",
+  },
+  {
+    id: "price_1Nez4hKRe8hWIoUkomne8M7P",
+    name: "T-shirt XXL",
+    price: 6,
+    emoji: "🍌",
+    currency: "EUR",
+  },
+  {
+    id: "price_1Nez53KRe8hWIoUkBhdcePy6",
+    name: "T-shirt XXXL",
+    price: 6,
+    emoji: "🍌",
+    currency: "EUR",
+  },
+];

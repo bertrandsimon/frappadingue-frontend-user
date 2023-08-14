@@ -19,6 +19,7 @@ import Banner from './common/Banner';
 import SingleEvent from './event/SingleEvent';
 import InfoArea from './event/InfoAreaEvent';
 import SignUp from './common/SignUp';
+import ProductOptions from './shop/ProductOptions';
 
 function Home() {
   return (
@@ -26,8 +27,9 @@ function Home() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
-
-
+          <br /><br />
+          <ProductOptions></ProductOptions>
+          <br /><br /><br />
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
           <CardsArea></CardsArea>
