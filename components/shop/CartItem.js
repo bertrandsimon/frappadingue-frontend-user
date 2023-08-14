@@ -1,6 +1,8 @@
 import { useShoppingCart } from "use-shopping-cart";
 import Image from "next/image";
 
+import { TrashIcon } from '@heroicons/react/24/outline';
+
 export default function CartItem({ item }) {
   const  { removeItem } = useShoppingCart();
   const { name, emoji, quantity, price } = item;
@@ -9,16 +11,14 @@ export default function CartItem({ item }) {
 
   return (
     <div className="flex items-center gap-4 mb-3">
-      <p className="text-4xl">{emoji}</p>
-      <div>
-        {name} <span className="text-xs">({quantity})</span>
+      <p className="text-1xl">{emoji}</p>
+      <div className="text-xs">
+        {name} <span >({quantity})</span>
       </div>
       {/* <div className="ml-auto">{price}</div> */}
-      <div className="ml-auto">{price * quantity}</div>
-      <button onClick={ () => removeItemFromCart() } className="hover:bg-emerald-50 transition-colors rounded-full duration-500 p-1">
-        X
-        {/* <Image alt="delete icon" src="./trash.svg" width={20} height={20} /> */}
-      </button>
+      <div className="ml-auto text-xs" >{price * quantity} Eur</div>
+    
+      <TrashIcon onClick={ () => removeItemFromCart() } className="h-4 w-4 hover:text-red-500 cusror-pointer" aria-hidden="true" />
     </div>
   );
 }
