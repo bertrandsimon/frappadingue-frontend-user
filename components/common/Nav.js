@@ -1,3 +1,5 @@
+import { useShoppingCart } from "use-shopping-cart";
+import ShoppingCart from "../shop/ShoppingCart";
 
 import { useState, useEffect } from 'react';
 import { Fragment } from 'react';
@@ -32,7 +34,7 @@ function classNames(...classes) {
 
 function Nav(props) {
 
-
+  const { handleCartClick, cartCount } = useShoppingCart();
 
   const user = useSelector((state) => state.user);
 
@@ -139,12 +141,18 @@ function Nav(props) {
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
+                onClick={ () => handleCartClick()}
                   type="button"
                   className="rounded-full p-1 text-white hover:text-white focus:outline-none "
                 >
-                  <span className="sr-only">Panier</span>
+                  
                   <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
                 </button>
+
+                <div className="rounded-full flex justify-center items-center bg-emerald-500 text-xs text-white absolute w-6 h-5 bottom-6 -right-1">
+                  {cartCount}
+                </div>
+                <ShoppingCart />
 
                 {/* Profile dropdown */}
                 {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6 cursor-pointer hover:text-yellow-300" aria-hidden="true" onClick={handleClickOpen}/>}

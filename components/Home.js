@@ -26,8 +26,8 @@ function Home() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
-          <SingleEvent></SingleEvent>
-          
+
+
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
           <CardsArea></CardsArea>
