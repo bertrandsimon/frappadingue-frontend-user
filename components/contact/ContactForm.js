@@ -105,12 +105,12 @@ function ContactForm() {
     </div>
 
     <div className="mt-6 flex items-center justify-end gap-x-6">
-      <button type="button" className="text-sm font-semibold leading-6 text-white">
+      <button type="button" className="text-sm text-normal leading-6 text-white">
         Annuler
       </button>
       <button
         type="submit"
-        className="rounded-md bg-yellow-400 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+        className="rounded-md bg-yellow-400 px-3 py-2 text-sm text-normal text-black shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
       >
         Envoyer
       </button>

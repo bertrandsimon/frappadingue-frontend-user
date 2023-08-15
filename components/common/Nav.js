@@ -149,14 +149,15 @@ function Nav(props) {
                   <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
                 </button>
 
-                <div className="rounded-full flex justify-center items-center bg-emerald-500 text-xs text-white absolute w-6 h-5 bottom-6 -right-1">
+                <div className="rounded-full flex justify-center items-center bg-yellow-400 text-xs text-black absolute w-6 h-5 bottom-12 right-8">
                   {cartCount}
                 </div>
                 <ShoppingCart />
 
                 {/* Profile dropdown */}
-                {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6 cursor-pointer hover:text-yellow-300" aria-hidden="true" onClick={handleClickOpen}/>}
-               
+                <div className="ml-4">
+                  {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6 cursor-pointer hover:text-yellow-300" aria-hidden="true" onClick={handleClickOpen}/>}
+                </div>
               </div>
 
               {/* Mobile menu button */}

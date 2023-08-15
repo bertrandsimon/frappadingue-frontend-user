@@ -31,18 +31,18 @@ export default function CheckoutButton() {
     <article className="mt-3 flex flex-col">
       <div className="text-red-700 text-xs mb-3 h-5 text-center">
         {totalPrice && totalPrice < 30
-          ? "You must have at least £0.30 in your basket"
+          ? "Minimum de commande : 30 Euros"
           : cartCount && cartCount > 20
-          ? "You cannot have more than 20 items"
+          ? "Pas plus de 20 articles"
           : status === "redirect-error"
-          ? "Unable to redirect to Stripe checkout page"
+          ? "Problème de redirection stripe"
           : status === "no-items"
-          ? "Please add some items to your cart"
+          ? "Ajoutez des produits au panier"
           : null}
       </div>
       <button
         onClick={handleClick}
-        className="bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white"
+        className="bg-yellow-300 hover:bg-yellow-400 text-xs hover:text-black transition-colors duration-500 text-gray-500 py-3 px-5 rounded-md w-100 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white"
         disabled={
           (totalPrice && totalPrice < 30) ||
           (cartCount && cartCount > 20) ||
@@ -51,7 +51,7 @@ export default function CheckoutButton() {
             : false
         }
       >
-        {status !== "loading" ? "Proceed to checkout" : "Loading..."}
+        {status !== "Chargement" ? "Paiement" : "Chargement..."}
       </button>
     </article>
   );
