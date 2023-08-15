@@ -48,7 +48,7 @@ function Pricing() {
   const [frequency, setFrequency] = useState(frequencies[0])
   
   return (
-    <div className="bg-black py-24 sm:py-32">
+    <div className="bg-black py-14 sm:py-4 sm:mb-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className=" font-semibold leading-7 text-yellow-400 uppercase">Nos tarifs</h2>
@@ -63,7 +63,7 @@ function Pricing() {
           <RadioGroup
             value={frequency}
             onChange={setFrequency}
-            className="text-center grid grid-cols-4 gap-x-1 rounded-full bg-yellow-400 p-2 text-xs font-normal leading-5 text-black"
+            className="text-center items-center grid grid-cols-4 gap-x-1 rounded-full bg-yellow-400 p-2 text-xs font-normal leading-5 text-black"
           >
             <RadioGroup.Label className="sr-only">Paiement</RadioGroup.Label>
             {frequencies.map((option) => (
@@ -100,7 +100,7 @@ function Pricing() {
               </div>
               <p className="mt-4 text-sm leading-6 text-gray-300">{tier.description}</p>
                 {tier.price[frequency.value] !== '' && (
-                  <p className="mt-6 flex items-baseline gap-x-1">
+                  <p className="mt-6 flex items-baseline gap-x-1 justify-center">
                     <span className="text-4xl font-bold tracking-tight text-white">{tier.price[frequency.value]}</span>
                     <span className="text-sm font-semibold leading-6 text-gray-300">{frequency.priceSuffix}</span>
               </p>
@@ -111,7 +111,7 @@ function Pricing() {
                 className={classNames(
                   tier.mostPopular
                     ? 'bg-yellow-400 text-black shadow-sm hover:bg-yellow-300 focus-visible:outline-indigo-500'
-                    : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
+                    : 'bg-white/10 text-white hover:bg-yellow-400 hover:text-black focus-visible:outline-white',
                   'mt-6 block rounded-md py-2 px-3 text-center text-sm font-normal leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 uppercase'
                 )}
               >

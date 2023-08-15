@@ -22,7 +22,7 @@ function EventCard(props) {
 
   
   return (
-    <div className="flex flex-col gap-2 p-8 rounded-xl shadow-md text-center  bg-black justify-normal items-center">
+    <div className="flex flex-col gap-2 p-8 rounded-xl shadow-md text-center justify-normal items-center">
       <Image src={props.thumb_image} width={302} height={378}/>
       <div className="text-2xl yellow">{props.location}</div>
       <div className="text-lg mb-4">{props.name}</div>

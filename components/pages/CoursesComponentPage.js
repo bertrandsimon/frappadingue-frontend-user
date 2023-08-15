@@ -10,6 +10,7 @@ import Editorial from "../homepage/Editorial";
 import Arguments from "../common/Arguments";
 import EventsCardsGrid from "../event/EventsCardsGrid";
 
+
 function CoursesComponentPage() {
   return (
     <div>
@@ -20,8 +21,12 @@ function CoursesComponentPage() {
           <Nav currentNavItem="Courses"></Nav>
 
           <Banner title="les prochaines courses" subtitle="une expérience inoubliable !" sliderOn={false}></Banner>
-
-          <EventsCardsGrid className='mt-[-50px]'></EventsCardsGrid>
+          
+          <div className="-mt-20">
+            <EventsCardsGrid></EventsCardsGrid>
+          </div>
+          
+          <Pricing></Pricing>
 
         </main>
        
