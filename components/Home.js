@@ -21,6 +21,9 @@ import InfoArea from './event/InfoAreaEvent';
 import SignUp from './common/SignUp';
 import ProductOptions from './shop/ProductOptions';
 
+import EventCard from './event/EventCard';
+import EventsCardsGrid from './event/EventsCardsGrid';
+
 function Home() {
   return (
     <div>
@@ -28,6 +31,7 @@ function Home() {
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
           <br /><br />
+          <EventsCardsGrid></EventsCardsGrid>
           <ProductOptions></ProductOptions>
           <br /><br /><br />
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>

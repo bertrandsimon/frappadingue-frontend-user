@@ -5,7 +5,7 @@ import { products } from "../../data/productsOptionsData";
 
 function ProductOptions() {
 
-  console.log(products)
+  //console.log(products)
 
   return (
 
