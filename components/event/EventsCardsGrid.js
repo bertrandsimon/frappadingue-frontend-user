@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Product from "../shop/Product";
 import EventCard from "./EventCard";
+import Link from "next/link";
 //import { products } from "../../data/productsOptionsData";
 
 
@@ -31,7 +32,7 @@ function EventsCardsGrid() {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center mx-auto place-center flex-wrap w-100 md:max-w-[1000px]">
      
         {eventsData.map((event) => (
-          <EventCard key={event.id} name={event.name} location={event.location} thumb_image={event.thumb_image} date={event.date} />
+          <EventCard key={event._id} name={event.name} location={event.location} thumb_image={event.thumb_image} date={event.date} id={event._id} />
         ))}
 
       </div>

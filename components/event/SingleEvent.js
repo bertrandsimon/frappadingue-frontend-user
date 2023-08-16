@@ -10,13 +10,13 @@ import Image from 'next/image';
 
 function SingleEvent( {event} ) {
 
-  console.log(event.name);
+  //console.log(event.name);
 
   return (
     <div>
       <h1>{event.name}</h1>
       <BannerSingleEvent></BannerSingleEvent>
-      <TitleSingleEvent></TitleSingleEvent>
+      <TitleSingleEvent event={event}></TitleSingleEvent>
       <InfoArea></InfoArea>
       <Pricing></Pricing>
       

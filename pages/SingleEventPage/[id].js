@@ -12,11 +12,13 @@ function SingleEventPage() {
 
     const router = useRouter();
     const { id } = router.query;
-
+    //const id  = "64db8865af6df4463b654a8a";
+    
+    console.log("id:", id);
     const [event, setEvent] = useState([])
 
     useEffect ( () => {
-        fetch('http://localhost:3000/events/64db8801af6df4463b654a88')
+        fetch(`http://localhost:3000/events/${id}`)
         .then(response => response.json())
         .then( data => {
             setEvent(data.event)
