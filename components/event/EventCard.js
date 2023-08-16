@@ -5,24 +5,12 @@ import Image from "next/image";
 
 import Link from 'next/link';
 
-function formatDate(dateString) {
-  const months = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-  ];
-
-  const date = new Date(dateString);
-  const day = date.getDate();
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-
-  return `${day} ${month} ${year}`;
-}
+import { formatDate } from "../utilities/helpers";
 
 
 function EventCard(props) {
 
-  console.log('props.id in EventCard :' , props.id)
+
 
   return (
     <div className="flex flex-col gap-2 p-8 rounded-xl shadow-md text-center justify-normal items-center">

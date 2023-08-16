@@ -17,7 +17,7 @@ function SingleEvent( {event} ) {
       <h1>{event.name}</h1>
       <BannerSingleEvent></BannerSingleEvent>
       <TitleSingleEvent event={event}></TitleSingleEvent>
-      <InfoArea></InfoArea>
+      <InfoArea event={event}></InfoArea>
       <Pricing></Pricing>
       
 
