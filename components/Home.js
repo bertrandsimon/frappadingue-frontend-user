@@ -31,6 +31,7 @@ function Home() {
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
           <br /><br />
+          <SingleEvent></SingleEvent>
           <EventsCardsGrid></EventsCardsGrid>
           <ProductOptions></ProductOptions>
           <br /><br /><br />

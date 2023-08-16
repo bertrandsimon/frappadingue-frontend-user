@@ -8,9 +8,13 @@ import InfoArea from './InfoAreaEvent';
 // IMAGE IMPORT
 import Image from 'next/image';
 
-function SingleEvent() {
+function SingleEvent( {event} ) {
+
+  console.log(event.name);
+
   return (
     <div>
+      <h1>{event.name}</h1>
       <BannerSingleEvent></BannerSingleEvent>
       <TitleSingleEvent></TitleSingleEvent>
       <InfoArea></InfoArea>
