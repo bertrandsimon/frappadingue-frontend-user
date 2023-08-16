@@ -11,8 +11,9 @@ function SingleEventPage({ event }) {
     <div>
       <main className="container mx-auto sm:px-6 lg:px-8">
         <Nav currentNavItem="Courses" />
-        <h1>Event ID: {id}</h1>
+      
         <SingleEvent event={event} />
+        
       </main>
       <Footer />
     </div>

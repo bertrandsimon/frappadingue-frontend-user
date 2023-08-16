@@ -3,7 +3,7 @@
 import BannerSingleEvent from './BannerSingleEvent';
 import TitleSingleEvent from './TitleSingleEvent';
 import Pricing from '../common/Pricing';
-import InfoArea from './InfoAreaEvent';
+import InfoArea from './InfoArea';
 
 // IMAGE IMPORT
 import Image from 'next/image';
@@ -14,7 +14,7 @@ function SingleEvent( {event} ) {
 
   return (
     <div>
-      <h1>{event.name}</h1>
+ 
       <BannerSingleEvent></BannerSingleEvent>
       <TitleSingleEvent event={event}></TitleSingleEvent>
       <InfoArea event={event}></InfoArea>

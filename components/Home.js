@@ -17,7 +17,7 @@ import Stats from './common/Stats';
 import Pattern from './common/Pattern';
 import Banner from './common/Banner';
 import SingleEvent from './event/SingleEvent';
-import InfoArea from './event/InfoAreaEvent';
+import InfoArea from './event/InfoArea';
 import SignUp from './common/SignUp';
 import ProductOptions from './shop/ProductOptions';
 
