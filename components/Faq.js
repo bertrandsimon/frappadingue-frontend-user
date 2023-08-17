@@ -270,9 +270,9 @@ function Faq() {
     {/* GENERAL */}
     
 
-    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-0 sm:pt-8 -mt-20 sm:mt-0'>
 
-      <div className='col-span-1 flex justify-center items-center'>
+      <div className='col-span-1 justify-center items-center'>
       <Image src="/images/events/info6.png" width={400} height={326}/>
       </div>
 
@@ -287,7 +287,7 @@ function Faq() {
   
     
     
-    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
       <div className='col-span-1 flex justify-center items-center'>
       <Image src="/images/events/info5.png" width={400} height={326}/>
@@ -303,7 +303,7 @@ function Faq() {
      {/* CERTIFICAT */}
      
 
-    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
       <div className='col-span-1 flex justify-center items-center'>
       <Image src="/images/events/info4.png" width={400} height={326}/>
@@ -319,7 +319,7 @@ function Faq() {
      {/* RETRAIT */}
      
 
-    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
       <div className='col-span-1 flex justify-center items-center'>
       <Image src="/images/events/info3.png" width={400} height={326}/>
@@ -335,7 +335,7 @@ function Faq() {
     {/* ANNULATION */}
     
 
-    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
       <div className='col-span-1 flex justify-center items-center'>
       <Image src="/images/events/info2.png" width={400} height={326}/>
@@ -351,7 +351,7 @@ function Faq() {
     {/* JOUR J */}
     
 
-    <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
       <div className='col-span-1 flex justify-center items-center'>
       <Image src="/images/events/info1.png" width={400} height={326}/>
@@ -367,7 +367,7 @@ function Faq() {
      {/* JOUR D APRES */}
      
 
-      <div className='grid grid-cols-3 gap-8 pl-8 pt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
         <div className='col-span-1 flex justify-center items-center'>
         <Image src="/images/events/info6.png" width={400} height={326}/>
