@@ -1,5 +1,8 @@
 import styles from '../../styles/TitleSingleEvent.module.css';
 
+import { useShoppingCart } from "use-shopping-cart";
+import { useState } from "react";
+
 import Image from 'next/image';
 import Button from '@mui/material/Button';
 

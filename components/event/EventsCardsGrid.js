@@ -32,7 +32,7 @@ function EventsCardsGrid() {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center mx-auto place-center flex-wrap w-100 md:max-w-[1000px]">
      
         {eventsData.map((event) => (
-          <EventCard key={event._id} name={event.name} location={event.location} thumb_image={event.thumb_image} date={event.date} id={event._id} />
+          <EventCard key={event._id} event={event} />
         ))}
 
       </div>

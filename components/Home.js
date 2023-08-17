@@ -20,6 +20,7 @@ import SingleEvent from './event/SingleEvent';
 import InfoArea from './event/InfoArea';
 import SignUp from './common/SignUp';
 import ProductOptions from './shop/ProductOptions';
+import CartSummary from './shop/CartSummary';
 
 import EventCard from './event/EventCard';
 import EventsCardsGrid from './event/EventsCardsGrid';
@@ -31,6 +32,7 @@ function Home() {
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
           <br /><br />
+          <CartSummary></CartSummary>
           <ProductOptions></ProductOptions>
           <br /><br /><br />
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>

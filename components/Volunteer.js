@@ -40,37 +40,37 @@ function Volunteer() {
             </p>
             <ul role="list" className="mt-8 space-y-8 text-white-600">
               <li className="flex gap-x-3">
-                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-300" aria-hidden="true" />
+                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-400" aria-hidden="true" />
                 <span>
                 Distribution des dossards (samedi/dimanche)
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-300" aria-hidden="true" />
+                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-400" aria-hidden="true" />
                 <span>
                 Remise des médailles/retrait des puces
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-300" aria-hidden="true" />
+                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-400" aria-hidden="true" />
                 <span>
                 Surveillance atelier
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-300" aria-hidden="true" />
+                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-400" aria-hidden="true" />
                 <span>
                 Orientation/signaleurs parcours
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-300" aria-hidden="true" />
+                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-400" aria-hidden="true" />
                 <span>
                 Distribution des ravitaillements, de la bière
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-300" aria-hidden="true" />
+                <CheckIcon className="mt-1 h-5 w-5 flex-none text-yellow-400" aria-hidden="true" />
                 <span>
                 Surveillance atelier
                 </span>
@@ -81,7 +81,7 @@ function Volunteer() {
             Si tu as des questions, n’hésite pas à nous écrire à  
             <span className="px-2">
               <Link href="mailto:contact@frappadingue.fr" >
-                <a className="hover:text-yellow-300 underline">contact@frappadingue.fr</a>
+                <a className="hover:text-yellow-400 underline">contact@frappadingue.fr</a>
               </Link>
             </span>
             Si tu es motivé, remplis le formulaire et nous le recevrons directement 🙂

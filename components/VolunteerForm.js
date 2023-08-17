@@ -133,7 +133,7 @@ function VolunteerForm() {
       </button>
       <button
         type="submit"
-        className="rounded-md bg-yellow-500 px-3 py-2 text-sm text-normal text-black shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+        className="rounded-md bg-yellow-400 px-3 py-2 text-sm text-normal text-black shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
       >
         Envoyer
       </button>
