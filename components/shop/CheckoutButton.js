@@ -30,7 +30,7 @@ export default function CheckoutButton() {
   return (
     <article className="mt-3 flex flex-col">
       <div className="text-red-700 text-xs mb-3 h-5 text-center">
-        {totalPrice && totalPrice < 30
+        {/* {totalPrice && totalPrice < 30
           ? "Minimum de commande : 30 Euros"
           : cartCount && cartCount > 20
           ? "Pas plus de 20 articles"
@@ -38,7 +38,7 @@ export default function CheckoutButton() {
           ? "Problème de redirection stripe"
           : status === "no-items"
           ? "Ajoutez des produits au panier"
-          : null}
+          : null} */}
       </div>
       <button
         onClick={handleClick}

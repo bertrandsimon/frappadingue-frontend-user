@@ -5,9 +5,10 @@ import Button from '@mui/material/Button';
 
 export default function Product({ product }) {
 
+  //console.log('product props in Product.js : ', product)
   const { addItem } = useShoppingCart();
   
-  const { name, price, emoji } = product;
+  const { name, price } = product;
   const [quantity, setQuantity] = useState(1);
 
   const addToCart = () => {
@@ -27,7 +28,7 @@ export default function Product({ product }) {
 
   return (
     <article className="flex flex-col gap-1  p-8 rounded-xl shadow-md text-center mb-6 bg-zinc-900">
-      <div className="text-4xl cursor-default">{emoji}</div>
+      <div className="text-4xl cursor-default">emoji</div>
       <div className="text-lg">{name}</div>
       <div className="text-2xl text-normal mt-auto">
 

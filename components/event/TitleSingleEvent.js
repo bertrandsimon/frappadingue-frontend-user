@@ -17,7 +17,7 @@ function TitleSingleEvent( {event} ) {
   return (
    
     <div className='grid grid-cols-1 gap-4 justify-center items-center text-center sm:grid-cols-4 sm:text-left'>
-
+      
       <div className='col-span-1'>
           <div className='flex-col gap-10 items-start h-full w-100px pl-8 -mt-20'>
 
