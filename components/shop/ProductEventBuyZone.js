@@ -5,24 +5,8 @@ import { products } from "../../data/productsOptionsData";
 
 
 function ProductEventBuyZone( {product} ) {
-  
-    // >> product :
-  // active: true
-  // date: 2023-10-08
-  // format_l_price: 48
-  // format_l_stripe_paylink: price_1NfIgmKRe8hWIoUkt6FczGlf
-  // format_s_price: 38
-  // format_s_stripe_paylink: price_1NfIfZKRe8hWIoUkZVN2pxHq
-  // location: Gravelines
-  // max_capacity: 5000
-  // name: Frappadingue
-  // start_hour: 14 h 00
-  // thumb_image: /images/event1.png
-  // year: 2023
-  // zip_code: 59
-  // __v: 0
-  // _id: 64db8865af6df4463b654a8a
 
+  // new products array with price by distance and stripe link
   const productsWithPricesByDistance = [
     {
       ...product,
@@ -44,12 +28,14 @@ function ProductEventBuyZone( {product} ) {
   
   return (
 
-    <div>
+    <div className="mt-20">
       
-      <h1>ProductEventBuyZone</h1>
      
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 justify-center mx-auto gap-4 place-center flex-wrap w-100 md:max-w-[1400px]">
+      <div className="grid sm:grid-cols-4 md:grid-cols-4 justify-center mx-auto gap-4 place-center flex-wrap w-100 md:max-w-[1400px]">
     
+      <div className="col-span-2">
+        {productsWithPricesByDistance[0].description}
+      </div>
       
       {productsWithPricesByDistance.map((product) => (
           <Product product={product} key={product.id} />

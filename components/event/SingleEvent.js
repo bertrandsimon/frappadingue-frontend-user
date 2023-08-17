@@ -20,7 +20,7 @@ function SingleEvent( {event} ) {
       <TitleSingleEvent event={event}></TitleSingleEvent>
       <ProductEventBuyZone product={event}></ProductEventBuyZone>
       <InfoArea event={event}></InfoArea>
-      <Pricing></Pricing>
+      <Pricing event={event}></Pricing>
       
 
     </div>

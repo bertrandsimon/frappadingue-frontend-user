@@ -7,7 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Pricing() {
+function Pricing( {event} ) {
 
   const frequencies = [
     { value: 'noOption', label: 'Sans option', priceSuffix: 'Euros' },

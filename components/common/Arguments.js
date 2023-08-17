@@ -16,11 +16,18 @@ function Arguments() {
     {title1: 'DES', title2: 'POTES', content: 'Marre du train train quotidien ? Formez une équipe et lancez vous dans ce voyage vers l’enfer !\n\nLa Frappadingue, c’est une affaire d’équipe! L’entraide et la solidarité seront vos maîtres-mots!'},
   ];
 
-  const argumentsZone = argumentsContent.map((item) => (<ArgumentCard title1={item.title1} title2={item.title2} content={item.content}/>))
+  const argumentsZone = argumentsContent.map((item) => (
+    <div>
+      <ArgumentCard title1={item.title1} title2={item.title2} content={item.content} />
+    </div>
+  ));
 
   return (
-    <div>
-
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center items-center m-14 pb-40 sm:m-0'>
+      {/* <div>Test</div>
+      <div>Test</div>
+      <div>Test</div>
+      <div>Test</div> */}
       {argumentsZone}
      
     </div>
