@@ -35,7 +35,7 @@ export default function Product({ product }) {
   return (
     <>
 
-    <article className="flex flex-col gap-1 p-8 rounded-xl shadow-md text-center mb-6 bg-zinc-900 m-2">
+    <article className="flex flex-col gap-1 p-8 rounded-xl shadow-md text-center mb-6 bg-neutral-950 m-2">
       <div className="text-lg uppercase">{name}</div>
       <hr />
       { product.format && <div className="text-1xl cursor-default">Format {product.format}</div>}
@@ -44,7 +44,7 @@ export default function Product({ product }) {
         {price} <span> €</span>
 
       </div>
-      <div className="flex justify-around items-center mt-4 mb-2 ">
+      <div className="flex justify-around items-center mt-4 mb-2 bg-neutral-950">
         <button
           onClick={decreaseQuantity}
           className="hover:text-black hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500"
@@ -61,7 +61,7 @@ export default function Product({ product }) {
       </div>
      
       <Button onClick={ () => addToCart()} variant="outlined" className='whiteBtn'>
-          Ajouter au panier
+          Ajouter
       </Button>
     </article>
 

@@ -16,7 +16,7 @@ function TitleSingleEvent( {event} ) {
 
   return (
    
-    <div className='grid grid-cols-1 gap-4 justify-center items-center text-center sm:grid-cols-4 sm:text-left'>
+    <div className='grid grid-cols-1 gap-4 text-center sm:grid-cols-4 sm:text-left'>
       
       <div className='col-span-1'>
           <div className='flex-col gap-10 items-start h-full w-100px pl-8 -mt-20'>
@@ -31,9 +31,9 @@ function TitleSingleEvent( {event} ) {
 
       <div className='col-span-3'>
 
-        <div className='flex-col w-full'>
+        <div className='flex-col w-full mt-10'>
           
-          <div className='flex pl-10 pt-10 justify-center sm:justify-start'>
+          <div className='flex pl-10 pt-0 sm:justify-start'>
             <div className='mr-2'><span className='text-2xl sm:text-3xl'>{event.name}</span></div>
             <div><span className='yellow text-2xl sm:text-3xl'>{event.location} ({event.zip_code})</span></div>
             <br />
@@ -43,9 +43,9 @@ function TitleSingleEvent( {event} ) {
             <span>Edition {event.year}</span>
           </div>
 
-          <div className='flex flex-col sm:flex-row pl-10 pt-10 justify-between items-center max-w-3xl'>
+          <div className='pl-10 pt-4 grid grid-cols-1 sm:grid-cols-3 gap-2'>
 
-            <Button variant="outlined" className='whiteBtn'>Inscription</Button>
+            {/* <Button variant="outlined" className='whiteBtn'>Inscription</Button> */}
 
             <div className={`${styles.yellowBlock} bg-yellow-500 m-4 mt-10 sm:m-0 sm:mt-0`}>
               <div className='font-poppins font-bold'>Format S : 5 à 6 kms</div>
