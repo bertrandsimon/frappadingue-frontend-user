@@ -3,11 +3,12 @@ import { useState } from "react";
 import { Fragment } from 'react';
 
 import Button from '@mui/material/Button';
-
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
 
 import ProductOptions from "./ProductOptions";
 
-export default function Product({ product }) {
+export default function ProductEvents({ product }) {
 
   //console.log('product props in Product.js : ', product)
   const { addItem } = useShoppingCart();
@@ -18,6 +19,7 @@ export default function Product({ product }) {
   const addToCart = () => {
     addItem(product, { count:quantity })
     setQuantity(1)
+    setOpen(true)
   }
 
   const decreaseQuantity = () => {
@@ -30,7 +32,15 @@ export default function Product({ product }) {
     setQuantity(quantity + 1);
   };
 
+  const [open, setOpen] = useState(false);
 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -65,7 +75,18 @@ export default function Product({ product }) {
       </Button>
     </article>
 
+    <Dialog open={open} onClose={handleClose} maxWidth="md">
+  
+        <DialogContent className='mb-10'>
+          <div>
+            <span>Choisissez vos options de course</span>
+          </div>
 
+          <ProductOptions></ProductOptions>
+
+      </DialogContent> 
+
+      </Dialog>
     </>
   );
 }

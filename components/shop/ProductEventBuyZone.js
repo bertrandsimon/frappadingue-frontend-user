@@ -1,5 +1,5 @@
 import Product from "./Product";
-
+import ProductEvents from "./ProductEvents";
 import { products } from "../../data/productsOptionsData";
 
 
@@ -29,12 +29,12 @@ function ProductEventBuyZone( {product} ) {
      
       <div className="grid sm:grid-cols-4 md:grid-cols-4 justify-center mx-auto gap-10 place-center flex-wrap w-100 md:max-w-[1400px]">
     
-      <div className="col-span-2 justify-center items-center flex text-justify">
+      <div className="sm:m-4 m-8 col-span-2 justify-center items-center flex text-justify">
         {productsWithPricesByDistance[0].description}
       </div>
       
       {productsWithPricesByDistance.map((product) => (
-          <Product product={product} key={product.id} />
+          <ProductEvents product={product} key={product.id} />
         ))}
      
 
