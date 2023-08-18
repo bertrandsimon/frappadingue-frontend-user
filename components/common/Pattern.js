@@ -1,7 +1,13 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
+import EventsCardsGrid from '../event/EventsCardsGrid';
+import InfoArea from '../event/InfoArea';
+import Editorial from '../homepage/Editorial';
 
-function Pattern() {
+function Pattern(props) {
+
+  const ComponentToDisplay = props.componentToDisplay;
+  
   
   return (
     <div className="relative isolate overflow-hidden bg-black">
@@ -18,9 +24,13 @@ function Pattern() {
         }}
       />
     </div>
-    <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+    <div className="p-10">
    
-   <span>PATTERN EXAMPLE Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas vero itaque asperiores atque harum fuga quam saepe voluptates quo? Cupiditate pariatur sit qui explicabo deserunt. Alias, eos officiis. Nam?</span>
+      {/* component to be patterned go belows */}
+      {ComponentToDisplay === 'EventsCardsGrid' && <EventsCardsGrid />}
+      {ComponentToDisplay === 'Editorial' && <Editorial /> }
+      {/*  */}
+
     </div>
   </div>
 

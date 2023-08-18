@@ -24,8 +24,9 @@ function EventCard( {event}) {
     {/*  */}
 
       <div style={{ width: '302px', height: '378px' }} className="w-full h-full" width="302px" height="378px">
-        <Image src={event.thumb_image} width={302} height={378} className="border"/>
-        
+        <div className="hvr-float cursor-pointer">
+        <Image src={event.thumb_image} width={302} height={378} />
+        </div>
       </div>
 
       <div className="text-2xl yellow">{event.location}</div>

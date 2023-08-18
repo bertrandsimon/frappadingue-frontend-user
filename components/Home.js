@@ -31,11 +31,11 @@ function Home() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
-      
+          
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
           <div className='-mt-20'><CardsArea></CardsArea></div>
-          <Editorial></Editorial>
+          <Pattern componentToDisplay="Editorial"></Pattern>
           <Arguments></Arguments>
           
         </main>
