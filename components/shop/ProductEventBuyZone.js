@@ -22,10 +22,6 @@ function ProductEventBuyZone( {product} ) {
     }
   ];
   
-  //console.log(productsWithPricesByDistance);
-
-  //console.log ('product in ProductEventBuyZone', product)
-  
   return (
 
     <div className="mt-20">

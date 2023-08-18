@@ -28,9 +28,10 @@ export default function Product({ product }) {
 
   return (
     <article className="flex flex-col gap-1  p-8 rounded-xl shadow-md text-center mb-6 bg-zinc-900">
-      <div className="text-4xl cursor-default">emoji</div>
-      <div className="text-lg">{name}</div>
-      <div className="text-2xl text-normal mt-auto">
+      <div className="text-lg uppercase">{name}</div>
+      <hr />
+      { product.format && <div className="text-1xl cursor-default">Format {product.format}</div>}
+      <div className="text-2xl text-normal mt-auto p-4 text-yellow-400">
 
         {price} <span> €</span>
 
