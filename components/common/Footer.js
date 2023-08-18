@@ -1,5 +1,5 @@
 import styles from '../../styles/Footer.module.css';
-
+import { Fragment } from 'react';
 // IMAGE IMPORT
 import Image from 'next/image';
 
@@ -66,6 +66,14 @@ const navigation = {
 
 function Footer() {
   return (
+
+    <>
+
+    <div className='w-full h-96'>
+      <div className={styles.bgFooterImage}></div>
+    </div>
+
+
     <footer className={styles.greyBg}>
     <h2 id="footer-heading" className="sr-only">
       Footer
@@ -135,6 +143,10 @@ function Footer() {
       </div>
     </div>
   </footer>
+
+
+  </>
+
   );
 }
 

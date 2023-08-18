@@ -1,3 +1,11 @@
 .greyBg {
     background-color: #242424 !important;
 }
+
+.bgFooterImage {
+    background-image: url('/images/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 390px;
+  }
