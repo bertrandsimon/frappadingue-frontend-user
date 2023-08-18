@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useShoppingCart } from "use-shopping-cart";
-
+import Image from "next/image";
 import { useEffect } from "react";
 
 function OrderSummary( {cartItems} ) {
@@ -37,9 +37,10 @@ useEffect( () => {
        
         {Object.values(products ?? {}).map((product) => (
           <div key={product.id} className="flex space-x-6 border-b border-gray-500 py-10">
+            <div><Image src={product.thumb_image} width={150} height={190}/></div>
+            
             {/* <img
-              src={product.imageSrc}
-              alt={product.imageAlt}
+              src={product.thumb_img}
               className="h-20 w-20 flex-none rounded-lg bg-gray-100 object-cover object-center sm:h-40 sm:w-40"
             /> */}
             <div className="flex flex-auto flex-col">
@@ -49,15 +50,15 @@ useEffect( () => {
                 </h4>
                 {product.format && <p className="mt-2 text-sm text-gray-400">{product.format}</p>}
               </div>
-              <div className="mt-6 flex flex-1 items-end">
+              <div className="mt-6 flex flex-1 items-start text-white">
                 <dl className="flex space-x-4 divide-x divide-gray-200 text-sm sm:space-x-6">
                   <div className="flex">
-                    <dt className="font-medium text-gray-400">Quantité</dt>
-                    <dd className="ml-2 text-gray-400">{product.quantity}</dd>
+                    <dt className="font-medium text-white">Quantité : </dt>
+                    <dd className="ml-2 text-yellow-400">{product.quantity}</dd>
                   </div>
                   <div className="flex pl-4 sm:pl-6">
-                    <dt className="font-medium text-gray-400">Prix</dt>
-                    <dd className="ml-2 text-gray-400">{product.price} €</dd>
+                    <dt className="font-medium text-white">Prix : </dt>
+                    <dd className="ml-2 text-yellow-400">{product.price} €</dd>
                   </div>
                 </dl>
               </div>
@@ -74,15 +75,11 @@ useEffect( () => {
           <h3 className="sr-only">Total</h3>
 
           <dl className="space-y-6  pt-10 text-sm">
-            <div className="flex justify-between">
-              <dt className="font-medium text-gray-400">Sous total</dt>
-              <dd className="text-gray-400">$36.00</dd>
-            </div>
-        
+
           
             <div className="flex justify-between">
               <dt className="font-medium text-yellow-400">Total</dt>
-              <dd className="text-yellow-400">{totalPrice}</dd>
+              <dd className="text-yellow-400">{totalPrice} €</dd>
             </div>
           </dl>
         </div>
