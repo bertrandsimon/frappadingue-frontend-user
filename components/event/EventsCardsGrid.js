@@ -29,7 +29,7 @@ function EventsCardsGrid() {
 
     <div>
            
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center mx-auto place-center flex-wrap w-100 md:max-w-[1000px]">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center mx-auto place-center flex-wrap md:max-w-[1000px]">
      
         {eventsData.map((event) => (
           <EventCard key={event._id} event={event} />

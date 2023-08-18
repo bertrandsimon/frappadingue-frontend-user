@@ -34,7 +34,7 @@ function Home() {
       
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
-          <CardsArea></CardsArea>
+          <div className='-mt-20'><CardsArea></CardsArea></div>
           <Editorial></Editorial>
           <Arguments></Arguments>
           

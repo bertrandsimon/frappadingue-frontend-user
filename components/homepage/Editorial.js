@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 function Editorial() {
   return (
-    <div className='flex flex-row flex-wrap justify-center items-center pr-8 pl-8 pt-20'>
+    <div className='flex flex-row flex-wrap justify-center items-center pr-8 pl-8'>
       <div className='w-full sm:basis-1/3 text-center pb-20 sm:pb-0'><Image src="/images/editorial.png" width={343} height={343}/></div>
       <div className='w-full sm:basis-2/3'>
         <h1 className='up text-2xl'><span className='yellow'>la frappadingue</span> c'est quoi ?</h1>

@@ -195,8 +195,6 @@ function Nav(props) {
 
     <Dialog open={open} onClose={handleClose} maxWidth="md">
   
-     
-    
       <DialogContent className='mb-10'>
         <div className='flex flex-row justify-center items-center pt-10 pb-10' style={{ overflowY: 'none' }}>
           <span className='px-2 cursor-pointer hover:text-yellow-300' onClick={handleClickDisplaySignIn}>J'ai deja un compte</span>

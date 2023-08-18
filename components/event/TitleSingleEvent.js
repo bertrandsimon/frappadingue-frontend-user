@@ -57,6 +57,10 @@ function TitleSingleEvent( {event} ) {
               <div className='pt-2 text-xs'>40 obstacles | à partir de 16 ans</div>  
             </div>
 
+            <div className='text-center flex justify-center items-center'>
+              <Image src="/images/choice.png" width={131} height={60} />
+            </div>
+
           
 
           </div>
