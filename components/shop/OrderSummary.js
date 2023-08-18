@@ -20,7 +20,7 @@ function OrderSummary() {
     <div className="bg-black">
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="max-w-xl">
-        <h1 className="text-base font-medium text-yellow-300">Merci !</h1>
+        <h1 className="text-base font-medium text-yellow-400">Merci !</h1>
         <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Commande validée !</p>
         <p className="mt-2 text-base text-gray-400">Inscription valide pour la Frappadingue</p>
 
@@ -40,7 +40,7 @@ function OrderSummary() {
             />
             <div className="flex flex-auto flex-col">
               <div>
-                <h4 className="font-medium text-yellow-300">
+                <h4 className="font-medium text-yellow-400">
                   <a href={product.href}>{product.name}</a>
                 </h4>
                 <p className="mt-2 text-sm text-gray-400">{product.description}</p>
@@ -77,8 +77,8 @@ function OrderSummary() {
         
           
             <div className="flex justify-between">
-              <dt className="font-medium text-yellow-300">Total</dt>
-              <dd className="text-yellow-300">$23.00</dd>
+              <dt className="font-medium text-yellow-400">Total</dt>
+              <dd className="text-yellow-400">$23.00</dd>
             </div>
           </dl>
         </div>

@@ -32,8 +32,9 @@ function Home() {
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
           {/* <br /><br /> */}
-          {/* <CartSummary></CartSummary>
-          <ProductOptions></ProductOptions> */}
+          <OrderSummary></OrderSummary>
+          {/* <CartSummary></CartSummary> */}
+          
           {/* <br /><br /><br /> */}
           <Banner title="la frappadingue" subtitle="accessible à tous sans exception" sliderOn={true}></Banner>
           
