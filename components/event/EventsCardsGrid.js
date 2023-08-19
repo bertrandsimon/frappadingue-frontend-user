@@ -13,7 +13,7 @@ function EventsCardsGrid() {
   const [eventsData, setEventsData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/events/allEvents')
+    fetch('https://frappadingue-backend.vercel.app/events/allEvents')
     .then(response => response.json())
     .then(data => {
       setEventsData(data.all)
