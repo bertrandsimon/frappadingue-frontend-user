@@ -1,3 +1,4 @@
+// import { useSession, signIn, signOut } from "next-auth/react"
 import styles from '../styles/Home.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -26,10 +27,14 @@ import EventCard from './event/EventCard';
 import EventsCardsGrid from './event/EventsCardsGrid';
 
 function Home() {
+
+  // const { data: session } = useSession()
+
   return (
     <div>
-        
-        <main className="container mx-auto sm:px-6 lg:px-8">
+        {/* <button onClick={() => signIn()}>Sign in</button>
+        <button onClick={() => signOut()}>Sign Out</button> */}
+        <main className="mx-auto sm:px-6 lg:px-8 px-0">
           <Nav></Nav>
           
           <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={true}></Banner>

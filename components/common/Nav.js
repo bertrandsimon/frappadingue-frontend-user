@@ -104,17 +104,23 @@ function Nav(props) {
 
   return (
     <>
-    <Disclosure as="nav" className="bg-black sticky top-0 z-50 pb-10 sm:mt-10">
+    <Disclosure as="nav" className="bg-black sticky top-0 z-50 pb-10 mt-6 sm:mt-10">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between">
-              <div className="flex flex-1 items-center justify-start">
+              <div className="flex flex-1 items-center sm:justify-start justify-center">
                 {/* Logo */}
 
+                {/* mobile logo */}
                 <div className="flex-shrink-0 items-center cursor-pointer">
-                  <Link href="/" ><Image src="/images/frappadingue-logo.png" width={216} height={77} /></Link>
+                  <Link href="/" ><Image src="/images/frappadingue-logo.png" width={154} height={55} className="w-30 h-auto"/></Link>
                 </div>
+
+                {/* desktop logo */}
+                {/* <div className="flex-shrink-0 items-center cursor-pointer">
+                  <Link href="/" ><Image src="/images/frappadingue-logo.png" width={216} height={77}/></Link>
+                </div> */}
 
                 {/* Desktop menu */}
                 <div className="hidden sm:ml-6 sm:block sm:pt-4 sm:pl-10">
@@ -149,7 +155,7 @@ function Nav(props) {
                   <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
                 </button>
 
-                <div className="rounded-full flex justify-center items-center bg-yellow-400 text-xs text-black absolute w-6 h-5 bottom-12 right-8">
+                <div className="rounded-full flex justify-center items-center bg-yellow-400 text-xs text-black absolute w-6 h-6 bottom-12 right-8 cursor-pointer">
                   {cartCount}
                 </div>
                 <ShoppingCart />
@@ -164,7 +170,7 @@ function Nav(props) {
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-yellow-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Ouvrir</span>
-                  {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6" aria-hidden="true" />}
+                  {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6 text-white" aria-hidden="true" />}
                 </Disclosure.Button>
               </div>
             </div>
@@ -179,8 +185,8 @@ function Nav(props) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-yellow-400 text-black' : 'text-gray-300 hover:bg-yellow-400 hover:text-black',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current ? 'bg-yellow-400 text-black' : 'text-white text-center hover:bg-yellow-400 hover:text-yellow-400',
+                    'block rounded-md px-3 py-2 text-base font-medium uppercase'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

@@ -1,3 +1,4 @@
+// import { SessionProvider } from "next-auth/react"
 import '../styles/globals.css';
 import 'tailwindcss/tailwind.css';
 
@@ -38,33 +39,37 @@ const store = configureStore({
   },
 });
 
-function App({ Component, pageProps }) {
+function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   return (
     <>
-    <CartProvider
-    mode="payment"
-    cartMode="client-only"
-    stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
-    successUrl={`${process.env.NEXT_PUBLIC_URL}/Success`}
-    cancelUrl={`${process.env.NEXT_PUBLIC_URL}/?success=false`}
-    currency="EUR"
-    allowedCountries={['US', 'GB', 'CA', 'FR']}
-    // enables local storage
-    shouldPersist={true}
-  >
-        <ThemeProvider theme={darkTheme}>
-          <Provider store={store}>
-            <PersistGate persistor={persistor}>
-              <Head>
-                <title>Frappadingue : courses à obstacles</title>
-              </Head>
-              <Component {...pageProps} />
-              </PersistGate>
-          </Provider>
-        </ThemeProvider>
+    {/* <SessionProvider session={session}> */}
+      <CartProvider
+      mode="payment"
+      cartMode="client-only"
+      stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
+      successUrl={`${process.env.NEXT_PUBLIC_URL}/Success`}
+      cancelUrl={`${process.env.NEXT_PUBLIC_URL}/?success=false`}
+      currency="EUR"
+      allowedCountries={['US', 'GB', 'CA', 'FR']}
+      // enables local storage
+      shouldPersist={true}
+    >
+          <ThemeProvider theme={darkTheme}>
+            <Provider store={store}>
+              <PersistGate persistor={persistor}>
+                <Head>
+                  <title>Frappadingue : courses à obstacles</title>
+                </Head>
+                <Component {...pageProps} />
+                </PersistGate>
+            </Provider>
+          </ThemeProvider>
 
-    </CartProvider>
-
+      </CartProvider>
+    {/* </SessionProvider> */}
     </>
   );
 }
