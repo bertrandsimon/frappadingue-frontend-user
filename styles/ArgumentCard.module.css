@@ -1,12 +1,13 @@
 .container{
-    min-height: 320px;
+    /* min-height: 320px;
     height: 320px;
     max-width: 392px;
-    min-width: 392px;
+    min-width: 392px; */
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
+    padding-bottom: 40px;
     background: url('/images/argument-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;

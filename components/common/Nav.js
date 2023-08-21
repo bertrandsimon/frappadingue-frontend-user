@@ -36,6 +36,13 @@ function Nav(props) {
 
   const { handleCartClick, cartCount } = useShoppingCart();
 
+  const [cartVisible, setCartVisible] = useState(false);
+
+  const toggleCartVisibility = () => {
+    setCartVisible(!cartVisible);
+    handleCartClick(); // call the original handleCartClick 
+  };
+
   const user = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
@@ -147,7 +154,7 @@ function Nav(props) {
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
-                onClick={ () => handleCartClick()}
+                onClick={toggleCartVisibility}
                   type="button"
                   className="rounded-full p-1 text-white hover:text-white focus:outline-none "
                 >
@@ -158,7 +165,8 @@ function Nav(props) {
                 <div className="rounded-full flex justify-center items-center bg-yellow-400 text-xs text-black absolute w-6 h-6 bottom-12 right-8 cursor-pointer">
                   {cartCount}
                 </div>
-                <ShoppingCart />
+                
+                {cartVisible && <ShoppingCart />}
 
                 {/* Profile dropdown */}
                 <div className="ml-4">
@@ -169,7 +177,6 @@ function Nav(props) {
               {/* Mobile menu button */}
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-yellow-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Ouvrir</span>
                   {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6 text-white" aria-hidden="true" />}
                 </Disclosure.Button>
               </div>
@@ -177,7 +184,7 @@ function Nav(props) {
           </div>
 
           {/* Mobile menu */}
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden z-[9999]">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {updatedNavigation.map((item) => (
                 <Disclosure.Button
