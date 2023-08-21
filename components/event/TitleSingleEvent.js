@@ -19,9 +19,10 @@ function TitleSingleEvent( {event} ) {
     <div className='grid grid-cols-1 gap-4 text-center sm:grid-cols-4 sm:text-left'>
       
       <div className='col-span-1'>
-          <div className='flex-col gap-10 items-start h-full w-100px pl-8 -mt-20'>
-
-          <Image className='rounded-md' src="/images/events/event-thumb1.jpg" width={270} height={346}/>
+          <div className='flex-col gap-10 items-center sm:items-start h-full w-100px pl-8 -mt-20 '>
+         
+          <div className='mx-auto flex justify-center'><Image className='rounded-md' src="/images/events/event-thumb1.jpg" width={270} height={346}/></div>
+          
           <div className='mt-4'> <span className='yellow pr-4'>Date: </span><span>{formatDate(event.date)}</span></div>
           <div className='mt-2'> <span className='yellow pr-4'>Horaire: </span><span>{event.start_hour}</span></div>
           <div className='mt-2'> <span className='yellow pr-4'>Lieu: </span><span>{event.location} </span></div>
@@ -31,9 +32,9 @@ function TitleSingleEvent( {event} ) {
 
       <div className='col-span-3'>
 
-        <div className='flex-col w-full mt-10'>
+        <div className='flex-col w-full mt-10 pl-0 sm:pl-10'>
           
-          <div className='flex pl-10 pt-0 sm:justify-start'>
+          <div className='flex pt-0 sm:justify-start justify-center'>
             <div className='mr-2'><span className='text-2xl sm:text-3xl'>{event.name}</span></div>
             <div><span className='yellow text-2xl sm:text-3xl'>{event.location} ({event.zip_code})</span></div>
             <br />
@@ -43,7 +44,7 @@ function TitleSingleEvent( {event} ) {
             <span>Edition {event.year}</span>
           </div>
 
-          <div className='pl-10 pt-4 grid grid-cols-1 sm:grid-cols-3 gap-2'>
+          <div className='pt-4 grid grid-cols-1 sm:grid-cols-3 gap-2'>
 
             {/* <Button variant="outlined" className='whiteBtn'>Inscription</Button> */}
 

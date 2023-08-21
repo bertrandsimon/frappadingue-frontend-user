@@ -46,7 +46,7 @@ export default function ProductEvents({ product }) {
   return (
     <>
     
-    <div className="text-center">
+    <div className="text-center mx-auto">
       <Image src={`/images/${product.topImg}`} width={241} height={126} />
       <article className="flex flex-col gap-1 p-8 rounded-xl shadow-md text-center mb-6 bg-zinc-900">
         <div className="text-lg uppercase">{name}</div>
