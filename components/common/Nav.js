@@ -192,7 +192,7 @@ function Nav(props) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-yellow-400 text-black' : 'text-white text-center hover:bg-yellow-400 hover:text-yellow-400',
+                    item.current ? 'bg-yellow-400 text-black text-center' : 'text-white text-center hover:bg-yellow-400 hover:text-black',
                     'block rounded-md px-3 py-2 text-base font-medium uppercase'
                   )}
                   aria-current={item.current ? 'page' : undefined}
