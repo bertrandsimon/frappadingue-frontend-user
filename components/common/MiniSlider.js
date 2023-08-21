@@ -38,11 +38,16 @@ function MiniSlider() {
   const currentImage = images[currentImgIndex];
 
   return (
-    <div className={styles.container}>
-      <div onClick={handlePrev} className='cursor-pointer flex items-center pt-40 h-full'><ChevronLeftIcon className="w-6 h-6 text-black hover:text-white" /></div>
-      <Image src={currentImage.src} width={488} height={404} />
-      <div onClick={handleNext} className='cursor-pointer flex items-center pt-40 h-full'><ChevronRightIcon className="w-6 h-6 text-black hover:text-white" /></div>
+    // <div className={styles.container}>
+    //   <div onClick={handlePrev} className='cursor-pointer flex items-center pt-40 h-full'><ChevronLeftIcon className="w-6 h-6 text-black hover:text-white" /></div>
+    //   <Image src={currentImage.src} width={488} height={404} />
+    //   <div onClick={handleNext} className='cursor-pointer flex items-center pt-40 h-full'><ChevronRightIcon className="w-6 h-6 text-black hover:text-white" /></div>
+    // </div>
+
+    <div>
+      <Image src='/images/events/info1.png' width={400} height={326}/>
     </div>
+
   );
 }
 

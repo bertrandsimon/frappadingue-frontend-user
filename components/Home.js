@@ -34,11 +34,12 @@ function Home() {
     <div>
         {/* <button onClick={() => signIn()}>Sign in</button>
         <button onClick={() => signOut()}>Sign Out</button> */}
+        
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
           
-          <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={false}></Banner>
-          {/* <Banner title="bénévoles" subtitle="Intègre la team Frappadingue" sliderOn={false}></Banner> */}
+          <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={true}></Banner>
+          
           <div className='-mt-20'><CardsArea></CardsArea></div>
           <Pattern componentToDisplay="Editorial"></Pattern>
           <Arguments></Arguments>
@@ -48,13 +49,7 @@ function Home() {
         <Footer></Footer>
     </div>
 
-    // <div className='bg-gray-900'>
-    //  <Nav></Nav>
-    //  <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={false}></Banner>
-    //  <div className='-mt-20'><CardsArea></CardsArea></div>
-    //  <Pattern componentToDisplay="Editorial"></Pattern>
-     
-    // </div>
+   
 
   );
 }
