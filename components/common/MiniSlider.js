@@ -5,13 +5,14 @@ import Image from 'next/image';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 
-function MiniSlider() {
+function MiniSlider(  ) {
   const images = [
     { id: 0, src: '/images/1.png', alt: 'slide1', current: false },
     { id: 1, src: '/images/2.png', alt: 'slide1', current: true },
     { id: 2, src: '/images/3.png', alt: 'slide1', current: false },
   ];
 
+  console.log(imageBanner)
   // Set the initial state to the index of the image with current: true
   const [currentImgIndex, setCurrentImgIndex] = useState(
     images.findIndex((image) => image.current === true)
@@ -45,7 +46,7 @@ function MiniSlider() {
     // </div>
 
     <div>
-      <Image src='/images/events/info1.png' width={400} height={326}/>
+      {/* <Image src={`/images/events/${imageBanner}`} width={400} height={326}/> */}
     </div>
 
   );

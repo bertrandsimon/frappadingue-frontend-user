@@ -17,7 +17,7 @@ function BenevolesComponentPage() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav currentNavItem="Bénévoles"></Nav>
-          <Banner title="bénévoles" subtitle="Intègre la team Frappadingue" sliderOn={false}></Banner>
+          <Banner title="bénévoles" subtitle="Intègre la team Frappadingue" sliderOn={true} imageBanner="info4.png"></Banner>
           <Volunteer></Volunteer>
         </main>
        

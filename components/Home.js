@@ -38,7 +38,7 @@ function Home() {
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav></Nav>
           
-          <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={true}></Banner>
+          <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={true} imageBanner="info3.png"></Banner>
           
           <div className='-mt-20'><CardsArea></CardsArea></div>
           <Pattern componentToDisplay="Editorial"></Pattern>

@@ -25,7 +25,9 @@ function EventCard( {event}) {
 
       <div style={{ width: '302px', height: '378px' }} className="w-full h-full" width="302px" height="378px">
         <div className="hvr-float cursor-pointer">
-        <Image src={event.thumb_image} width={302} height={378} />
+          <Link href={`/SingleEventPage/${event._id}`} >
+            <Image src={event.thumb_image} width={302} height={378} />
+          </Link>
         </div>
       </div>
 

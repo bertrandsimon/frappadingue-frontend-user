@@ -20,7 +20,7 @@ function CoursesComponentPage() {
 
           <Nav currentNavItem="Courses"></Nav>
 
-          <Banner title="les prochaines courses" subtitle="une expérience inoubliable !" sliderOn={false}></Banner>
+          <Banner title="les prochaines courses" subtitle="une expérience inoubliable !" sliderOn={true} imageBanner="info1.png"></Banner>
           
           <div className="-mt-20">
             <EventsCardsGrid></EventsCardsGrid>

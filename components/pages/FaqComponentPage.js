@@ -17,7 +17,7 @@ function FaqComponentPage() {
         
         <main className="container mx-auto sm:px-6 lg:px-8">
           <Nav currentNavItem="FAQ"></Nav>
-          <Banner title="F.A.Q" subtitle="questions / réponses" sliderOn={false}></Banner>
+          <Banner title="F.A.Q" subtitle="questions / réponses" sliderOn={false} imageBanner="info5.png"></Banner>
           <div className="-mt-20"><Faq/></div>
         </main>
        

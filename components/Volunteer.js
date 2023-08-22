@@ -80,8 +80,8 @@ function Volunteer() {
             Alors motive toi et inscris toi 🙂
             Si tu as des questions, n’hésite pas à nous écrire à  
             <span className="px-2">
-              <Link href="mailto:contact@frappadingue.fr" >
-                <a className="hover:text-yellow-400 underline">contact@frappadingue.fr</a>
+              <Link href="mailto:contact@frappadingue.fr" className="hover:text-yellow-400 underline">
+                contact@frappadingue.fr
               </Link>
             </span>
             Si tu es motivé, remplis le formulaire et nous le recevrons directement 🙂
