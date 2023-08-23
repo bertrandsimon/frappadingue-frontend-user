@@ -18,7 +18,7 @@ function PresentationComponentPage() {
         <main className="container mx-auto sm:px-6 lg:px-8">
           
           <Nav currentNavItem="Présentation"></Nav>
-          <Banner title="la frappadingue c'est" subtitle="la référence de la course à obstacles" sliderOn={true} imageBanner="info7.png"></Banner>
+          <Banner title="la frappadingue c'est" subtitle="la référence de la course à obstacles" sliderOn={true} imageBanner="infodummy.png"></Banner>
           
           <div className='-mt-60'><ImagesArea></ImagesArea></div>
           
