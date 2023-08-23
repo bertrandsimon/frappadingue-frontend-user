@@ -17,7 +17,7 @@ function Arguments() {
   ];
 
   const argumentsZone = argumentsContent.map((item) => (
-    <div>
+    <div className='h-96'>
       <ArgumentCard title1={item.title1} title2={item.title2} content={item.content} />
     </div>
   ));
