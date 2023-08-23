@@ -5,7 +5,7 @@ import ContactForm from './ContactForm';
 function Contact() {
 
   return (
-    <div className="relative isolate overflow-hidden bg-black px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+    <div className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
 
 
 
@@ -22,7 +22,8 @@ function Contact() {
         </div>
       </div>
       <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-    
+
+       
         <ContactForm></ContactForm>
 
       </div>

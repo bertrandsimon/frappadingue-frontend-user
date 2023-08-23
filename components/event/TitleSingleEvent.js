@@ -19,15 +19,20 @@ function TitleSingleEvent( {event} ) {
     <div className='grid grid-cols-1 gap-4 text-center sm:grid-cols-4 sm:text-left'>
       
       <div className='col-span-1'>
+
           <div className='flex-col gap-10 items-center sm:items-start h-full w-100px pl-8 -mt-20 '>
          
-          <div className='mx-auto flex justify-center'><Image className='rounded-md' src="/images/events/event-thumb1.jpg" width={270} height={346}/></div>
+          <div className='mx-auto flex justify-center'>
+            <Image className='rounded-md' src="/images/events/event-thumb1.jpg" width={270} height={346}/>
+          </div>
           
-          <div className='mt-4'> <span className='yellow pr-4'>Date: </span><span>{formatDate(event.date)}</span></div>
-          <div className='mt-2'> <span className='yellow pr-4'>Horaire: </span><span>{event.start_hour}</span></div>
-          <div className='mt-2'> <span className='yellow pr-4'>Lieu: </span><span>{event.location} </span></div>
-
+          <div className='flex flex-col justify-center items-center'>
+            <div className='mt-4'> <span className='yellow pr-4'>Date: </span><span>{formatDate(event.date)}</span></div>
+            <div className='mt-2'> <span className='yellow pr-4'>Horaire: </span><span>{event.start_hour}</span></div>
+            <div className='mt-2'> <span className='yellow pr-4'>Lieu: </span><span>{event.location} </span></div>
+          </div>
         </div>
+
       </div>
 
       <div className='col-span-3'>

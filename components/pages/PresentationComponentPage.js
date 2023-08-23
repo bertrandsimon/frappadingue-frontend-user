@@ -18,10 +18,11 @@ function PresentationComponentPage() {
           <Nav currentNavItem="Présentation"></Nav>
           <Banner title="la frappadingue c'est" subtitle="la référence de la course à obstacles" sliderOn={true} imageBanner="info7.png"></Banner>
           <Stats></Stats>
-          <Pricing></Pricing>
+          <div className='m-10'><Pricing ></Pricing></div>
         </main>
-       
-        <Footer></Footer>
+
+        <div className='-mt-40'><Footer ></Footer></div>
+        
     </div>
 
   );

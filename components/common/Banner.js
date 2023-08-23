@@ -14,12 +14,15 @@ function Banner(props) {
 
   return (
    
-    <div className={styles.container}>
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 pr-1 h-96 sm:h-80 sm:m-1 mb-20 sm:pt-0 select-none'>
-        <div className='sm:pt-11 sm:ml-10 sm:col-span-1 flex sm:justify-end items-end sm:h-full mt-14 lg:mt-0 sm:mt-0 '>      {sliderOn && <Image src={`/images/events/${props.imageBanner}`} width={400} height={326}/> }
-        </div>
+    <div className='flex justify-center items-end h-full rounded-t-lg bg-cover bg-no-repeat' style={{ backgroundImage: "url('/images/slide1.jpg')" }}>
+      <div className='grid grid-cols-1 sm:grid-cols-3 pr-1 sm:pt-0 select-none '>
+
+      <div className='sm:col-span-1 flex flex-col justify-end sm:justify-end items-end'>
+      {sliderOn && <Image src={`/images/events/${props.imageBanner}`} width={400} height={326} />}
+    </div>
+
         {/* desktop */}
-        <div className='hidden sm:visible sm:col-span-2 sm:flex justify-center text-center items-center flex-col mb-20 sm:mb-0'>
+        <div className='hidden sm:visible sm:col-span-2 sm:flex justify-center text-center items-center flex-col sm:mb-0'>
           <div className='drop-shadow-md text-4xl uppercase font-extrabold'>{props.title}</div>
           <div className='drop-shadow-md text-2xl uppercase font-medium'>{props.subtitle}</div>
         </div>

@@ -16,7 +16,7 @@ function MediasComponentPage() {
           <Photos></Photos>
         </main>
        
-        <Footer></Footer>
+        <div className='-mt-40'><Footer ></Footer></div>
     </div>
 
   );
