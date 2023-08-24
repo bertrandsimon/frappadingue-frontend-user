@@ -17,7 +17,7 @@ function CardsArea() {
     <div className="col-span-1 w-full sm:basis-1/4 text-center mx-auto flex flex-column items-center justify-center pb-6" height={346}>
       <div className='pt-10'>
         <p className="pb-2 text-2xl">Les prochaines</p>
-        <p className='yellow text-2xl pb-8'>courses</p>
+        <p className='text-yellow-400 text-2xl pb-8'>courses</p>
           <Button variant="outlined" className='whiteBtn'>
             <Link href="/CoursesPage">toutes les courses</Link>
           </Button>

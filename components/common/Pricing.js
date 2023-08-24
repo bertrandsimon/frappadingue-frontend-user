@@ -19,7 +19,7 @@ function Pricing( {event} ) {
     {
       name: 'FORMAT S : 5 - 6 KMS',
       id: 'tier-freelancer',
-      href: '#',
+      href: '/CoursesPage',
       price: { noOption: '38', shirt: '44', insurance: '48', all:'54' },
       description: 'INSCRIPTION INDIVIDUELLE OU GROUPE',
       features: ['Inscription à la course', 'Dossard', 'Ravitaillement', 'Médaille'],
@@ -28,7 +28,7 @@ function Pricing( {event} ) {
     {
       name: 'FORMAT L : 10 - 12 KMS',
       id: 'tier-startup',
-      href: '#',
+      href: '/CoursesPage',
       price: { noOption: '48', shirt: '54', insurance: '58', all:'64' },
       description: 'INSCRIPTION INDIVIDUELLE OU GROUPE',
       features: ['Inscription à la course', 'Dossard', 'Ravitaillement', 'Médaille'],
@@ -37,7 +37,7 @@ function Pricing( {event} ) {
     {
       name: 'SUR PLACE',
       id: 'tier-enterprise',
-      href: '#',
+      href: '/CoursesPage',
       price: { noOption: '', shirt: '', insurance: '', all:'' },
       description: '6 kms : 50€ / 12 kms : 60€',
       features: ['Inscription à la course', 'Dossard', 'Ravitaillement', 'Médaille'],
@@ -51,12 +51,12 @@ function Pricing( {event} ) {
     <div className="bg-black py-14 sm:py-4 sm:mb-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className=" font-semibold leading-7 text-yellow-400 uppercase">Nos tarifs</h2>
-          <p className="mt-2 text-4xl font-normal tracking-tight text-white">
+          <h2 className=" font-normal leading-7 text-yellow-400 uppercase text-2xl">Nos tarifs</h2>
+          <p className="mt-4 font-bold leading-8tracking-tight text-white">
             2 formats de courses adaptés à tous
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-md leading-8 text-gray-300">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-md leading-8 text-gray-300">
           1 course, 2 challenges : 1 départ commun
         </p>
         <div className="mt-16 flex justify-center">
@@ -106,7 +106,7 @@ function Pricing( {event} ) {
               </p>
                )}
               <a
-                href={tier.href}
+                href='/CoursesPage'
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular

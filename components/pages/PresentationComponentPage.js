@@ -24,7 +24,7 @@ function PresentationComponentPage() {
           
           <Stats></Stats>
 
-          <div className='m-0'><Pricing ></Pricing></div>
+          <div className='m-20'><Pricing ></Pricing></div>
 
         </main>
 

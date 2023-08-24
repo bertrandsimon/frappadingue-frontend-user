@@ -31,7 +31,7 @@ function EventCard( {event}) {
         </div>
       </div>
 
-      <div className="text-2xl yellow">{event.location}</div>
+      <div className="text-2xl text-yellow-400">{event.location}</div>
       <div className="text-lg mb-4">{event.name}</div>
       
       <Link href={`/SingleEventPage/${event._id}`} >

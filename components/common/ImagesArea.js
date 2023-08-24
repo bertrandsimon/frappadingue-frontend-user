@@ -164,14 +164,16 @@ function ImagesArea() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <img src="images/events/info10.png" width="433px" height="348px" alt="" />
-                  <h1 className="text-2xl font-normal tracking-tight text-yellow-400 sm:text-1xl pt-10">
-                    We’re changing the way people connect.
+                  <h1 className="text-2xl font-normal tracking-tight text-yellow-400 sm:text-1xl pt-10 uppercase">
+                    La Frappadingue c'est quoi ?
                   </h1>
+                  
                   <p className="relative mt-6 font-light leading-8 text-white sm:max-w-md lg:max-w-none">
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
-                    labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt
-                    mollit id pariatur in voluptate cillum. Eu voluptate tempor esse minim amet fugiat veniam occaecat
-                    aliqua.
+                  La FRAPPADINGUE c’est une course à obstacles hors du commun :un parcours parsemé d’embûches, de passages d’échelles, de ponts de singe,
+                  de filets à grimper, de tunnels à franchir, de boue et bien plus encore…
+                  <br /><br />
+                  Sur un parcours de 5 à 12km, une quarantaine d’obstacles viendra mettre à rude épreuve sportifs aguerris et sportifs d’un jour.
+                  Chaque muscle sera mis à contribution, avec pour seul objectif, pouvoir dire : « J’y étais et j’ai terminé ! ».
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">

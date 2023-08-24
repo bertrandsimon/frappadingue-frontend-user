@@ -23,7 +23,7 @@ function Arguments() {
   ));
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center items-center pb-40 sm:m-0'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center items-center pb-40 sm:m-0 pr-8 pl-8'>
   
       {argumentsZone}
      
