@@ -49,7 +49,7 @@ function Pricing( {event} ) {
   
   return (
     <div className="bg-black py-14 sm:py-4 sm:mb-14">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto  px-0 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className=" font-normal leading-7 text-yellow-400 uppercase text-2xl">Nos tarifs</h2>
           <p className="mt-4 font-bold leading-8tracking-tight text-white">

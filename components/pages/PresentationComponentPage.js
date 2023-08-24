@@ -15,7 +15,7 @@ function PresentationComponentPage() {
     <div>
         
         
-        <main className="container mx-auto sm:px-6 lg:px-8">
+        <main className="container mx-auto px-0 sm:px-6 lg:px-8">
           
           <Nav currentNavItem="Présentation"></Nav>
           <Banner title="la frappadingue c'est" subtitle="la référence de la course à obstacles" sliderOn={true} imageBanner="infodummy.png"></Banner>
@@ -24,10 +24,10 @@ function PresentationComponentPage() {
           
           <Stats></Stats>
 
-          <div className='m-20'><Pricing ></Pricing></div>
+          
 
         </main>
-
+        <div className='m-20'><Pricing ></Pricing></div>
         <div className='-mt-40'><Footer ></Footer></div>
         
     </div>
