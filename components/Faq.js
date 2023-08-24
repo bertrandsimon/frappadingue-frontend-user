@@ -270,10 +270,10 @@ function Faq() {
     {/* GENERAL */}
     
 
-    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-0 sm:pt-8 mt-10 sm:mt-0'>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pl-8 pt-8'>
 
-      <div className='col-span-1 justify-center items-center hidden sm:visible'>
-      <Image src="/images/events/info6.png" width={400} height={326}/>
+    <div className='col-span-1 flex justify-center items-center'>
+      <Image src="/images/events/info10.png" width={400} height={326}/>
       </div>
 
       <div className='col-span-2'> 

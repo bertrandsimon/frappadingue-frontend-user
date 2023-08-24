@@ -29,10 +29,12 @@ function EventsCardsGrid() {
 
     <div>
            
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center mx-auto place-center flex-wrap md:max-w-[1000px]">
+      <div className="pl-10 pr-10 grid gap-1 sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center">
      
         {eventsData.map((event) => (
-          <EventCard key={event._id} event={event} />
+          <div key={event._id} className="flex items-center">
+            <EventCard event={event} />
+          </div>
         ))}
 
       </div>

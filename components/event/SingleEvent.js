@@ -18,9 +18,9 @@ function SingleEvent( {event} ) {
  
       <BannerSingleEvent></BannerSingleEvent>
       <TitleSingleEvent event={event}></TitleSingleEvent>
-      <div className="pt-10 pb-10"><ProductEventBuyZone product={event}></ProductEventBuyZone></div>
-      <div className="pt-10 pb-10"><InfoArea event={event}></InfoArea></div>
-      <div className="pt-10 pb-10"><Pricing event={event} ></Pricing></div>
+      <div className="pt-4"><ProductEventBuyZone product={event}></ProductEventBuyZone></div>
+      <div className="pt-4"><InfoArea event={event}></InfoArea></div>
+      <div className="pt-4"><Pricing event={event} ></Pricing></div>
       
       
 

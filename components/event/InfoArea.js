@@ -142,7 +142,7 @@ Elle vous garantit le remboursement à 100% de votre inscription jusqu’au SAM
 
   return (
    
-    <div>
+    <div className='pl-6 pr-6'>
       <h2 className='pt-0 text-2xl text-center sm:text-left'><span className='yellow'>INFOS</span> GENERALES</h2>
 
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8'>
