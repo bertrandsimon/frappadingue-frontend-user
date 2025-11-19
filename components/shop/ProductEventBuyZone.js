@@ -31,7 +31,7 @@ function ProductEventBuyZone( {product} ) {
      
       <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 justify-center mx-auto gap-10 place-center items-center justify-center flex-wrap md:max-w-[1400px]">
     
-      <div className="sm:m-4 m-8 sm:col-span-2 justify-center items-center flex text-justify">
+      <div className="sm:m-4 m-8 sm:col-span-2 justify-center items-center flex text-justify whitespace-pre-line">
         {productsWithPricesByDistance[0].description}
       </div>
       

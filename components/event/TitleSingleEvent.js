@@ -23,13 +23,13 @@ function TitleSingleEvent( {event} ) {
           <div className='flex-col gap-10 items-center sm:items-start h-full w-100px pl-8 -mt-20 '>
          
           <div className='mx-auto flex justify-center'>
-            <Image className='rounded-md' src="/images/events/event-thumb1.jpg" width={270} height={346}/>
+            <Image className='rounded-md' src={`/images/events/thumbs/${event.thumb_image}`} width={270} height={346}/>
           </div>
           
           <div className='flex flex-col justify-center items-center'>
-            <div className='mt-4'> <span className='yellow pr-4'>Date: </span><span>{formatDate(event.date)}</span></div>
-            <div className='mt-2'> <span className='yellow pr-4'>Horaire: </span><span>{event.start_hour}</span></div>
-            <div className='mt-2'> <span className='yellow pr-4'>Lieu: </span><span>{event.location} </span></div>
+            <div className='mt-4'> <span className='yellow pr-4'>Date : </span><span>{formatDate(event.date)}</span></div>
+            <div className='mt-2'> <span className='yellow pr-4'>Horaire : </span><span>{event.start_hour}</span></div>
+            <div className='mt-2'> <span className='yellow pr-4'>Lieu : </span><span>{event.location} </span></div>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ function TitleSingleEvent( {event} ) {
             <br />
           </div>
 
-          <div className='pl-10 pt-4 text-gray-500'>
+          <div className='pt-4 text-gray-500'>
             <span>Edition {event.year}</span>
           </div>
 

@@ -8,8 +8,8 @@ import Link from 'next/link';
 import Button from '@mui/material/Button';
 
 
-function CardsArea() {
-  return (
+function CardsArea( {eventsCount} ) {
+  return (  
     
 
     <div className="grid grid-cols-1 sm:grid-cols-4 justify-center pt-20 mt-20 sm:-mt-16 sm:pt-0 pr-8 pl-8">
@@ -23,9 +23,7 @@ function CardsArea() {
           </Button>
       </div>
     </div>
-  
-    <div className='col-span-3'><EventsCardsGrid></EventsCardsGrid></div>
-  
+    <div className='col-span-3'><EventsCardsGrid eventsCount={eventsCount}></EventsCardsGrid></div>
   
   </div>
   

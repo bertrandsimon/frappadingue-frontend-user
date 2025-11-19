@@ -18,7 +18,7 @@ function EventCard( {event}) {
       <div className="w-full h-full">
         <div className="hvr-float cursor-pointer hover:sepia">
           <Link href={`/SingleEventPage/${event._id}`} >
-            <Image src={event.thumb_image} width={241} height={302} className="rounded-md object-contain"/>
+            <Image src={`/images/events/thumbs/${event.thumb_image}`} width={241} height={302} className="rounded-md object-contain"/>
           </Link>
         </div>
       </div>

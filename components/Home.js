@@ -40,7 +40,7 @@ function Home() {
           
           <Banner title="la frappadingue" subtitle="Accessible à tous sans exception" sliderOn={true} imageBanner="info3.png"></Banner>
           
-          <div className='-mt-20'><CardsArea></CardsArea></div>
+          <div className='-mt-20'><CardsArea eventsCount={3}></CardsArea></div>
           <Pattern componentToDisplay="Editorial"></Pattern>
           <Arguments></Arguments>
           

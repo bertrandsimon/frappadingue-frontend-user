@@ -8,7 +8,7 @@ import Link from "next/link";
 
 
 
-function EventsCardsGrid() {
+function EventsCardsGrid({ eventsCount }) {
 
   const [eventsData, setEventsData] = useState([]);
 
@@ -24,6 +24,11 @@ function EventsCardsGrid() {
     //console.log('eventsData:', eventsData);
   }, [eventsData]);
 
+  // Limit events if eventsCount is provided
+  let displayedEvents = eventsData;
+  if (eventsCount) {
+    displayedEvents = eventsData.slice(0, eventsCount);
+  }
 
   return (
 
@@ -31,7 +36,7 @@ function EventsCardsGrid() {
            
       <div className="pl-10 pr-10 grid gap-1 sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center">
      
-        {eventsData.map((event) => (
+        {displayedEvents.map((event) => (
           <div key={event._id} className="flex items-center">
             <EventCard event={event} />
           </div>

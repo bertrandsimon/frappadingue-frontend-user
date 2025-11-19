@@ -1,7 +1,9 @@
 //import styles from '../../styles/Pricing.module.css';
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/20/solid'
+import { ClipboardDocumentCheckIcon, TrophyIcon } from '@heroicons/react/20/solid'
+import ContactsIcon from '@mui/icons-material/Contacts';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -20,7 +22,7 @@ function Pricing( {event} ) {
       name: 'FORMAT S : 5 - 6 KMS',
       id: 'tier-freelancer',
       href: '/CoursesPage',
-      price: { noOption: '38', shirt: '44', insurance: '48', all:'54' },
+      price: { noOption: '48', shirt: '54', insurance: '58', all:'65' },
       description: 'INSCRIPTION INDIVIDUELLE OU GROUPE',
       features: ['Inscription à la course', 'Dossard', 'Ravitaillement', 'Médaille'],
       mostPopular: false,
@@ -29,7 +31,7 @@ function Pricing( {event} ) {
       name: 'FORMAT L : 10 - 12 KMS',
       id: 'tier-startup',
       href: '/CoursesPage',
-      price: { noOption: '48', shirt: '54', insurance: '58', all:'64' },
+      price: { noOption: '58', shirt: '65', insurance: '68', all:'75' },
       description: 'INSCRIPTION INDIVIDUELLE OU GROUPE',
       features: ['Inscription à la course', 'Dossard', 'Ravitaillement', 'Médaille'],
       mostPopular: true,
@@ -84,7 +86,7 @@ function Pricing( {event} ) {
             <div
               key={tier.id}
               className={classNames(
-                tier.mostPopular ? 'bg-white/5 ring-2 ring-yellow-400' : 'ring-1 ring-white/10',
+                'bg-white/5 ring-2 ring-yellow-400',
                 'rounded-3xl p-8 xl:p-10'
               )}
             >
@@ -109,21 +111,34 @@ function Pricing( {event} ) {
                 href='/CoursesPage'
                 aria-describedby={tier.id}
                 className={classNames(
-                  tier.mostPopular
-                    ? 'bg-yellow-400 text-black shadow-sm hover:bg-yellow-300 focus-visible:outline-indigo-500'
-                    : 'bg-white/10 text-white hover:bg-yellow-400 hover:text-black focus-visible:outline-white',
+                  'bg-yellow-400 text-black shadow-sm hover:bg-yellow-300 focus-visible:outline-indigo-500',
                   'mt-6 block rounded-md py-2 px-3 text-center text-sm font-normal leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 uppercase'
                 )}
               >
                 Inscription
               </a>
               <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
-                    <CheckIcon className="h-6 w-5 flex-none text-white" aria-hidden="true" />
-                    {feature}
-                  </li>
-                ))}
+                {tier.features.map((feature) => {
+                  const getIcon = (featureName) => {
+                    if (featureName === 'Inscription à la course') {
+                      return <ClipboardDocumentCheckIcon className="h-6 w-5 flex-none text-white" aria-hidden="true" />;
+                    } else if (featureName === 'Dossard') {
+                      return <ContactsIcon style={{ fontSize: '20px', color: 'white' }} className="flex-none" aria-hidden="true" />;
+                    } else if (featureName === 'Ravitaillement') {
+                      return <RestaurantIcon style={{ fontSize: '20px', color: 'white' }} className="flex-none" aria-hidden="true" />;
+                    } else if (featureName === 'Médaille') {
+                      return <TrophyIcon className="h-6 w-5 flex-none text-white" aria-hidden="true" />;
+                    }
+                    return null;
+                  };
+                  
+                  return (
+                    <li key={feature} className="flex gap-x-3">
+                      {getIcon(feature)}
+                      {feature}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
