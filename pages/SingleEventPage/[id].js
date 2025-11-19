@@ -22,7 +22,9 @@ function SingleEventPage({ event }) {
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
-  const response = await fetch(`https://frappadingue-backend.vercel.app/events/${id}`);
+  const response = await fetch(`https://frappadingue-backend.vercel.app/events/${id}`, {
+    next: { revalidate: 3600 }
+  });
   const data = await response.json();
 
   return {

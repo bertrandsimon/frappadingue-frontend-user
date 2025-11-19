@@ -5,7 +5,10 @@ function ContactForm() {
   const [events,SetEvents] = useState([]);
 
   useEffect(() => {
-    fetch('https://frappadingue-backend.vercel.app/events/allEvents')
+    fetch('https://frappadingue-backend.vercel.app/events/allEvents', {
+      cache: 'force-cache',
+      next: { revalidate: 3600 }
+    })
     .then(res => res.json())
     .then( data => { SetEvents(data.all) } )
   }, []);
