@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function CheckoutButton() {
 
-  const { redirectToCheckout, cartCount, totalPrice } = useShoppingCart();
+  const { cartCount, totalPrice, cartDetails } = useShoppingCart();
 
   const [status, setStatus] = useState("idle");
 
@@ -13,13 +13,46 @@ export default function CheckoutButton() {
     if (cartCount > 0) {
       setStatus("loading");
       try {
-        const result = await redirectToCheckout();
-        if (result?.error) {
-          console.error(result);
+        // Prepare cart items for payment
+        const cartItems = Object.values(cartDetails ?? {}).map(item => ({
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+        }));
+
+        // Call Next.js API route to initiate payment
+        const response = await fetch('/api/payment/initiate', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            cartItems,
+            totalPrice: totalPrice,
+            customerInfo: {
+              // Add customer info if available
+              // email: userEmail,
+              // name: userName,
+            },
+          }),
+        });
+
+        if (response.ok) {
+          // If API returns a redirect, the server will handle it
+          // If API returns a URL, redirect client-side
+          const data = await response.json();
+          if (data.paymentUrl) {
+            window.location.href = data.paymentUrl;
+          }
+          // If server redirects (302), browser will follow automatically
+        } else {
+          const error = await response.json();
+          console.error('Payment error:', error);
           setStatus("redirect-error");
         }
       } catch (error) {
-        console.error(error);
+        console.error('Payment initiation error:', error);
         setStatus("redirect-error");
       }
     } else {

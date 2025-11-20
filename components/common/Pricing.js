@@ -22,7 +22,7 @@ function Pricing( {event} ) {
       name: 'FORMAT S : 5 - 6 KMS',
       id: 'tier-freelancer',
       href: '/CoursesPage',
-      price: { noOption: '48', shirt: '54', insurance: '58', all:'65' },
+      price: { noOption: '48', shirt: '55', insurance: '58', all:'65' },
       description: 'INSCRIPTION INDIVIDUELLE OU GROUPE',
       features: ['Inscription à la course', 'Dossard', 'Ravitaillement', 'Médaille'],
       mostPopular: false,
