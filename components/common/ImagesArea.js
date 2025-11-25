@@ -164,7 +164,7 @@ function ImagesArea() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <img src="images/events/info10.png" width="433px" height="348px" alt="" />
-                  <h1 className="text-2xl font-normal tracking-tight text-yellow-400 sm:text-1xl pt-10 uppercase">
+                  <h1 className="text-2xl font-normal tracking-tight text-[#ffe500] sm:text-1xl pt-10 uppercase">
                     La Frappadingue c'est quoi ?
                   </h1>
                   

@@ -24,7 +24,7 @@ useEffect( () => {
     <div className="bg-black">
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="max-w-xl">
-        <h1 className="text-base font-medium text-yellow-400">Merci !</h1>
+        <h1 className="text-base font-medium text-[#ffe500]">Merci !</h1>
         <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Commande validée !</p>
         <p className="mt-2 text-base text-gray-400">Inscription valide pour la Frappadingue</p>
 
@@ -45,7 +45,7 @@ useEffect( () => {
             /> */}
             <div className="flex flex-auto flex-col">
               <div>
-                <h4 className="font-medium text-yellow-400">
+                <h4 className="font-medium text-[#ffe500]">
                   <a href={product.href}>{product.name}</a>
                 </h4>
                 {product.format && <p className="mt-2 text-sm text-gray-400">{product.format}</p>}
@@ -54,11 +54,11 @@ useEffect( () => {
                 <dl className="flex space-x-4 divide-x divide-gray-200 text-sm sm:space-x-6">
                   <div className="flex">
                     <dt className="font-medium text-white">Quantité : </dt>
-                    <dd className="ml-2 text-yellow-400">{product.quantity}</dd>
+                    <dd className="ml-2 text-[#ffe500]">{product.quantity}</dd>
                   </div>
                   <div className="flex pl-4 sm:pl-6">
                     <dt className="font-medium text-white">Prix : </dt>
-                    <dd className="ml-2 text-yellow-400">{product.price} €</dd>
+                    <dd className="ml-2 text-[#ffe500]">{product.price} €</dd>
                   </div>
                 </dl>
               </div>
@@ -78,8 +78,8 @@ useEffect( () => {
 
           
             <div className="flex justify-between">
-              <dt className="font-medium text-yellow-400">Total</dt>
-              <dd className="text-yellow-400">{totalPrice} €</dd>
+              <dt className="font-medium text-[#ffe500]">Total</dt>
+              <dd className="text-[#ffe500]">{totalPrice} €</dd>
             </div>
           </dl>
         </div>

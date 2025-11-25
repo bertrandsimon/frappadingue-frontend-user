@@ -52,7 +52,7 @@ function CartSummary() {
                       <div className="flex justify-between sm:grid sm:grid-cols-2">
                         <div className="pr-6">
                           <h3 className="text-sm">
-                            <a href={product.href} className="font-medium text-yellow-300 hover:text-yellow-400">
+                            <a href={product.href} className="font-medium text-[#ffe500] hover:text-[#e6ce00]">
                               {product.name}
                             </a>
                           </h3>
@@ -84,7 +84,7 @@ function CartSummary() {
 
                         <button
                           type="button"
-                          className="ml-4 text-sm font-medium text-yellow-400 hover:text-yellow-500 sm:ml-0 sm:mt-3"
+                          className="ml-4 text-sm font-medium text-[#ffe500] hover:text-[#e6ce00] sm:ml-0 sm:mt-3"
                         >
                           <span>Supprimer</span>
                         </button>
@@ -124,7 +124,7 @@ function CartSummary() {
             <div className="mt-10">
               <button
                 type="submit"
-                className="w-full rounded-md border border-transparent bg-yellow-400 px-4 py-3 text-base font-medium text-black shadow-sm hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                className="w-full rounded-md border border-transparent bg-[#ffe500] px-4 py-3 text-base font-medium text-black shadow-sm hover:bg-[#e6ce00] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
               >
                 Payer
               </button>

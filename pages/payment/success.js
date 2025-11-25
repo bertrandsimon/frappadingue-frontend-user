@@ -27,7 +27,7 @@ export default function PaymentSuccess() {
         <Nav />
         <div className="min-h-screen py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-yellow-400 mb-4">
+            <h1 className="text-4xl font-bold text-[#ffe500] mb-4">
               Paiement réussi !
             </h1>
             <p className="text-white mb-8">

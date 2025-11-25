@@ -34,7 +34,7 @@ export default function PaymentCancel() {
             )}
             <Link 
               href="/CartPage"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-md inline-block"
+              className="bg-[#ffe500] hover:bg-[#e6ce00] text-black px-6 py-3 rounded-md inline-block"
             >
               Retour au panier
             </Link>

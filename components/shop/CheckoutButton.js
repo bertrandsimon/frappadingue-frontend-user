@@ -75,7 +75,7 @@ export default function CheckoutButton() {
       </div>
       <button
         onClick={handleClick}
-        className="bg-yellow-300 hover:bg-yellow-400 text-xs hover:text-black transition-colors duration-500 text-gray-500 py-3 px-5 rounded-md w-100 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white"
+        className="bg-[#ffe500] hover:bg-[#e6ce00] text-xs hover:text-black transition-colors duration-500 text-gray-500 py-3 px-5 rounded-md w-100 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white"
         disabled={
           (totalPrice && totalPrice < 30) ||
           (cartCount && cartCount > 20) ||

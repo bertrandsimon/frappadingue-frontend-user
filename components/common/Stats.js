@@ -16,7 +16,7 @@ function Stats() {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
       <div className="mx-auto max-w-2xl lg:max-w-none">
         <div className="text-center">
-          <h2 className="text-2xl font-normal tracking-tight text-yellow-400 sm:text-2xl uppercase">Quelques chiffres</h2>
+          <h2 className="text-2xl font-normal tracking-tight text-[#ffe500] sm:text-2xl uppercase">Quelques chiffres</h2>
           <p className="mt-4 text-md leading-8 text-white font-light">
           Motivation, Fun attitude, Persévérance, Endurance, Solidarité et aussi
           </p>

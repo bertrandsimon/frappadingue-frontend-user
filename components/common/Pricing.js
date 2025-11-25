@@ -53,7 +53,7 @@ function Pricing( {event} ) {
     <div className="bg-black py-14 sm:py-4 sm:mb-14">
       <div className="mx-auto  px-0 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className=" font-normal leading-7 text-yellow-400 uppercase text-2xl">Nos tarifs</h2>
+          <h2 className=" font-normal leading-7 text-[#ffe500] uppercase text-2xl">Nos tarifs</h2>
           <p className="mt-4 font-bold leading-8tracking-tight text-white">
             2 formats de courses adaptés à tous
           </p>
@@ -65,7 +65,7 @@ function Pricing( {event} ) {
           <RadioGroup
             value={frequency}
             onChange={setFrequency}
-            className="text-center items-center grid grid-cols-4 gap-x-1 rounded-full bg-yellow-400 p-2 text-xs font-normal leading-5 text-black"
+            className="text-center items-center grid grid-cols-4 gap-x-1 rounded-full bg-[#ffe500] p-2 text-xs font-normal leading-5 text-black"
           >
             <RadioGroup.Label className="sr-only">Paiement</RadioGroup.Label>
             {frequencies.map((option) => (
@@ -73,7 +73,7 @@ function Pricing( {event} ) {
                 key={option.value}
                 value={option}
                 className={({ checked }) =>
-                  classNames(checked ? 'bg-yellow-400' : '', 'cursor-pointer rounded-full px-2.5 py-1')
+                  classNames(checked ? 'bg-[#ffe500]' : '', 'cursor-pointer rounded-full px-2.5 py-1')
                 }
               >
                 <span>{option.label}</span>
@@ -86,7 +86,7 @@ function Pricing( {event} ) {
             <div
               key={tier.id}
               className={classNames(
-                'bg-white/5 ring-2 ring-yellow-400',
+                'bg-white/5 ring-2 ring-[#ffe500]',
                 'rounded-3xl p-8 xl:p-10'
               )}
             >
@@ -95,7 +95,7 @@ function Pricing( {event} ) {
                   {tier.name}
                 </h3>
                 {tier.mostPopular ? (
-                  <p className="rounded-full bg-yellow-400 px-2.5 py-1 text-xs font-semibold leading-5 text-black">
+                  <p className="rounded-full bg-[#ffe500] px-2.5 py-1 text-xs font-semibold leading-5 text-black">
                     Top
                   </p>
                 ) : null}
@@ -111,7 +111,7 @@ function Pricing( {event} ) {
                 href='/CoursesPage'
                 aria-describedby={tier.id}
                 className={classNames(
-                  'bg-yellow-400 text-black shadow-sm hover:bg-yellow-300 focus-visible:outline-indigo-500',
+                  'bg-[#ffe500] text-black shadow-sm hover:bg-[#e6ce00] focus-visible:outline-indigo-500',
                   'mt-6 block rounded-md py-2 px-3 text-center text-sm font-normal leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 uppercase'
                 )}
               >

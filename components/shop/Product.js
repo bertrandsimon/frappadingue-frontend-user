@@ -39,7 +39,7 @@ export default function Product({ product }) {
       <div className="text-lg uppercase">{name}</div>
       <hr />
       { product.format && <div className="text-1xl cursor-default">Format {product.format}</div>}
-      <div className="text-2xl text-normal mt-auto p-4 text-yellow-400">
+      <div className="text-2xl text-normal mt-auto p-4 text-[#ffe500]">
 
         {price} <span> €</span>
 
@@ -51,7 +51,7 @@ export default function Product({ product }) {
         >
           -
         </button>
-        <span className="w-8 text-center rounded-md mx-3 text-yellow-400">{quantity}</span>
+        <span className="w-8 text-center rounded-md mx-3 text-[#ffe500]">{quantity}</span>
         <button
           onClick={increaseQuantity}
           className="hover:text-black hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500"

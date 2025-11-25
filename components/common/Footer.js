@@ -101,7 +101,7 @@ function Footer() {
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.courses.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-yellow-400">
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-[#ffe500]">
                       {item.name}
                     </a>
                   </li>
@@ -113,7 +113,7 @@ function Footer() {
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.medias.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-yellow-400">
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-[#ffe500]">
                       {item.name}
                     </a>
                   </li>
@@ -127,7 +127,7 @@ function Footer() {
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.informations.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-yellow-400">
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-[#ffe500]">
                       {item.name}
                     </a>
                   </li>
@@ -139,7 +139,12 @@ function Footer() {
         </div>
       </div>
       <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-        <p className="text-xs leading-5 text-gray-400">&copy; Droits réservées La Frappadingue 2023.</p>
+        <p className="text-xs leading-5 text-gray-400">
+          &copy; Droits réservées La Frappadingue 2025. Conception site{' '}
+          <a href="https://www.logeen.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ffe500]">
+            Logeen
+          </a>
+        </p>
       </div>
     </div>
   </footer>

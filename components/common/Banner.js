@@ -14,11 +14,20 @@ function Banner(props) {
 
   return (
    
-    <div className='flex justify-center items-end h-full rounded-t-lg bg-cover bg-no-repeat' style={{ backgroundImage: "url('/images/slide1.jpg')" }}>
+    <div className='flex justify-center items-end h-full rounded-t-lg bg-cover bg-no-repeat bg-center' style={{ backgroundImage: "url('/images/slide1.jpg')", WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)', willChange: 'transform' }}>
       <div className='grid grid-cols-1 sm:grid-cols-3 pr-1 sm:pt-0 select-none '>
 
       <div className='sm:col-span-1 flex flex-col justify-end sm:justify-end items-end order-2 sm:order-1'>
-      {sliderOn && <Image src={`/images/events/${props.imageBanner}`} width={400} height={326} />}
+      {sliderOn && (
+        <Image 
+          src={`/images/events/${props.imageBanner}`} 
+          width={463} 
+          height={384}
+          priority
+          alt={props.title || 'Frappadingue'}
+          className="object-contain"
+        />
+      )}
     </div>
 
         {/* desktop */}

@@ -139,8 +139,8 @@ function Nav(props) {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'bg-yellow-400 text-black'
-                            : 'text-gray-300 hover:bg-yellow-400 hover:text-black',
+                            ? 'bg-[#ffe500] text-black'
+                            : 'text-gray-300 hover:bg-[#ffe500] hover:text-black',
                           'rounded-md px-3 py-2 text-lg font-extralight'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -162,7 +162,7 @@ function Nav(props) {
                   <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
                 </button>
 
-                <div className="rounded-full flex justify-center items-center bg-yellow-400 text-xs text-black absolute w-6 h-6 bottom-12 right-8 cursor-pointer">
+                <div className="rounded-full flex justify-center items-center bg-[#ffe500] text-xs text-black absolute w-6 h-6 bottom-12 right-8 cursor-pointer">
                   {cartCount}
                 </div>
                 
@@ -176,7 +176,7 @@ function Nav(props) {
 
               {/* Mobile menu button */}
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-yellow-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#ffe500] hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6 text-white" aria-hidden="true" />}
                 </Disclosure.Button>
               </div>
@@ -192,7 +192,7 @@ function Nav(props) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-yellow-400 text-black text-center' : 'text-white text-center hover:bg-yellow-400 hover:text-black',
+                    item.current ? 'bg-[#ffe500] text-black text-center' : 'text-white text-center hover:bg-[#ffe500] hover:text-black',
                     'block rounded-md px-3 py-2 text-base font-medium uppercase'
                   )}
                   aria-current={item.current ? 'page' : undefined}
