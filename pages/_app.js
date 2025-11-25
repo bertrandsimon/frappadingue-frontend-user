@@ -60,9 +60,6 @@ function App({
           <ThemeProvider theme={darkTheme}>
             <Provider store={store}>
               <PersistGate persistor={persistor}>
-                <Head>
-                  <title>Frappadingue : courses à obstacles</title>
-                </Head>
                 <Component {...pageProps} />
                 </PersistGate>
             </Provider>

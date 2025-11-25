@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /CartPage
+Disallow: /Success
+Disallow: /payment/
+
+Sitemap: https://www.frappadingue.net/sitemap.xml
+

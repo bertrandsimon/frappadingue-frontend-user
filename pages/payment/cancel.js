@@ -2,13 +2,21 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Nav from '../../components/common/Nav';
 import Footer from '../../components/common/Footer';
+import SEO from '../../components/utilities/SEO';
 
 export default function PaymentCancel() {
   const router = useRouter();
   const { orderId } = router.query;
+  const isClient = typeof window !== 'undefined';
 
   return (
     <div>
+      <SEO
+        title="Paiement annulé"
+        description="Votre paiement a été annulé. Aucun montant n'a été débité. Vous pouvez réessayer votre commande."
+        url={isClient && orderId ? `/payment/cancel?orderId=${orderId}` : '/payment/cancel'}
+        noindex={true}
+      />
       <main className="container mx-auto sm:px-6 lg:px-8">
         <Nav />
         <div className="min-h-screen py-16">

@@ -76,7 +76,7 @@ function Faq() {
       Demande de devis à contact@frappadingue.fr
       Infos à nous communiquer : adresse de facturation, mode de règlement, nombre d’inscrits, ville sélectionnées, choix du kilométrage, tee-shirt ou non
       Validation du devis en retour d’email + envoie de la facture
-      Règlement : chèque ou virement (ordre > association La Salicorne)
+      Règlement : chèque ou virement (ordre > Frappadingue)
        
       
       Dès réception du paiement, nous t’enverrons des éléments pour que les membres de ton équipe puissent finaliser leurs inscriptions en ligne via des codes spécifiques ou nous te demanderons le fichier des inscrits;

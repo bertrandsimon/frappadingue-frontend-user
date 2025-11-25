@@ -1,8 +1,18 @@
 import CartComponentPage from "../components/pages/CartComponentPage";
-import Head from 'next/head';
+import SEO from '../components/utilities/SEO';
 
 function CartPage() {
-  return <CartComponentPage />;
+  return (
+    <>
+      <SEO
+        title="Panier"
+        description="Votre panier Frappadingue. Finalisez votre inscription aux courses à obstacles."
+        url="/CartPage"
+        noindex={true}
+      />
+      <CartComponentPage />
+    </>
+  );
 }
 
 export default CartPage;
