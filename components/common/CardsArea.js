@@ -18,13 +18,15 @@ function CardsArea( {eventsCount} ) {
     
     
     
-    <div className='flex flex-col justify-center items-center gap-4'>
-    {/* <Image src="/images/events/girls.png" width={211} height={211} alt="courses" /> */}
+    <div className='flex flex-col justify-center items-center gap-4 pt-20'>
+    <Image src="/images/events/boy.png" width={465} height={491} alt="courses" />
 
 
-    <div className='pt-10'>
-        <p className="pb-2 text-2xl">Les prochaines</p>
-        <p className='text-[#ffe500] text-2xl pb-8'>courses</p>
+    <div className='flex flex-col justify-center items-center gap-2'>
+      <div>   <span className="text-xl">Les prochaines </span>
+      <span className='text-[#ffe500] text-xl'>courses</span></div>
+     
+        <br />
           <Button variant="outlined" className='whiteBtn'>
             
             <Link href="/CoursesPage">toutes les courses</Link>

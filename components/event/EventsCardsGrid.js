@@ -37,10 +37,10 @@ function EventsCardsGrid({ eventsCount }) {
 
     <div>
            
-      <div className="pl-10 pr-10 grid gap-1 sm:grid-cols-2 md:grid-cols-3 mb-10 pb-10 justify-center items-center">
+      <div className="pl-10 pr-10 grid gap-1 sm:grid-cols-2 md:grid-cols-3 mb-10 justify-center items-center">
      
         {displayedEvents.map((event) => (
-          <div key={event._id} className="flex items-center pb-10">
+          <div key={event._id} className="flex items-center ">
             <EventCard event={event} />
           </div>
         ))}

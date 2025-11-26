@@ -71,7 +71,9 @@ function ContactForm() {
         <h2 className="text-base font-semibold leading-7 text-white ">Formulaire de contact</h2>
        
         <p className="mt-1 text-sm leading-6 text-gray-400">Téléphone: 06.28.93.10.50</p>
-        <p className="mt-1 text-sm leading-6 text-gray-400">Mail: contact@frappadingue.fr</p>
+        <p className="mt-1 text-sm leading-6 text-gray-400">
+          Mail: <a href="mailto:contact@frappadingue.fr" className="text-[#ffe500] hover:underline">contact@frappadingue.fr</a>
+        </p>
         <p className="mt-1 text-sm leading-6 text-gray-400">Adresse: 62630 Etaples</p>
         
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">

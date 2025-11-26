@@ -32,6 +32,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
+// Configuration: Set to true to show cart and user icons
+const SHOW_CART_AND_USER_ICONS = false;
+
 function Nav(props) {
 
   const { handleCartClick, cartCount } = useShoppingCart();
@@ -152,27 +155,29 @@ function Nav(props) {
                 </div>
               </div>
 
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                onClick={toggleCartVisibility}
-                  type="button"
-                  className="rounded-full p-1 text-white hover:text-white focus:outline-none "
-                >
+              {SHOW_CART_AND_USER_ICONS && (
+                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <button
+                  onClick={toggleCartVisibility}
+                    type="button"
+                    className="rounded-full p-1 text-white hover:text-white focus:outline-none "
+                  >
+                    
+                    <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
+                  </button>
+
+                  <div className="rounded-full flex justify-center items-center bg-[#ffe500] text-xs text-black absolute w-6 h-6 bottom-12 right-8 cursor-pointer">
+                    {cartCount}
+                  </div>
                   
-                  <ShoppingCartIcon className="h-6 w-6 hover:text-yellow-300" aria-hidden="true" />
-                </button>
+                  {cartVisible && <ShoppingCart />}
 
-                <div className="rounded-full flex justify-center items-center bg-[#ffe500] text-xs text-black absolute w-6 h-6 bottom-12 right-8 cursor-pointer">
-                  {cartCount}
+                  {/* Profile dropdown */}
+                  <div className="ml-4">
+                    {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6 cursor-pointer hover:text-yellow-300" aria-hidden="true" onClick={handleClickOpen}/>}
+                  </div>
                 </div>
-                
-                {cartVisible && <ShoppingCart />}
-
-                {/* Profile dropdown */}
-                <div className="ml-4">
-                  {user.userConnected ? <UserMenu/> : <UserIcon className="h-6 w-6 cursor-pointer hover:text-yellow-300" aria-hidden="true" onClick={handleClickOpen}/>}
-                </div>
-              </div>
+              )}
 
               {/* Mobile menu button */}
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

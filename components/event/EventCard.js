@@ -13,7 +13,7 @@ function EventCard( {event}) {
 
 
   return (
-    <div className="flex flex-col gap-2 shadow-md text-center justify-normal items-center ">
+    <div className="flex flex-col gap-2 shadow-md text-center justify-normal items-center pb-10">
 
       <div className="w-full h-full relative hvr-float cursor-pointer hover:sepia">
         <Link href={`/SingleEventPage/${event._id}`} >

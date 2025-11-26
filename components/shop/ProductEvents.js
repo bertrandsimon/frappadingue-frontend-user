@@ -73,9 +73,22 @@ export default function ProductEvents({ product }) {
           </button>
         </div>
       
-        <Button onClick={ () => addToCart()} variant="outlined" className='whiteBtn'>
-            Ajouter au panier
-        </Button>
+        <div className="relative group inline-block">
+          <Button 
+            onClick={ () => addToCart()} 
+            variant="outlined" 
+            className='whiteBtn' 
+            disabled
+          >
+              Ajouter au panier
+          </Button>
+          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none whitespace-nowrap z-50">
+            Ouverture des inscriptions en Décembre
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
+              <div className="border-4 border-transparent border-t-gray-900"></div>
+            </div>
+          </div>
+        </div>
       </article>
     </div>
 
