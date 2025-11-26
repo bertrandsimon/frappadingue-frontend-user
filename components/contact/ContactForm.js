@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 function ContactForm() {
-
+// com
   const [events, SetEvents] = useState([]);
   const [isSent, setIsSent] = useState(false);
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
