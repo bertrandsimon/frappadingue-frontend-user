@@ -19,7 +19,7 @@ function CardsArea( {eventsCount} ) {
     
     
     <div className='flex flex-col justify-center items-center gap-4'>
-    <Image src="/images/events/girls.png" width={211} height={211} alt="courses" />
+    {/* <Image src="/images/events/girls.png" width={211} height={211} alt="courses" /> */}
 
 
     <div className='pt-10'>
