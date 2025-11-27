@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Home from '../components/Home';
 import SEO from '../components/utilities/SEO';
 
+export const revalidate = 0;
+
 function Index() {
   const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://www.frappadingue.net';
   

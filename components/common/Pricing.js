@@ -13,9 +13,9 @@ function Pricing( {event} ) {
 
   const frequencies = [
     { value: 'noOption', label: 'Sans option', priceSuffix: 'Euros' },
-    { value: 'shirt', label: 'Avec t-shirt (+6€)', priceSuffix: 'Euros' },
+    { value: 'shirt', label: 'Avec t-shirt (+7€)', priceSuffix: 'Euros' },
     { value: 'insurance', label: 'Avec assurance (+10€)', priceSuffix: 'Euros' },
-    { value: 'all', label: ' Avec t-shirt et assurance (+16€)', priceSuffix: 'Euros' },
+    { value: 'all', label: ' Avec t-shirt et assurance (+17€)', priceSuffix: 'Euros' },
   ]
   const tiers = [
     {
