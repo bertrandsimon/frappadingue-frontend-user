@@ -4,10 +4,10 @@ function Stats() {
   const stats = [
     { id: 1, name: 'Des départements représentés', value: '100 %' },
     { id: 2, name: 'De déguisements', value: '95 %' },
-    { id: 3, name: 'De femmes', value: '35 %' },
+    { id: 3, name: 'De femmes', value: '48 %' },
     { id: 4, name: 'De moyenne d age', value: '33 ans' },
     { id: 5, name: 'Tonnes de matériels', value: '40' },
-    { id: 6, name: 'Participants au total', value: '150 000' },
+    { id: 6, name: 'Participants au total', value: '250 000' },
   ]
   
 

@@ -97,6 +97,7 @@ function Nav(props) {
     { name: 'Médias', href: '/MediasPage', current: false },
     { name: 'FAQ', href: '/FaqPage', current: false },
     { name: 'Bénévoles', href: '/BenevolesPage', current: false },
+    { name: 'Team Building', href: '/TeamBuildingPage', current: false },
     { name: 'Contact', href: '/ContactPage', current: false },
   ];
 

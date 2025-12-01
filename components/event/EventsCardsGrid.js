@@ -13,14 +13,44 @@ function EventsCardsGrid({ eventsCount }) {
   const [eventsData, setEventsData] = useState([]);
 
   useEffect(() => {
+    const CACHE_KEY = 'frappadingue_events';
+    const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
+    
+    // Check if we have cached data
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    const now = Date.now();
+    
+    if (cachedData) {
+      const { data, timestamp } = JSON.parse(cachedData);
+      // Use cache if it's less than 5 minutes old
+      if (now - timestamp < CACHE_DURATION) {
+        setEventsData(data);
+        return; // Don't fetch if cache is still valid
+      }
+    }
+    
+    // Fetch fresh data
     fetch('https://frappadingue-backend.vercel.app/events/allEvents', {
-      cache: 'force-cache',
-      next: { revalidate: 3600 }
+      cache: 'no-store'
     })
     .then(response => response.json())
     .then(data => {
-      setEventsData(data.all)
+      const events = data.all;
+      setEventsData(events);
+      // Cache the data with timestamp
+      localStorage.setItem(CACHE_KEY, JSON.stringify({
+        data: events,
+        timestamp: now
+      }));
     })
+    .catch(error => {
+      console.error('Error fetching events:', error);
+      // Fallback to cached data if fetch fails
+      if (cachedData) {
+        const { data } = JSON.parse(cachedData);
+        setEventsData(data);
+      }
+    });
   }, []);
 
   useEffect(() => {
