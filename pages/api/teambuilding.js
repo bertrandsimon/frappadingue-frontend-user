@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Frappadingue <noreply@frappadingue.net>',
-      to: ['trandber@hotmail.com'],
+      to: ['trandber@hotmail.com', 'lafrappadingue@outlook.fr'],
       replyTo: email,
       subject: 'Nouvelle demande de Team Building - Frappadingue',
       react: TeamBuildingEmailTemplate({

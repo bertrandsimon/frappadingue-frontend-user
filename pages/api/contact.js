@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { firstName, lastName, email, course } = req.body;
+    const { firstName, lastName, email, course, message } = req.body;
 
     // Validate required fields
     if (!firstName || !lastName || !email) {
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Frappadingue <noreply@frappadingue.net>',
-      to: ['trandber@hotmail.com'],
+      to: ['trandber@hotmail.com', 'lafrappadingue@outlook.fr'],
       replyTo: email,
       subject: 'Nouveau message de contact - Frappadingue',
       react: ContactEmailTemplate({
@@ -36,6 +36,7 @@ export default async function handler(req, res) {
         lastName,
         email,
         course,
+        message,
       }),
     });
 

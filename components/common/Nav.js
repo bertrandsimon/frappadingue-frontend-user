@@ -145,7 +145,7 @@ function Nav(props) {
                           item.current
                             ? 'bg-[#ffe500] text-black'
                             : 'text-gray-300 hover:bg-[#ffe500] hover:text-black',
-                          'rounded-md px-3 py-2 text-lg font-extralight'
+                          'rounded-md px-3 py-2 text-base font-extralight'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

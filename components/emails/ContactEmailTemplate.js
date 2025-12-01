@@ -14,6 +14,7 @@ export default function ContactEmailTemplate({
   lastName,
   email,
   course,
+  message,
 }) {
   return (
     <Html>
@@ -31,6 +32,11 @@ export default function ContactEmailTemplate({
             <Text style={text}>
               <strong>Course concernée:</strong> {course || 'Non spécifiée'}
             </Text>
+            {message && (
+              <Text style={text}>
+                <strong>Message:</strong> {message}
+              </Text>
+            )}
             <Text style={text}>
               <strong>Date:</strong> {new Date().toLocaleString('fr-FR')}
             </Text>
