@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     // Get PHP payment server URL from environment variable
     // Format: https://votre-domaine-ovh.com/paiement-uptopay-frappadingue/api/create-payment.php
-    const phpPaymentUrl = process.env.PHP_PAYMENT_SERVER_URL || 'https://votre-domaine-ovh.com/paiement-uptopay-frappadingue/api/create-payment.php';
+    const phpPaymentUrl = process.env.PHP_PAYMENT_SERVER_URL || 'https://www.tonagotchi.com/paiement-uptopay-frappadingue/api/create-payment.php';
 
     // Appeler votre API PHP sur OVH
     // Le script PHP attend amount en euros (il convertira en centimes lui-même)
