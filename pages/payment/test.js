@@ -25,8 +25,15 @@ export default function PaymentTestPage() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to create payment');
+        let errorData;
+        try {
+          errorData = await response.json();
+        } catch (e) {
+          const errorText = await response.text();
+          throw new Error(`Erreur ${response.status}: ${errorText.substring(0, 200)}`);
+        }
+        const errorMessage = errorData.error || errorData.details || 'Failed to create payment';
+        throw new Error(errorMessage);
       }
 
       const { paymentUrl, formData } = await response.json();

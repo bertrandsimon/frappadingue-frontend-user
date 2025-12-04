@@ -1,5 +1,5 @@
 // API Route: /api/payment/initiate
-// This route prepares payment data and redirects to your PHP payment server
+// This route prepares payment data and calls the Up2Pay API via /api/payment/create
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -17,48 +17,68 @@ export default async function handler(req, res) {
     // Generate a unique order ID
     const orderId = `ORDER-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
-    // Prepare payment data for Up2pay
-    const paymentData = {
-      orderId: orderId,
-      amount: totalPrice,
-      currency: 'EUR',
-      items: cartItems,
-      customer: customerInfo || {},
-      // Add any other required fields for Up2pay
-      returnUrl: `${process.env.NEXT_PUBLIC_URL}/payment/success?orderId=${orderId}`,
-      cancelUrl: `${process.env.NEXT_PUBLIC_URL}/payment/cancel?orderId=${orderId}`,
-      notifyUrl: `${process.env.NEXT_PUBLIC_URL}/api/payment/webhook`,
+    // Extract customer email (required for Up2Pay)
+    const email = customerInfo?.email || customerInfo?.emailAddress || '';
+
+    if (!email) {
+      return res.status(400).json({ error: 'Customer email is required for payment' });
+    }
+
+    // Prepare billing information from customerInfo
+    const billing = customerInfo?.billing || {
+      firstName: customerInfo?.firstName || customerInfo?.first_name || '',
+      lastName: customerInfo?.lastName || customerInfo?.last_name || '',
+      address1: customerInfo?.address1 || customerInfo?.address || '',
+      address2: customerInfo?.address2 || '',
+      zipCode: customerInfo?.zipCode || customerInfo?.zip_code || customerInfo?.postalCode || '',
+      city: customerInfo?.city || '',
+      country: customerInfo?.country || '250', // 250 = France par défaut
+      phone: customerInfo?.phone || customerInfo?.phoneNumber || '',
+      phoneCountryCode: customerInfo?.phoneCountryCode || '+33',
     };
 
-    // Build PHP payment URL with parameters
-    const phpPaymentUrl = `${process.env.PHP_PAYMENT_SERVER_URL}/payment.php`;
-    const params = new URLSearchParams({
-      orderId: paymentData.orderId,
-      amount: paymentData.amount,
-      currency: paymentData.currency,
-      returnUrl: paymentData.returnUrl,
-      cancelUrl: paymentData.cancelUrl,
-      notifyUrl: paymentData.notifyUrl,
-      // Add any other required parameters for Up2pay
-      // ...paymentData.customer,
+    // Calculate number of products
+    const nbProducts = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
+
+    // Call the create payment API
+    const createPaymentResponse = await fetch(`${req.headers.origin || process.env.NEXT_PUBLIC_URL || 'http://localhost:3001'}/api/payment/create`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        amount: totalPrice,
+        orderId: orderId,
+        email: email,
+        billing: billing,
+        nbProducts: nbProducts,
+      }),
     });
 
-    // Store order in database (recommended for tracking)
-    // TODO: Save order to database here before redirecting
-    // await saveOrderToDatabase(paymentData);
+    if (!createPaymentResponse.ok) {
+      const error = await createPaymentResponse.json();
+      console.error('Payment creation error:', error);
+      return res.status(500).json({ 
+        error: 'Failed to create payment',
+        details: error.error || error.message
+      });
+    }
 
-    // Return payment URL for frontend to handle redirect
+    const paymentData = await createPaymentResponse.json();
+
+    // Return payment URL and form data for frontend to handle
     return res.status(200).json({ 
-      paymentUrl: `${phpPaymentUrl}?${params.toString()}`,
-      orderId: paymentData.orderId
+      paymentUrl: paymentData.paymentUrl,
+      formData: paymentData.formData,
+      orderId: orderId
     });
-
-    // Alternative: Server-side redirect (uncomment if preferred)
-    // return res.redirect(302, `${phpPaymentUrl}?${params.toString()}`);
 
   } catch (error) {
     console.error('Payment initiation error:', error);
-    return res.status(500).json({ error: 'Failed to initiate payment' });
+    return res.status(500).json({ 
+      error: 'Failed to initiate payment',
+      details: error.message 
+    });
   }
 }
 

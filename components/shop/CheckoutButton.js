@@ -21,6 +21,28 @@ export default function CheckoutButton() {
           quantity: item.quantity,
         }));
 
+        // TODO: Collect customer information (email, billing address)
+        // For now, using placeholder - you should collect this from a form
+        const customerInfo = {
+          email: prompt('Veuillez entrer votre email:') || '', // TODO: Replace with form input
+          // billing: {
+          //   firstName: '',
+          //   lastName: '',
+          //   address1: '',
+          //   zipCode: '',
+          //   city: '',
+          //   country: '250',
+          //   phone: '',
+          //   phoneCountryCode: '+33',
+          // }
+        };
+
+        if (!customerInfo.email) {
+          alert('L\'email est requis pour le paiement');
+          setStatus("idle");
+          return;
+        }
+
         // Call Next.js API route to initiate payment
         const response = await fetch('/api/payment/initiate', {
           method: 'POST',
@@ -30,22 +52,36 @@ export default function CheckoutButton() {
           body: JSON.stringify({
             cartItems,
             totalPrice: totalPrice,
-            customerInfo: {
-              // Add customer info if available
-              // email: userEmail,
-              // name: userName,
-            },
+            customerInfo: customerInfo,
           }),
         });
 
         if (response.ok) {
-          // If API returns a redirect, the server will handle it
-          // If API returns a URL, redirect client-side
+          // API returns paymentUrl and formData from Up2Pay
           const data = await response.json();
-          if (data.paymentUrl) {
+          
+          if (data.paymentUrl && data.formData) {
+            // Create and submit form to Up2Pay
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = data.paymentUrl;
+            form.style.display = 'none';
+
+            // Add all form fields
+            Object.entries(data.formData).forEach(([key, value]) => {
+              const input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = key;
+              input.value = value;
+              form.appendChild(input);
+            });
+
+            document.body.appendChild(form);
+            form.submit();
+          } else if (data.paymentUrl) {
+            // Fallback: direct redirect if only URL is provided
             window.location.href = data.paymentUrl;
           }
-          // If server redirects (302), browser will follow automatically
         } else {
           const error = await response.json();
           console.error('Payment error:', error);
