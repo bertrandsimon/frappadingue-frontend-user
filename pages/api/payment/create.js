@@ -17,8 +17,9 @@ export default async function handler(req, res) {
 
     // Get PHP payment server URL from environment variable
     // Format: https://votre-domaine-ovh.com/paiement-uptopay-frappadingue/api/create-payment.php
-    const phpPaymentUrl = process.env.PHP_PAYMENT_SERVER_URL || 'https://www.tonagotchi.com/paiement-uptopay-frappadingue/api/create-payment.php';
-
+    //const phpPaymentUrl = process.env.PHP_PAYMENT_SERVER_URL || 'https://www.tonagotchi.com/paiement-uptopay-frappadingue/api/create-payment.php';
+    const phpPaymentUrl = 'https://www.tonagotchi.com/paiement-uptopay-frappadingue/api/create-payment.php';
+    
     console.log('Calling PHP API:', phpPaymentUrl);
     console.log('Request data:', { amount, orderId, email });
 
