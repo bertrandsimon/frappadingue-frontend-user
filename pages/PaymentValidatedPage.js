@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
 import PaymentValidatedComponentPage from "../components/pages/PaymentValidatedComponentPage";
 import SEO from '../components/utilities/SEO';
 
 function PaymentValidatedPage() {
+  const router = useRouter();
+  const { ref, amount } = router.query;
+
   return (
     <>
       <SEO
@@ -9,7 +13,7 @@ function PaymentValidatedPage() {
         description="Votre paiement a été validé avec succès."
         url="/PaymentValidatedPage"
       />
-      <PaymentValidatedComponentPage />
+      <PaymentValidatedComponentPage ref={ref} amount={amount} />
     </>
   );
 }

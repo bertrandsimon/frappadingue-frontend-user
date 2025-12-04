@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
 import PaymentRefusedComponentPage from "../components/pages/PaymentRefusedComponentPage";
 import SEO from '../components/utilities/SEO';
 
 function PaymentRefusedPage() {
+  const router = useRouter();
+  const { ref, amount } = router.query;
+
   return (
     <>
       <SEO
@@ -9,7 +13,7 @@ function PaymentRefusedPage() {
         description="Votre paiement a été refusé."
         url="/PaymentRefusedPage"
       />
-      <PaymentRefusedComponentPage />
+      <PaymentRefusedComponentPage ref={ref} amount={amount} />
     </>
   );
 }

@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
 import PaymentCanceledComponentPage from "../components/pages/PaymentCanceledComponentPage";
 import SEO from '../components/utilities/SEO';
 
 function PaymentCanceledPage() {
+  const router = useRouter();
+  const { ref, amount } = router.query;
+
   return (
     <>
       <SEO
@@ -9,7 +13,7 @@ function PaymentCanceledPage() {
         description="Votre paiement a été annulé."
         url="/PaymentCanceledPage"
       />
-      <PaymentCanceledComponentPage />
+      <PaymentCanceledComponentPage ref={ref} amount={amount} />
     </>
   );
 }

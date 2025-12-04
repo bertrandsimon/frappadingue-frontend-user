@@ -5,7 +5,7 @@ import Banner from "../common/Banner";
 import PaymentCanceled from "../PaymentCanceled";
 
 
-function PaymentCanceledComponentPage() {
+function PaymentCanceledComponentPage({ ref, amount }) {
   return (
     <div>
         
@@ -14,7 +14,7 @@ function PaymentCanceledComponentPage() {
          
         <Nav></Nav>
           <Banner title="Paiement" subtitle="annulé" sliderOn={true} imageBanner="info8.png"></Banner>
-          <PaymentCanceled></PaymentCanceled>
+          <PaymentCanceled ref={ref} amount={amount}></PaymentCanceled>
         
         </main>
        

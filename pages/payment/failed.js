@@ -1,39 +1,32 @@
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import Nav from '../../components/common/Nav';
 import Footer from '../../components/common/Footer';
-import OrderSummary from '../../components/shop/OrderSummary';
 import SEO from '../../components/utilities/SEO';
 
-export default function PaymentSuccess() {
+export default function PaymentFailed() {
   const router = useRouter();
-  const { orderId, ref, amount } = router.query;
+  const { ref, amount } = router.query;
   const isClient = typeof window !== 'undefined';
-
-  useEffect(() => {
-    // Verify payment status with your backend if needed
-    // You can fetch order details using orderId or ref
-  }, [orderId, ref]);
 
   const formattedAmount = amount ? (parseInt(amount) / 100).toFixed(2) : null;
 
   return (
     <div>
       <SEO
-        title="Paiement réussi"
-        description="Votre paiement a été traité avec succès. Merci pour votre inscription aux courses à obstacles Frappadingue."
-        url={isClient && orderId ? `/payment/success?orderId=${orderId}` : '/payment/success'}
+        title="Paiement échoué"
+        description="Votre paiement a échoué. Aucun montant n'a été débité. Vous pouvez réessayer votre commande."
+        url={isClient && ref ? `/payment/failed?ref=${ref}` : '/payment/failed'}
         noindex={true}
       />
       <main className="container mx-auto sm:px-6 lg:px-8">
         <Nav />
         <div className="min-h-screen py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-[#ffe500] mb-4">
-              ✅ Paiement réussi !
+            <h1 className="text-4xl font-bold text-red-400 mb-4">
+              ❌ Paiement échoué
             </h1>
             <p className="text-white mb-8">
-              Votre commande a été traitée avec succès.
+              Votre paiement a échoué. Aucun montant n'a été débité.
             </p>
             {ref && (
               <p className="text-gray-400 text-sm mb-2">
@@ -41,13 +34,8 @@ export default function PaymentSuccess() {
               </p>
             )}
             {formattedAmount && (
-              <p className="text-gray-400 text-sm mb-2">
+              <p className="text-gray-400 text-sm mb-8">
                 Montant: {formattedAmount} €
-              </p>
-            )}
-            {orderId && (
-              <p className="text-gray-400 text-sm">
-                Numéro de commande: {orderId}
               </p>
             )}
           </div>
